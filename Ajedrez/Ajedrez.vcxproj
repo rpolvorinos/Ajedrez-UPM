@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Ajedrez.cpp" />
+    <ClCompile Include="src\piezas.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\piezas.h" />
