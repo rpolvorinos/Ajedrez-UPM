@@ -3,8 +3,15 @@
 class Vector
 {
 public:
-	Vector();
-	virtual ~Vector(){}
+	//Se crean los parametros de vector
 	float x;
 	float y;
+
+	//Metodos
+	Vector(float xv=0.0f, float yv=0.0f);
+	virtual ~Vector(){}
+	Vector operator+ (Vector op);
+	float operator* (Vector op);
+	Vector operator* (float op);
+	Vector operator+ (float real);
 };

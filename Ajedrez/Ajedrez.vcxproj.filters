@@ -18,10 +18,10 @@
     <ClCompile Include="src\Ajedrez.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\piezas.cpp">
+    <ClCompile Include="src\Mundo.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\peones.cpp">
+    <ClCompile Include="src\Peon.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="src\Vector.cpp">
@@ -30,21 +30,33 @@
     <ClCompile Include="src\ListaPeones.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\Torres.cpp">
+    <ClCompile Include="src\Torre.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\Caballos.cpp">
+    <ClCompile Include="src\Alfil.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\Alfiles.cpp">
+    <ClCompile Include="src\Caballo.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dama.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Rey.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tablero.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ObjetoMovil.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\piezas.h">
+    <ClInclude Include="src\Mundo.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="src\peones.h">
+    <ClInclude Include="src\Peon.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="src\Vector.h">
@@ -53,13 +65,25 @@
     <ClInclude Include="src\ListaPeones.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="src\Torres.h">
+    <ClInclude Include="src\Torre.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="src\Caballos.h">
+    <ClInclude Include="src\Alfil.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="src\Alfiles.h">
+    <ClInclude Include="src\Caballo.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dama.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rey.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tablero.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ObjetoMovil.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

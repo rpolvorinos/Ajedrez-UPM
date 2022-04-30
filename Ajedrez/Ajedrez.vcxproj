@@ -20,21 +20,29 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Ajedrez.cpp" />
-    <ClCompile Include="src\Alfiles.cpp" />
-    <ClCompile Include="src\Caballos.cpp" />
+    <ClCompile Include="src\Alfil.cpp" />
+    <ClCompile Include="src\Caballo.cpp" />
+    <ClCompile Include="src\Dama.cpp" />
     <ClCompile Include="src\ListaPeones.cpp" />
-    <ClCompile Include="src\peones.cpp" />
-    <ClCompile Include="src\piezas.cpp" />
-    <ClCompile Include="src\Torres.cpp" />
+    <ClCompile Include="src\ObjetoMovil.cpp" />
+    <ClCompile Include="src\Peon.cpp" />
+    <ClCompile Include="src\Mundo.cpp" />
+    <ClCompile Include="src\Rey.cpp" />
+    <ClCompile Include="src\Tablero.cpp" />
+    <ClCompile Include="src\Torre.cpp" />
     <ClCompile Include="src\Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Alfiles.h" />
-    <ClInclude Include="src\Caballos.h" />
+    <ClInclude Include="src\Alfil.h" />
+    <ClInclude Include="src\Caballo.h" />
+    <ClInclude Include="src\Dama.h" />
     <ClInclude Include="src\ListaPeones.h" />
-    <ClInclude Include="src\peones.h" />
-    <ClInclude Include="src\piezas.h" />
-    <ClInclude Include="src\Torres.h" />
+    <ClInclude Include="src\ObjetoMovil.h" />
+    <ClInclude Include="src\Peon.h" />
+    <ClInclude Include="src\Mundo.h" />
+    <ClInclude Include="src\Rey.h" />
+    <ClInclude Include="src\Tablero.h" />
+    <ClInclude Include="src\Torre.h" />
     <ClInclude Include="src\Vector.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

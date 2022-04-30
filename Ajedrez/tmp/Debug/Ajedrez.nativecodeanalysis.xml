@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\</FILEPATH>
+      <FILENAME>Mundo.h</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable "Mundo::y_ojo" no está inicializada. Siempre debe inicializarse una variable miembro (type.6).</DESCRIPTION>
+    <FUNCTION>Mundo::{ctor}</FUNCTION>
+    <DECORATED>??0Mundo@@QEAA@XZ</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Mundo::y_ojo</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\</FILEPATH>
+      <FILENAME>Mundo.h</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable "Mundo::x_ojo" no está inicializada. Siempre debe inicializarse una variable miembro (type.6).</DESCRIPTION>
+    <FUNCTION>Mundo::{ctor}</FUNCTION>
+    <DECORATED>??0Mundo@@QEAA@XZ</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Mundo::x_ojo</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\</FILEPATH>
+      <FILENAME>Mundo.h</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>La variable "Mundo::z_ojo" no está inicializada. Siempre debe inicializarse una variable miembro (type.6).</DESCRIPTION>
+    <FUNCTION>Mundo::{ctor}</FUNCTION>
+    <DECORATED>??0Mundo@@QEAA@XZ</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Mundo::z_ojo</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

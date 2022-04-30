@@ -1,13 +1,16 @@
-#include "piezas.h"
+#include "Mundo.h"
 #include "freeglut.h"
 
-Piezas piezas;
+Mundo piezas;
 
 //los callback, funciones que seran llamadas automaticamente por la glut
 //cuando sucedan eventos
 //NO HACE FALTA LLAMARLAS EXPLICITAMENTE
+
 void OnDraw(void); //esta funcion sera llamada para dibujar
+
 void OnTimer(int value); //esta funcion sera llamada cuando transcurra una temporizacion
+
 void OnKeyboardDown(unsigned char key, int x, int y); //cuando se pulse una tecla	
 
 int main(int argc, char* argv[])

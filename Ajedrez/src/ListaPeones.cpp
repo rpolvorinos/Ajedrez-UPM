@@ -1,5 +1,5 @@
 #include "ListaPeones.h"
-#include "peones.h"
+#include "Peon.h"
 
 ListaPeones::ListaPeones()
 {
@@ -8,7 +8,7 @@ ListaPeones::ListaPeones()
 		lista[i] = 0;
 }
 
-bool ListaPeones::agregar(Peones* e)
+bool ListaPeones::agregar(Peon* e)
 {
 	if (numero < MAX_PEONES)
 		lista[numero++] = e; // último puesto sin rellenar
@@ -19,6 +19,10 @@ bool ListaPeones::agregar(Peones* e)
 
 void ListaPeones::dibuja()
 {
-	for (int i = 0;i < numero;i++)
-		lista[i]->dibuja();
+	for (int i = 0;i < numero-8;i++)
+		lista[i]->dibujaw();
+
+	for (int j = 8; j < numero; j++)
+		lista[j]->dibujab();
+	
 }
