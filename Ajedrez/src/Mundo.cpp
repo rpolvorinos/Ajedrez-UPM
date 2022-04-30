@@ -95,8 +95,8 @@ void Mundo::inicializa()
 	dama2.setDatos(0.25f, -6.45, -4.35);
 
 	// datos de inicializacion de los alfiles
-	alfil1.setDatos(0.1f, -4.5f, 2.35f);
-	alfil2.setDatos(0.1f, -4.5f, -4.35f);
+	alfil1.setDatos(0.1f, -4.55f, 2.35f);
+	alfil2.setDatos(0.1f, -4.55f, -4.35f);
 	alfil3.setDatos(0.1f, -7.4f, 2.35);
 	alfil4.setDatos(0.1f, -7.4f, -4.35);
 
