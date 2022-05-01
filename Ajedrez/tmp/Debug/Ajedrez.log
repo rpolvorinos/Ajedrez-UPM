@@ -1,2 +1,11 @@
-﻿  ListaPeones.cpp
+﻿  Mundo.cpp
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(72,15): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(75,2): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(75,36): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(81,2): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(81,36): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(94,35): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(95,34): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(98,36): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(99,35): warning C4305: 'argumento': truncamiento de 'double' a 'float'
   Ajedrez.vcxproj -> C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\bin\Ajedrez.exe

@@ -5,18 +5,22 @@
 
 void Mundo::rotarOjo()
 {
-	float dist = sqrt(x_ojo * x_ojo + y_ojo * y_ojo);
+	/*float dist = sqrt(x_ojo * x_ojo + y_ojo * y_ojo);
 	float ang = atan2(y_ojo, x_ojo);
-	ang += 0.02f;
+	ang -= 90.0f;
 	x_ojo = dist * cos(ang);
 	y_ojo = dist * sin(ang);
+	*/
+
+	glRotatef(y_ojo, 0, 1, 0);
+
 }
 void Mundo::dibuja()
 {
 
 	
 	gluLookAt(x_ojo, y_ojo, z_ojo,  // posicion del ojo
-		0,0,0,    // hacia que punto mira  (0,0,0) 
+		0.0,0.0,0.0,    // hacia que punto mira  (0,0,0) 
 		0.0, 0.0, 1.0);      // definimos hacia arriba (eje Z)    
 
 //aqui es donde hay que poner el codigo de dibujo
@@ -64,8 +68,8 @@ void Mundo::mueve()
 
 void Mundo::inicializa()
 {
-	x_ojo = 0;
-	y_ojo = -0.5;
+	x_ojo = 0.0;
+	y_ojo = -0.01;
 	z_ojo = 23;
 
 	for (float i = -9.9; i < 1; i = i + 1.47)

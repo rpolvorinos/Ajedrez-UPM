@@ -61,10 +61,12 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t)
 {
 	//poner aqui el código de teclado
 	piezas.tecla(key);
+
 	switch (key) {
 
-		case  '\n':
-			piezas.rotarOjo();
+		case 13:
+				piezas.y_ojo = -piezas.y_ojo;
+				piezas.rotarOjo();
 			break;
 
 	}
