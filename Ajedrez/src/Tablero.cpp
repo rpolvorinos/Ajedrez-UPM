@@ -32,64 +32,65 @@ void Tablero::dibuja() {
 	//Dibujo de los cuadrados blancos
 			
 			//Columna 1
-			 cuadrado(-4, -3,1);
-			 cuadrado(-4, -1,1);
-			 cuadrado(-4, 1,1);
-			 cuadrado(-4, 3,1);
+			 cuadrado(-4.5, -4.5,1.5);
+			 cuadrado(-4.5, -1.5,1.5);
+			 cuadrado(-4.5, 1.5,1.5);
+			 cuadrado(-4.5, 4.5,1.5);
 
 			 //Columna 2
-			 cuadrado(-3,-4, 1);
-			 cuadrado(-3,-2, 1);
-			 cuadrado(-3, 0, 1);
-			 cuadrado(-3, 2, 1);
+			 cuadrado(-3, -6, 1.5);
+			 cuadrado(-3,-3, 1.5);
+			 cuadrado(-3, 0, 1.5);
+			 cuadrado(-3, 3, 1.5);
 
+			 
 			 //Columna 3
-			 cuadrado(-2, -3, 1);
-			 cuadrado(-2,-1, 1);
-			 cuadrado(-2, 1, 1);
-			 cuadrado(-2, 3, 1);
-
+			 cuadrado(-1.5, -4.5, 1.5);
+			 cuadrado(-1.5,-1.5, 1.5);
+			 cuadrado(-1.5, 1.5, 1.5);
+			 cuadrado(-1.5, 4.5, 1.5);
+			 
 			 //Columna 4
-			 cuadrado(-1, -4, 1);
-			 cuadrado(-1, -2, 1);
-			 cuadrado(-1, 0, 1);
-			 cuadrado(-1, 2, 1);
+			 cuadrado(0, -6, 1.5);
+			 cuadrado(0, -3, 1.5);
+			 cuadrado(0, 0, 1.5);
+			 cuadrado(0,3, 1.5);
 
 			 //Columna 5
-			 cuadrado(0, -3, 1);
-			 cuadrado(0, -1, 1);
-			 cuadrado(0, 1, 1);
-			 cuadrado(0, 3, 1);
+			 cuadrado(1.5, -4.5, 1.5);
+			 cuadrado(1.5, -1.5, 1.5);
+			 cuadrado(1.5, 1.5, 1.5);
+			 cuadrado(1.5, 4.5, 1.5);
 
 			 //Columna 6
-			 cuadrado(1, -4, 1);
-			 cuadrado(1, -2, 1);
-			 cuadrado(1, 0, 1);
-			 cuadrado(1, 2, 1);
+			 cuadrado(3, -6, 1.5);
+			 cuadrado(3, -3, 1.5);
+			 cuadrado(3, 0, 1.5);
+			 cuadrado(3, 3, 1.5);
 			 //fila 7
-			 cuadrado(2, -3, 1);
-			 cuadrado(2, -1, 1);
-			 cuadrado(2, 1, 1);
-			 cuadrado(2, 3, 1);
+			 cuadrado(4.5, -4.5, 1.5);
+			 cuadrado(4.5, -1.5, 1.5);
+			 cuadrado(4.5, 1.5, 1.5);
+			 cuadrado(4.5, 4.5, 1.5);
 			 //fila 8
-			 cuadrado(3, -4,1);
-			 cuadrado(3, -2, 1);
-			 cuadrado(3, 0, 1);
-			 cuadrado(3, 2, 1);
-
+			 cuadrado(6, -6,1.5);
+			 cuadrado(6, -3, 1.5);
+			 cuadrado(6, 0, 1.5);
+			 cuadrado(6, 3, 1.5);
+			 
 
 			 //Dibujo del contorno
 			 glLineWidth(4);
 			 glBegin(GL_LINES);
 			 glColor3f(128, 64, 0);
-			 glVertex2f(3.55, -4.55);
-			 glVertex2f(3.55, 3.55);
-			 glVertex2f(3.55, 3.55);
-			 glVertex2f(-4.55, 3.55);
-			 glVertex2f(-4.55, 3.55);
-			 glVertex2f(-4.55, -4.55);
-			 glVertex2f(-4.55, -4.55);
-			 glVertex2f(3.55, -4.55);
+			 glVertex2f(-5.3, -6.8);
+			 glVertex2f(6.75, -6.8),
+			 glVertex2f(6.75, -6.8);
+			 glVertex2f(6.75, 5.3);
+			 glVertex2f(6.75, 5.3);
+			 glVertex2f(-5.3, 5.3);
+			 glVertex2f(-5.3, 5.3);
+			 glVertex2f(-5.3, -6.8);
 			 glEnd();
 
 }
