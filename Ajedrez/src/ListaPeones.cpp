@@ -20,9 +20,9 @@ bool ListaPeones::agregar(Peon* e)
 void ListaPeones::dibuja()
 {
 	for (int i = 0;i < numero-8;i++)
-		lista[i]->dibujaw();
+		lista[i]->dibujab();
 
 	for (int j = 8; j < numero; j++)
-		lista[j]->dibujab();
+		lista[j]->dibujaw();
 	
 }

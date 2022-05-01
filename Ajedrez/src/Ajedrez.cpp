@@ -61,7 +61,13 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t)
 {
 	//poner aqui el código de teclado
 	piezas.tecla(key);
+	switch (key) {
 
+		case  '\n':
+			piezas.rotarOjo();
+			break;
+
+	}
 	glutPostRedisplay();
 }
 
@@ -69,6 +75,8 @@ void OnTimer(int value)
 {
 	//poner aqui el código de animacion
 	piezas.mueve();
+	
+
 
 	//no borrar estas lineas
 	glutTimerFunc(25, OnTimer, 0);

@@ -4,7 +4,9 @@ Vector::Vector(float xv,float yv)
 {
 	x = xv;
 	y = yv;
-}Vector Vector::operator+(Vector op) {
+}
+
+Vector Vector::operator+(Vector op) {
 
 	Vector resultado;
 	resultado.x = x + op.x;
