@@ -25,7 +25,10 @@ En cada partida existen dos jugadores, al primer jugador sse le asignan las piez
 - Perdedor-El jugador que recibe el jaque mate.
 
 
-# Controles del juego
-
+## Controles del juego
+| **Tecla**  | **Función** |
+| ---      | ---       |
+|  |         |
+| |    |        |
 
 
