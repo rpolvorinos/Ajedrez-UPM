@@ -1,5 +1,5 @@
-# AJEDREZ 3D
-Este proyecto correspondiente a la asignatura de informática industrial y de las comunicaciones, trata sobre un gueg de ajedrez en modo 3D.
+# AJEDREZ 2D
+Este proyecto correspondiente a la asignatura de informática industrial y de las comunicaciones, trata sobre un gueg de ajedrez en modo 2D.
 El ajedrez es un juego de mesa de estrategia para dos jugadores, se juega sobre un tablero subdividido en 8 filas y 8 columnas que forman 64 casillas.
 En cada partida existen dos jugadores, al primer jugador se le asignan las piezas blancas y al segundo las piezas negras.
 
