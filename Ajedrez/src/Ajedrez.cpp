@@ -59,7 +59,7 @@ void OnDraw(void)
 }
 void OnKeyboardDown(unsigned char key, int x_t, int y_t)
 {
-	//poner aqui el código de teclado
+	//poner aqui el cÃ³digo de teclado
 	piezas.tecla(key);
 
 	switch (key) {
@@ -75,7 +75,7 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t)
 
 void OnTimer(int value)
 {
-	//poner aqui el código de animacion
+	//poner aqui el cÃ³digo de animacion
 	piezas.mueve();
 	
 
@@ -84,3 +84,4 @@ void OnTimer(int value)
 	glutTimerFunc(25, OnTimer, 0);
 	glutPostRedisplay();
 }
+//
