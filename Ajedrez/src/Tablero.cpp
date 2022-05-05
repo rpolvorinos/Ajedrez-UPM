@@ -3,33 +3,12 @@
 #include "ETSIDI.h"
 
 Tablero::Tablero() {
-
-	rojo = verde = azul = 255;
-};
-
-
-void Tablero::setColor(unsigned char r, unsigned char v, unsigned char a) {
-	rojo = r;
-	verde = v;
-	azul = a;
 }
-
-void Tablero::cuadrado(float _x,float _y,float tamanio) {
-
-	tamanio /= 2;
-	glBegin(GL_POLYGON);
-	glColor3f(rojo, verde, azul);
-		glVertex2f(_x + tamanio, _y + tamanio); glVertex2f(_x - tamanio, _y + tamanio);
-		glVertex2f(_x - tamanio, _y - tamanio); glVertex2f(_x + tamanio, _y - tamanio);
-		glEnd();
-}
-
 
 void Tablero::dibuja() {
 
 	glClear(GL_COLOR_BUFFER_BIT);
 	
-	setColor(rojo,verde,azul);
 	float x, y;
 
 	for (int fila = 1; fila <= 8; fila++) {
@@ -38,16 +17,16 @@ void Tablero::dibuja() {
 			y = columna*1.5 - 7.5;
 			
 			/*if (fila == Seleccion.fila && columna == Seleccion.columna) {
-			setColor(0,255,0);
+			casillas[fila - 1][columna - 1].setColor(0,255,0);
 			SI LA CASILLA ES LA SELECCIONADA POR EL USUARIO, LA PINTAMOS DE VERDE
 			}
 			else
 			*/
 			if ((fila + columna) & 1)
-				setColor(255, 255, 255);
+				casillas[fila - 1][columna - 1].setColor(255, 255, 255);
 			else
-				setColor(255, 0, 0);
-			cuadrado(x, y, 1.5);
+				casillas[fila - 1][columna - 1].setColor(255, 0, 0);
+			casillas[fila-1][columna-1].cuadrado(x, y, 1.5);
 
 		}
 	}

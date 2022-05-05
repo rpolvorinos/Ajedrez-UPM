@@ -2,7 +2,6 @@
 #include "freeglut.h"
 
 Casilla::Casilla() {
-
 }
 
 Casilla::Casilla(int f, int c) {
@@ -10,7 +9,13 @@ Casilla::Casilla(int f, int c) {
 	columna = c;
 }
 
-/*void Casilla::cuadrado(float _x, float _y, float tamanio) {
+void Casilla::setColor(unsigned char r, unsigned char v, unsigned char a) {
+	rojo = r;
+	verde = v;
+	azul = a;
+}
+
+void Casilla::cuadrado(float _x, float _y, float tamanio) {
 
 	tamanio /= 2;
 	glBegin(GL_POLYGON);
@@ -18,4 +23,4 @@ Casilla::Casilla(int f, int c) {
 	glVertex2f(_x + tamanio, _y + tamanio); glVertex2f(_x - tamanio, _y + tamanio);
 	glVertex2f(_x - tamanio, _y - tamanio); glVertex2f(_x + tamanio, _y - tamanio);
 	glEnd();
-}*/
+}
