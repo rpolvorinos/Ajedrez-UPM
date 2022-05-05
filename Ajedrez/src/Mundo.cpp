@@ -111,7 +111,6 @@ void Mundo::inicializa()
 	caballo4.setDatos(0.25f, -1.15f, -6.4f);
 
 	//datos de inicializacion del tablero
-	tablero.setColor(255, 255, 255);
 
 }
 
