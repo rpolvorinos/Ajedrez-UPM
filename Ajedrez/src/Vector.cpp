@@ -47,7 +47,7 @@ Vector Vector::conversor(int _f, int _c) {
 		resultado.x = -8.45;
 		break;
 	case 3:
-		resultado.x = -7;q2235es
+		resultado.x = -7;
 		break;
 	case 4:
 		resultado.x = -5.55;

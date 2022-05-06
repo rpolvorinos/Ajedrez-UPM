@@ -74,15 +74,15 @@ void Mundo::inicializa()
 	y_ojo = -0.01;
 	z_ojo = 23;
 
-	for (float i = -9.9; i < 1; i = i + 1.47)
+	for (float i = 1; i < 9; i = i++)
 	{
-		Peon* aux = new Peon(i, 2.35f);
+		Peon* aux = new Peon(i, 7);
 		peones.agregar(aux);
 	}
 
-	for (float i = -9.9; i < 1; i = i + 1.47)
+	for (float i = 1; i < 9; i++)
 	{
-		Peon* aux = new Peon(i, -4.85f);
+		Peon* aux = new Peon(i, 2);
 		peones.agregar(aux);
 	}
 

@@ -7,24 +7,25 @@ Peon::Peon()
 	sprite1.setCenter(0, 0);
 	sprite1.setSize(1, 1);
 	radio = 0.25f;
+	fila = columna = 0;
 
 	sprite2.setCenter(0, 0);
 	sprite2.setSize(1, 1);
 	radio = 0.25f;
-
+	fila = columna = 0;
 }
-Peon::Peon(float _x, float _y) {
+Peon::Peon(int _f, int _c) {
 	sprite1.setCenter(0, 0);
 	sprite1.setSize(1, 1);
 	radio = 0.01f;
-	posicion.x = _x;
-	posicion.y = _y;
+	Vector pos1;
+	posicion = pos1.conversor(_f, _c);
 
 	sprite2.setCenter(0, 0);
 	sprite2.setSize(1, 1);
 	radio = 0.01f;
-	posicion.x = _x;
-	posicion.y = _y;
+	Vector pos2;
+	posicion = pos2.conversor(_f, _c);
 }
 
 void Peon::dibujaw()
