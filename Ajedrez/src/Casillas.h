@@ -3,7 +3,7 @@
 class Casillas
 {
 	friend class Tablero;
-
+	
 private:
 	int fila, columna;
 	unsigned char rojo;

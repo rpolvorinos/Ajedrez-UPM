@@ -1,1 +1,16 @@
-﻿  Ajedrez.vcxproj -> C:\Users\Eme\Downloads\Ajedrez-UPM-main (1)\Ajedrez-UPM-main\Ajedrez\bin\Ajedrez.exe
+﻿  Vector.cpp
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(44,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(47,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(53,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(56,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(59,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(62,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(65,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(72,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(75,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(78,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(81,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(84,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(90,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Vector.cpp(93,21): warning C4305: '=': truncamiento de 'double' a 'float'
+  Ajedrez.vcxproj -> C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\bin\Ajedrez.exe

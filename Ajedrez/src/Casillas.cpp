@@ -2,6 +2,12 @@
 #include "freeglut.h"
 
 Casillas::Casillas() {
+
+	rojo = 255;
+	verde = 255;
+	azul = 255;
+	fila = 0;
+	columna = 0;
 }
 
 void Casillas::setCasillas(int f, int c) {

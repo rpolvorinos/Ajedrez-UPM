@@ -20,7 +20,6 @@ public:
 	float y_ojo;
 	float z_ojo;
 
-	char w, b;
 
 	ListaPeones peones;
 	Rey rey1, rey2;

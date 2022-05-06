@@ -14,4 +14,5 @@ public:
 	float operator* (Vector op);
 	Vector operator* (float op);
 	Vector operator+ (float real);
+	Vector conversor(int _f, int _c);
 };

@@ -1,24 +1,23 @@
-#include "peones.h"
-#include "ListaPeones.h"
-#include "Torres.h"
-#include "Alfiles.h"
-#include "Caballos.h"
+#pragma once
+#include "Vector.h"
+#include "ETSIDI.h"
+#include "Tablero.h"
 
-class Piezas
-{
+using ETSIDI::Sprite;
+
+class piezas: public Tablero {
+
+private:
+	
+	Sprite torrew{ "imagenes/Torre_w.png", 5 };
+	Sprite torreb{ "imagenes/Torre_b.png", 5 };
+	float radio;
+	Vector posicion;
+	int fila, columna;
+
+
 public:
-	void tecla(unsigned char key);
 	void inicializa();
-	void rotarOjo();
-	void mueve();
 	void dibuja();
-
-	float x_ojo;
-	float y_ojo;
-	float z_ojo;
-
-	ListaPeones peones;
-	Torres torre1, torre2,torre3,torre4;
-	Caballos caballo1, caballo2, caballo3, caballo4;
-	Alfiles alfil1, alfil2, alfil3, alfil4;
+	void setDatos(float _r, int _f, int _c);
 };

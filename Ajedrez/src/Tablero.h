@@ -4,13 +4,15 @@
 
 class Tablero {
 
-private:
 
-	Vector limite1;
-	Vector limite2;
+protected:
+
+	Vector posicion;
 	Casillas casillas[8][8];
 	int fila_selector;
 	int columna_selector;
+	float posf[8];
+	float posc[8];
 
 public:
 	Tablero();

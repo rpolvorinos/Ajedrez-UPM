@@ -87,32 +87,32 @@ void Mundo::inicializa()
 	}
 
 	//datos de inicializacion de las torres
-	torre1.setDatos(0.25f, -9.9f, 3.85f);
-	torre2.setDatos(0.25f, -9.9f, -6.4f);
-	torre3.setDatos(0.25f, 0.35f, 3.85f);
-	torre4.setDatos(0.25f, 0.35f, -6.4f);
+	torre1.setDatos(0.25f, 1, 8);
+	torre2.setDatos(0.25f, 1, 1);
+	torre3.setDatos(0.25f, 8, 8);
+	torre4.setDatos(0.25f, 8, 1);
+	
 
 	//datos de incializacion de los reyes
-	rey1.setDatos(0.25f, -4.05, 3.85f);
-	rey2.setDatos(0.25f, -4.05, -6.4);
+	rey1.setDatos(0.25f, 4, 8);
+	rey2.setDatos(0.25f, 4, 1);
 
 	//datos de inicializacion de las damas
-	dama1.setDatos(0.25f, -5.55, 3.85f);
-	dama2.setDatos(0.25f, -5.55, -6.4);
+	dama1.setDatos(0.25f, 5,8);
+	dama2.setDatos(0.25f, 5,1);
 
 	// datos de inicializacion de los alfiles
-	alfil1.setDatos(0.25f, -7.0f, 3.85f);
-	alfil2.setDatos(0.25f, -7.0f, -6.4f);
-	alfil3.setDatos(0.25f, -2.55f, 3.85f);
-	alfil4.setDatos(0.25f, -2.55f, -6.4f);
+	alfil1.setDatos(0.25f, 3, 8);
+	alfil2.setDatos(0.25f, 3, 1);
+	alfil3.setDatos(0.25f, 6, 8);
+	alfil4.setDatos(0.25f, 6, 1);
 
 	//datos de incializacion de los caballos
-	caballo1.setDatos(0.25f, -8.45f, 3.85f);
-	caballo2.setDatos(0.25f, -8.45f, -6.4f);
-	caballo3.setDatos(0.25f, -1.15f, 3.85f);
-	caballo4.setDatos(0.25f, -1.15f, -6.4f);
+	caballo1.setDatos(0.25f, 2, 8);
+	caballo2.setDatos(0.25f, 2, 1);
+	caballo3.setDatos(0.25f, 7, 8);
+	caballo4.setDatos(0.25f, 7, 1);
 
-	//datos de inicializacion del tablero
 
 }
 

@@ -10,10 +10,11 @@ private:
 	Sprite sprite2{ "imagenes/rey_b.png", 5 };
 	float radio;
 	Vector posicion;
+	int fila, columna;
 
 public:
 	Rey();
-	void setDatos(float r, float _x, float _y);
+	void setDatos(float r, int _f, int _c);
 	virtual ~Rey() {}
 	void dibujaw();
 	void dibujab();

@@ -12,12 +12,12 @@ void Tablero::dibuja() {
 
 	glClear(GL_COLOR_BUFFER_BIT);
 	
-	float x, y;
+
 
 	for (int fila = 1; fila <= 8; fila++) {
 		for (int columna = 1; columna <= 8; columna++) {
-			x = fila*1.5 - 6;
-			y = columna*1.5 - 7.5;
+			posicion.x = fila*1.5 - 6;
+			posicion.y = columna*1.5 - 7.5;
 			
 			/*if (fila == Seleccion.fila && columna == Seleccion.columna) {
 			casillas[fila - 1][columna - 1].setColor(0,255,0);
@@ -43,7 +43,9 @@ void Tablero::dibuja() {
 				}
 			}
 				
-			casillas[fila-1][columna-1].cuadrado(x, y, 1.5);
+			casillas[fila-1][columna-1].cuadrado(posicion.x, posicion.y, 1.5);
+			posf[fila - 1] = posicion.x;
+			posc[columna - 1] = posicion.y;
 
 		}
 	}
