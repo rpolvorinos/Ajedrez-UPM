@@ -1,10 +1,5 @@
-#include "Peon.h"
-#include "ListaPeones.h"
-#include "Torre.h"
-#include "Rey.h"
-#include "Dama.h"
-#include "Alfil.h"
-#include "Caballo.h"
+#pragma once
+#include "piezas.h"
 #include "Tablero.h"
 
 class Mundo
@@ -20,14 +15,7 @@ public:
 	float y_ojo;
 	float z_ojo;
 
-
-	ListaPeones peones;
-	Rey rey1, rey2;
-	Dama dama1, dama2;
-	Torre torre1, torre2,torre3,torre4;
-	Alfil alfil1, alfil2, alfil3, alfil4;
-	Caballo caballo1, caballo2, caballo3, caballo4;
+	piezas piezas;
 	Tablero tablero;
-
-
+	
 };

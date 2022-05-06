@@ -1,5 +1,5 @@
-﻿  Mundo.cpp
-C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(74,15): warning C4305: '=': truncamiento de 'double' a 'float'
-C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(79,24): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(85,24): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+﻿  Ajedrez.cpp
+  Mundo.cpp
+C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(43,15): warning C4305: '=': truncamiento de 'double' a 'float'
+  Generando código...
   Ajedrez.vcxproj -> C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\bin\Ajedrez.exe

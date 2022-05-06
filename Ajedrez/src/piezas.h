@@ -1,23 +1,27 @@
 #pragma once
-#include "Vector.h"
-#include "ETSIDI.h"
-#include "Tablero.h"
+#include "Peon.h"
+#include "ListaPeones.h"
+#include "Torre.h"
+#include "Rey.h"
+#include "Dama.h"
+#include "Alfil.h"
+#include "Caballo.h"
 
-using ETSIDI::Sprite;
 
-class piezas: public Tablero {
-
-private:
-	
-	Sprite torrew{ "imagenes/Torre_w.png", 5 };
-	Sprite torreb{ "imagenes/Torre_b.png", 5 };
-	float radio;
-	Vector posicion;
-	int fila, columna;
-
+class piezas{
 
 public:
+	void tecla(unsigned char key);
 	void inicializa();
+	void mueve();
 	void dibuja();
-	void setDatos(float _r, int _f, int _c);
+
+	//Creacion de los objetos
+	ListaPeones peones;
+	Rey rey1, rey2;
+	Dama dama1, dama2;
+	Torre torre1, torre2, torre3, torre4;
+	Alfil alfil1, alfil2, alfil3, alfil4;
+	Caballo caballo1, caballo2, caballo3, caballo4;
+	Tablero tablero;
 };
