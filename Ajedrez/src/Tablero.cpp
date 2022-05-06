@@ -3,6 +3,9 @@
 #include "ETSIDI.h"
 
 Tablero::Tablero() {
+
+	fila_selector = 4;
+	columna_selector = 4;
 }
 
 void Tablero::dibuja() {
@@ -22,10 +25,24 @@ void Tablero::dibuja() {
 			}
 			else
 			*/
-			if ((fila + columna) & 1)
-				casillas[fila - 1][columna - 1].setColor(255, 255, 255);
+
+			if (fila == fila_selector && columna== columna_selector)
+				casillas[fila - 1][columna - 1].setColor(0, 255, 0);
 			else
-				casillas[fila - 1][columna - 1].setColor(255, 0, 0);
+			{
+				if ((fila + columna) & 1)
+				{
+					casillas[fila - 1][columna - 1].setColor(255, 255, 255);
+					casillas[fila - 1][columna - 1].setCasillas(fila, columna);
+				}
+
+				else
+				{
+					casillas[fila - 1][columna - 1].setColor(255, 0, 0);
+					casillas[fila - 1][columna - 1].setCasillas(fila, columna);
+				}
+			}
+				
 			casillas[fila-1][columna-1].cuadrado(x, y, 1.5);
 
 		}
@@ -45,4 +62,19 @@ void Tablero::dibuja() {
 			 glVertex2f(-5.3, -6.8);
 			 glEnd();
 
+}
+
+void Tablero::setSelector(int aux)
+{
+	if (aux == 1 && fila_selector>1)
+		fila_selector--;
+
+	if (aux == 2 && columna_selector > 1)
+		columna_selector--;
+
+	if (aux == 3 && fila_selector < 8)
+		fila_selector++;
+
+	if (aux == 4 && columna_selector < 8)
+		columna_selector++;
 }

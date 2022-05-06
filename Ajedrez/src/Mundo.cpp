@@ -58,6 +58,8 @@ void Mundo::dibuja()
 	
 	//Dibujo de los peones
 	peones.dibuja();
+
+	
 	
 }
 
@@ -116,5 +118,19 @@ void Mundo::inicializa()
 
 void Mundo::tecla(unsigned char key)
 {
-	
+	switch (key)
+	{
+	case GLUT_KEY_LEFT:
+		tablero.setSelector(1);
+		break;
+	case GLUT_KEY_DOWN:
+		tablero.setSelector(2);
+		break;
+	case GLUT_KEY_RIGHT:
+		tablero.setSelector(3);
+		break;
+	case GLUT_KEY_UP:
+		tablero.setSelector(4);
+		break;
+	}
 }
