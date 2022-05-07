@@ -1,7 +1,7 @@
 #include "piezas.h"
 #include "freeglut.h"
 
-void piezas::inicializa() {
+void Piezas::inicializa() {
 	
 	for (float i = 1; i < 9; i = i++)
 	{
@@ -44,7 +44,7 @@ void piezas::inicializa() {
 
 }
 
-void piezas::dibuja() {
+void Piezas::dibuja() {
 
 	//Dibujo de las torres
 	torre1.dibujab();
@@ -76,12 +76,12 @@ void piezas::dibuja() {
 	peones.dibuja();
 }
 
-void piezas::tecla(unsigned char key) {
+void Piezas::tecla(unsigned char key) {
 
 
 
 }
 
-void piezas::mueve() {
+void Piezas::mueve() {
 
 }

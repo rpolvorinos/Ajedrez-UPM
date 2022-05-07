@@ -54,7 +54,7 @@
     <ClCompile Include="src\Casillas.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\piezas.cpp">
+    <ClCompile Include="src\Piezas.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="src\Selector.cpp">
@@ -98,7 +98,7 @@
     <ClInclude Include="src\Casillas.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="src\piezas.h">
+    <ClInclude Include="src\Piezas.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="src\Selector.h">
