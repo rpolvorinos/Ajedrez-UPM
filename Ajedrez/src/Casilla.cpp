@@ -2,9 +2,15 @@
 #include "freeglut.h"
 
 Casilla::Casilla() {
+
+	rojo = 255;
+	verde = 255;
+	azul = 255;
+	fila = 0;
+	columna = 0;
 }
 
-Casilla::Casilla(int f, int c) {
+void Casilla::setCasillas(int f, int c) {
 	fila = f;
 	columna = c;
 }

@@ -1,6 +1,6 @@
 #pragma once
 #include "Vector.h"
-#include "Casillas.h"
+#include "Casilla.h"
 #include "Selector.h"
 
 class Tablero {
@@ -8,7 +8,7 @@ class Tablero {
 protected:
 
 	Vector posicion;
-	Casillas casillas[8][8];
+	Casilla casillas[8][8];
 	Selector selector;
 	float posf[8];
 	float posc[8];
