@@ -1,7 +1,7 @@
 #include "Mundo.h"
 #include "freeglut.h"
 
-Mundo piezas;
+Mundo mundo;
 
 //los callback, funciones que seran llamadas automaticamente por la glut
 //cuando sucedan eventos
@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
 	glutKeyboardFunc(OnKeyboardDown);
 	glutSpecialFunc(onSpecialKeyboardDown);
 
-	piezas.inicializa();
+	mundo.inicializa();
 
 	//pasarle el control a GLUT,que llamara a los callbacks
 	glutMainLoop();
@@ -54,7 +54,7 @@ void OnDraw(void)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	piezas.dibuja();
+	mundo.dibuja();
 
 	//no borrar esta linea ni poner nada despues
 	glutSwapBuffers();
@@ -62,13 +62,13 @@ void OnDraw(void)
 void OnKeyboardDown(unsigned char key, int x_t, int y_t)
 {
 	//poner aqui el código de teclado
-	piezas.tecla(key);
-
+	mundo.tecla(key);
+	
 	switch (key) {
 
 		case 13:
-				piezas.y_ojo = -piezas.y_ojo;
-				piezas.rotarOjo();
+				mundo.y_ojo = -mundo.y_ojo;
+				mundo.rotarOjo();
 			break;
 
 	}
@@ -78,7 +78,7 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t)
 void OnTimer(int value)
 {
 	//poner aqui el código de animacion
-	piezas.mueve();
+	mundo.mueve();
 	
 
 
@@ -89,5 +89,5 @@ void OnTimer(int value)
 
 void onSpecialKeyboardDown(int key, int x, int y)
 {
-	piezas.tecla(key);
+	mundo.tecla(key);
 }

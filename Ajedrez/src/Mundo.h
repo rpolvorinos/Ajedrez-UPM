@@ -2,6 +2,7 @@
 #include "piezas.h"
 #include "Tablero.h"
 
+
 class Mundo
 {
 public:

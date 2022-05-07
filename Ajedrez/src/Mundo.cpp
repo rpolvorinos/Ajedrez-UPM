@@ -17,8 +17,6 @@ void Mundo::rotarOjo()
 }
 void Mundo::dibuja()
 {
-
-	
 	gluLookAt(x_ojo, y_ojo, z_ojo,  // posicion del ojo
 		0.0,0.0,0.0,    // hacia que punto mira  (0,0,0) 
 		0.0, 0.0, 1.0);      // definimos hacia arriba (eje Z)    
@@ -44,25 +42,12 @@ void Mundo::inicializa()
 	z_ojo = 23;
 
 	piezas.inicializa(); //inicializacion de los datos de las diferentes piezas
-	
+	tablero.selector.inicializa();
 
 }
 
 void Mundo::tecla(unsigned char key)
 {
-	switch (key)
-	{
-	case GLUT_KEY_LEFT:
-		tablero.setSelector(1);
-		break;
-	case GLUT_KEY_DOWN:
-		tablero.setSelector(2);
-		break;
-	case GLUT_KEY_RIGHT:
-		tablero.setSelector(3);
-		break;
-	case GLUT_KEY_UP:
-		tablero.setSelector(4);
-		break;
-	}
+	tablero.selector.mover(key);
+	piezas.tecla(key);
 }

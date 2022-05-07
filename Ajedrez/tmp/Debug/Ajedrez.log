@@ -1,5 +1,20 @@
 ﻿  Ajedrez.cpp
   Mundo.cpp
-C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(43,15): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\Mundo.cpp(41,15): warning C4305: '=': truncamiento de 'double' a 'float'
+  Tablero.cpp
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\Tablero.cpp(15,26): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\Tablero.cpp(16,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\Tablero.cpp(49,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\Tablero.cpp(50,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\Tablero.cpp(51,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\Tablero.cpp(52,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\Tablero.cpp(53,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\Tablero.cpp(54,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\Tablero.cpp(55,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\Tablero.cpp(56,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  Torre.cpp
+  piezas.cpp
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\piezas.cpp(8,24): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\src\piezas.cpp(14,24): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   Generando código...
-  Ajedrez.vcxproj -> C:\Users\victo\Desktop\Ajedrez-UPM-main\Ajedrez\bin\Ajedrez.exe
+  Ajedrez.vcxproj -> C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Escritorio\Ajedrez-UPM-main\Ajedrez\bin\Ajedrez.exe

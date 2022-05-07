@@ -78,6 +78,8 @@ void piezas::dibuja() {
 
 void piezas::tecla(unsigned char key) {
 
+
+
 }
 
 void piezas::mueve() {
