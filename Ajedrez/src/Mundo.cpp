@@ -32,7 +32,7 @@ void Mundo::dibuja()
 
 void Mundo::mueve()
 {
-
+	piezas.mueve();
 }
 
 void Mundo::inicializa()
