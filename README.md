@@ -28,7 +28,7 @@ En cada partida existen dos jugadores, al primer jugador se le asignan las pieza
 
 ## Controles del juego
 | **Tecla**  | **Función** |
-| ---      | ---       |
+| ---     | ---       |
 |  |         |
 | |    |        |
 
