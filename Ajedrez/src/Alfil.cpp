@@ -35,8 +35,6 @@ void Alfil::dibujab()
 void Alfil::setDatos(float _r, int _f, int _c)
 {
 	radio = _r;
-	fila = _f;
-	columna = _c;
 	Vector pos;
 	posicion = pos.conversor(_f, _c);
 }

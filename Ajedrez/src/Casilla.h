@@ -3,7 +3,9 @@
 class Casilla
 {
 	friend class Tablero;
-	
+	friend class Movimiento;
+	friend class Torre;
+	friend class piezas;
 private:
 	int fila, columna;
 	unsigned char rojo;
