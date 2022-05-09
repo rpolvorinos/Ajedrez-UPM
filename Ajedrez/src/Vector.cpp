@@ -84,7 +84,7 @@ Vector Vector::conversor(int _f, int _c) {
 		resultado.y = -0.45;
 		break;
 	case 6:
-		resultado.y = -1;
+		resultado.y = 1;
 		break;
 	case 7:
 		resultado.y = 2.35;

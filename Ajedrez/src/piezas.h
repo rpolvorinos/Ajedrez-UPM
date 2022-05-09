@@ -8,7 +8,7 @@
 #include "Caballo.h"
 
 
-class Piezas{
+class piezas{
 
 public:
 	void tecla(unsigned char key);

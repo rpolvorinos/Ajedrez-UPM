@@ -1,7 +1,7 @@
 #include "piezas.h"
 #include "freeglut.h"
 
-void Piezas::inicializa() {
+void piezas::inicializa() {
 	
 	for (float i = 1; i < 9; i = i++)
 	{
@@ -44,7 +44,7 @@ void Piezas::inicializa() {
 
 }
 
-void Piezas::dibuja() {
+void piezas::dibuja() {
 
 	//Dibujo de las torres
 	torre1.dibujab();
@@ -76,12 +76,34 @@ void Piezas::dibuja() {
 	peones.dibuja();
 }
 
-void Piezas::tecla(unsigned char key) {
+void piezas::tecla(unsigned char key) {
 
+	switch (key) {
 
+	case GLUT_KEY_DOWN:
+		torre1.getFC(torre1.fc.fila, torre1.fc.columna);
+		torre1.fc = torre1.vertical(-1);
+		break;
+
+	case GLUT_KEY_UP:
+		torre1.getFC(torre1.fc.fila, torre1.fc.columna);
+		torre1.fc = torre1.vertical(1);
+		break;
+		
+	case GLUT_KEY_LEFT:
+		torre1.getFC(torre1.fc.fila, torre1.fc.columna);
+		torre1.fc = torre1.horizontal(-1);
+		break;
+
+	case GLUT_KEY_RIGHT:
+		torre1.getFC(torre1.fc.fila, torre1.fc.columna);
+		torre1.fc = torre1.horizontal(1);
+		break;
+	}
 
 }
 
-void Piezas::mueve() {
+void piezas::mueve() {
 
+	torre1.movimiento(torre1.fc.fila, torre1.fc.columna);
 }

@@ -49,5 +49,11 @@ void Mundo::inicializa()
 void Mundo::tecla(unsigned char key)
 {
 	tablero.selector.mover(key);
-	piezas.tecla(key);
+
+	//piezas.tecla(key);
+
+	switch (key) {
+	case 'q':
+		piezas.torre1.setDatos(0.5,tablero.selector.getFila(), tablero.selector.getColumna());
+	}
 }

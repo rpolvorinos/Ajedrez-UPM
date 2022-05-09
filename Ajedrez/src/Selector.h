@@ -8,6 +8,8 @@ public:
 	
 	void inicializa();
 	void mover(unsigned char key);
+	int getFila();
+	int getColumna();
 
 	friend class Tablero;
 };

@@ -31,3 +31,13 @@ void Selector::mover(unsigned char key) {
 		break;
 	}
 }
+
+int Selector::getFila()
+{
+	return fila;
+}
+
+int Selector::getColumna()
+{
+	return columna;
+}

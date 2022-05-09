@@ -1,5 +1,5 @@
 # AJEDREZ 2D
-Este proyecto correspondiente a la asignatura de informática industrial y de las comunicaciones, trata sobre un gueg de ajedrez en modo 2D.
+Este proyecto correspondiente a la asignatura de informática industrial y de las comunicaciones, trata sobre un juego de ajedrez en 2D.
 El ajedrez es un juego de mesa de estrategia para dos jugadores, se juega sobre un tablero subdividido en 8 filas y 8 columnas que forman 64 casillas.
 En cada partida existen dos jugadores, al primer jugador se le asignan las piezas blancas y al segundo las piezas negras.
 
@@ -23,11 +23,12 @@ En cada partida existen dos jugadores, al primer jugador se le asignan las pieza
 **Resultado**
 - Ganador-El jugador que provoca un jaque mate al oponente.
 - Perdedor-El jugador que recibe el jaque mate.
+- Tablas- Rey Ahogado (El rey ahogado es una situación que se produce cuando el jugador de quien es el turno no tiene jugadas legales para realizar y el rey no se encuentra en estado de jaque)
 
 
 ## Controles del juego
 | **Tecla**  | **Función** |
-| ---      | ---       |
+| ---     | ---       |
 |  |         |
 | |    |        |
 
