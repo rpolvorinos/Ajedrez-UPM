@@ -1,12 +1,6 @@
 ﻿  Ajedrez.cpp
   Mundo.cpp
 C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Mundo.cpp(41,15): warning C4305: '=': truncamiento de 'double' a 'float'
-C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Mundo.cpp(57,47): error C2039: "getFila": no es un miembro de "Selector"
-C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Selector.h(2): message : vea la declaración de 'Selector'
-C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Mundo.cpp(57,75): error C2039: "getColumna": no es un miembro de "Selector"
-C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Selector.h(2): message : vea la declaración de 'Selector'
-C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Mundo.cpp(57,87): error C2660: 'Torre::setDatos': la función no acepta 1 argumentos
-C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Torre.h(22,7): message : vea la declaración de 'Torre::setDatos'
   Selector.cpp
   Tablero.cpp
 C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Tablero.cpp(15,26): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
@@ -19,4 +13,20 @@ C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Aj
 C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Tablero.cpp(54,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
 C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Tablero.cpp(55,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
 C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Tablero.cpp(56,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  Vector.cpp
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(44,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(47,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(53,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(56,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(59,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(62,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(65,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(72,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(75,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(78,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(81,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(84,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(90,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\src\Vector.cpp(93,21): warning C4305: '=': truncamiento de 'double' a 'float'
   Generando código...
+  Ajedrez.vcxproj -> C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez\bin\Ajedrez.exe
