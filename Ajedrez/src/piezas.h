@@ -24,4 +24,5 @@ public:
 	Alfil alfil1, alfil2, alfil3, alfil4;
 	Caballo caballo1, caballo2, caballo3, caballo4;
 
+	int estado;
 };

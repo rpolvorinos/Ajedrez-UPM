@@ -17,4 +17,6 @@ public:
 	void setCasillas(int f, int c);
 	void setColor(unsigned char r, unsigned char v, unsigned char a);
 	void cuadrado(float _x, float _y, float tamanio);
+
+	friend class Interaccion;
 };

@@ -1,4 +1,5 @@
 #pragma once
+
 class Selector
 {
 private:
@@ -11,4 +12,5 @@ public:
 	int getFila();
 	int getColumna();
 	friend class Tablero;
+	friend class Interaccion;
 };

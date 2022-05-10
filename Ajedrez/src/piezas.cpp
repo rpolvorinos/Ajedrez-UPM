@@ -42,6 +42,7 @@ void piezas::inicializa() {
 	caballo3.setDatos(0.25f, 7, 8);
 	caballo4.setDatos(0.25f, 7, 1);
 
+	estado = 0;
 }
 
 void piezas::dibuja() {

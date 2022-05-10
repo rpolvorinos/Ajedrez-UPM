@@ -12,7 +12,6 @@ protected:
 	Selector selector;
 	float posf[8];
 	float posc[8];
-	
 
 public:
 	Tablero();

@@ -2,6 +2,7 @@
 #include "freeglut.h"
 #include <math.h>
 #include "ETSIDI.h"
+#include "Interaccion.h"
 
 void Mundo::rotarOjo()
 {
@@ -51,9 +52,13 @@ void Mundo::tecla(unsigned char key)
 	tablero.selector.mover(key);
 
 	//piezas.tecla(key);
-
+	
 	switch (key) {
 	case 'q':
-		piezas.torre1.setDatos(0.5,tablero.selector.getFila(), tablero.selector.getColumna());
+		Interaccion::mov(piezas.torre1, tablero.selector);
+		Interaccion::mov(piezas.torre2, tablero.selector);
+		Interaccion::mov(piezas.torre3, tablero.selector);
+		Interaccion::mov(piezas.torre4, tablero.selector);
+		break;
 	}
 }

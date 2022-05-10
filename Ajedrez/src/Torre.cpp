@@ -12,6 +12,8 @@ Torre::Torre()
 	sprite2.setCenter(0, 0);
 	sprite2.setSize(1, 1);
 	radio = 0.5f;
+
+	estado = 0;
 }
 	
 void Torre::dibujaw()
@@ -46,4 +48,14 @@ void Torre::movimiento(int _f, int _c) {
 
 	Vector pos;
 	posicion=pos.conversor(_f, _c);
+}
+
+int Torre::getFila()
+{
+	return fc.fila;
+}
+
+int Torre::getColumna()
+{
+	return fc.columna;
 }

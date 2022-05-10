@@ -14,6 +14,7 @@ private:
 	float radio;
 	Vector posicion;
 	Casilla fc;
+	int estado;
 public:
 	Torre();
 	virtual ~Torre() {}
@@ -21,5 +22,9 @@ public:
 	void dibujab();
 	void setDatos(float _r, int _f, int _c);
 	void movimiento(int _f, int _c);
+	int getFila();
+	int getColumna();
+
+	friend class Interaccion;
 };
 
