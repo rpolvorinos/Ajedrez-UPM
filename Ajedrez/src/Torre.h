@@ -17,6 +17,7 @@ private:
 	int estado;
 public:
 	Torre();
+	Torre(int _f, int _c);
 	virtual ~Torre() {}
 	void dibujaw();
 	void dibujab();

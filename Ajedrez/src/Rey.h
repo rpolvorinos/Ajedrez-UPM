@@ -14,6 +14,7 @@ private:
 
 public:
 	Rey();
+	Rey(int _f, int _c);
 	void setDatos(float r, int _f, int _c);
 	virtual ~Rey() {}
 	void dibujaw();

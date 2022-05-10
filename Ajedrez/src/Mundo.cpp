@@ -33,7 +33,7 @@ void Mundo::dibuja()
 
 void Mundo::mueve()
 {
-	piezas.mueve();
+	//piezas.mueve();
 }
 
 void Mundo::inicializa()
@@ -53,12 +53,12 @@ void Mundo::tecla(unsigned char key)
 
 	//piezas.tecla(key);
 	
-	switch (key) {
+	/*switch (key) {
 	case 'q':
 		Interaccion::mov(piezas.torre1, tablero.selector);
 		Interaccion::mov(piezas.torre2, tablero.selector);
 		Interaccion::mov(piezas.torre3, tablero.selector);
 		Interaccion::mov(piezas.torre4, tablero.selector);
 		break;
-	}
+	}*/
 }

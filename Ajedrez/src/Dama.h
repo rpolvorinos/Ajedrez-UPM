@@ -15,6 +15,7 @@ private:
 
 public:
 	Dama();
+	Dama(int _f, int _c);
 	virtual ~Dama() {}
 	void dibujaw();
 	void dibujab();

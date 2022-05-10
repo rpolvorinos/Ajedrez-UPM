@@ -1,5 +1,5 @@
 #pragma once
-#include "piezas.h"
+#include "Piezas.h"
 #include "Tablero.h"
 
 
@@ -16,7 +16,7 @@ public:
 	float y_ojo;
 	float z_ojo;
 
-	piezas piezas;
+	Piezas piezas;
 	Tablero tablero;
 	
 };

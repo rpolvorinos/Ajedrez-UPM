@@ -14,6 +14,7 @@ private:
 	Vector posicion;
 public:
 	Caballo();
+	Caballo(int _f, int _c);
 	virtual ~Caballo() {};
 	void dibujaw();
 	void dibujab();

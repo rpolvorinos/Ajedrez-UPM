@@ -14,6 +14,7 @@ private:
 
 public:
 	Alfil();
+	Alfil(int _f, int _c);
 	virtual ~Alfil() {};
 	void dibujaw();
 	void dibujab();

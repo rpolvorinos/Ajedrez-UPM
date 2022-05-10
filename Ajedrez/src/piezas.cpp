@@ -1,85 +1,86 @@
-#include "piezas.h"
+#include "Piezas.h"
 #include "freeglut.h"
 
-void piezas::inicializa() {
-	
+void Piezas::inicializa() {
+
+	//datos de incializacion de los peones
 	for (float i = 1; i < 9; i = i++)
 	{
 		Peon* aux = new Peon(i, 7);
-		peones.agregar(aux);
+		piezas.agregar(aux);
 	}
 
 	for (float i = 1; i < 9; i++)
 	{
 		Peon* aux = new Peon(i, 2);
-		peones.agregar(aux);
+		piezas.agregar(aux);
 	}
 
 	//datos de inicializacion de las torres
-	torre1.setDatos(0.25f, 1, 8);
-	torre2.setDatos(0.25f, 1, 1);
-	torre3.setDatos(0.25f, 8, 8);
-	torre4.setDatos(0.25f, 8, 1);
+	for (float i = 1; i < 9; i = i + 7)
+	{
+		Torre* aux = new Torre(i, 8);
+		piezas.agregar(aux);
+	}
+
+	for (float i = 1; i < 9; i = i + 7)
+	{
+		Torre* aux = new Torre(i, 1);
+		piezas.agregar(aux);
+	}
 
 
 	//datos de incializacion de los reyes
-	rey1.setDatos(0.25f, 4, 8);
-	rey2.setDatos(0.25f, 4, 1);
+	for (float i = 1; i < 9; i = i + 7)
+	{
+		Rey* aux = new Rey(4, i);
+		piezas.agregar(aux);
+	}
 
 	//datos de inicializacion de las damas
-	dama1.setDatos(0.25f, 5, 8);
-	dama2.setDatos(0.25f, 5, 1);
+	for (float i = 1; i < 9; i = i + 7)
+	{
+		Dama* aux = new Dama(5, i);
+		piezas.agregar(aux);
+	}
 
 	// datos de inicializacion de los alfiles
-	alfil1.setDatos(0.25f, 3, 8);
-	alfil2.setDatos(0.25f, 3, 1);
-	alfil3.setDatos(0.25f, 6, 8);
-	alfil4.setDatos(0.25f, 6, 1);
+	for (float i = 3; i < 7; i = i + 3)
+	{
+		Alfil* aux = new Alfil(i, 8);
+		piezas.agregar(aux);
+	}
+
+	for (float i = 3; i < 7; i = i + 3)
+	{
+		Alfil* aux = new Alfil(i, 1);
+		piezas.agregar(aux);
+	}
 
 	//datos de incializacion de los caballos
-	caballo1.setDatos(0.25f, 2, 8);
-	caballo2.setDatos(0.25f, 2, 1);
-	caballo3.setDatos(0.25f, 7, 8);
-	caballo4.setDatos(0.25f, 7, 1);
+	for (float i = 2; i < 8; i = i + 5)
+	{
+		Caballo* aux = new Caballo(i, 8);
+		piezas.agregar(aux);
+	}
+
+	for (float i = 2; i < 8; i = i + 5)
+	{
+		Caballo* aux = new Caballo(i, 1);
+		piezas.agregar(aux);
+	}
 
 	estado = 0;
 }
 
-void piezas::dibuja() {
+void Piezas::dibuja() {
 
-	//Dibujo de las torres
-	torre1.dibujab();
-	torre2.dibujaw();
-	torre3.dibujab();
-	torre4.dibujaw();
-
-	//Dibujo de los reyes
-	rey1.dibujab();
-	rey2.dibujaw();
-
-	//Dibujo de las damas
-	dama1.dibujab();
-	dama2.dibujaw();
-
-	//Dibujo de los alfiles
-	alfil1.dibujab();
-	alfil2.dibujaw();
-	alfil3.dibujab();
-	alfil4.dibujaw();
-
-	//Dibujo de los caballos
-	caballo1.dibujab();
-	caballo2.dibujaw();
-	caballo3.dibujab();
-	caballo4.dibujaw();
-
-	//Dibujo de los peones
-	peones.dibuja();
+	piezas.dibuja();
 }
 
-void piezas::tecla(unsigned char key) {
+void Piezas::tecla(unsigned char key) {
 
-	switch (key) {
+	/**switch (key) {
 
 	case GLUT_KEY_DOWN:
 		torre1.getFC(torre1.fc.fila, torre1.fc.columna);
@@ -90,7 +91,7 @@ void piezas::tecla(unsigned char key) {
 		torre1.getFC(torre1.fc.fila, torre1.fc.columna);
 		torre1.fc = torre1.vertical(1);
 		break;
-		
+
 	case GLUT_KEY_LEFT:
 		torre1.getFC(torre1.fc.fila, torre1.fc.columna);
 		torre1.fc = torre1.horizontal(-1);
@@ -100,11 +101,11 @@ void piezas::tecla(unsigned char key) {
 		torre1.getFC(torre1.fc.fila, torre1.fc.columna);
 		torre1.fc = torre1.horizontal(1);
 		break;
-	}
+	}*/
 
 }
 
-void piezas::mueve() {
+void Piezas::mueve() {
 
-	torre1.movimiento(torre1.fc.fila, torre1.fc.columna);
+	/*torre1.movimiento(torre1.fc.fila, torre1.fc.columna);*/
 }
