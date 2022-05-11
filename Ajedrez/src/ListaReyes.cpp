@@ -18,10 +18,8 @@ bool ListaReyes::agregar(Rey* t)
 }
 
 void ListaReyes::dibuja()
-{/*
-	for (int i = 0; i < numero - 2; i++)
-		lista[i]->dibujab();
+{
+	lista[0]->dibujaw();
 	
-	for (int j = 2; j < numero; j++)
-		lista[j]->dibujab();*/
+	lista[1]->dibujab();
 }

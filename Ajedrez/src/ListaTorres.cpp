@@ -1,4 +1,6 @@
 #include "ListaTorres.h"
+#include "Interaccion.h"
+#include "Mundo.h"
 
 ListaTorres::ListaTorres()
 {
@@ -24,4 +26,10 @@ void ListaTorres::dibuja()
 
 	for (int j = 2; j < numero; j++)
 		lista[j]->dibujaw();
+}
+
+void ListaTorres::mover(Selector s)
+{
+	for (int i = 0;i < 4;i++)
+		Interaccion::mov(*lista[i],s);
 }

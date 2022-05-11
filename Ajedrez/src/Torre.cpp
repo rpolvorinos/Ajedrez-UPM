@@ -27,6 +27,7 @@ Torre::Torre(int _f, int _c) {
 	radio = 0.01f;
 	Vector pos2;
 	posicion = pos2.conversor(_f, _c);
+
 }
 	
 void Torre::dibujaw()
@@ -35,8 +36,7 @@ void Torre::dibujaw()
 		glTranslatef(posicion.x, posicion.y, 0.5);
 		glColor3f(1.0f, 0.0f, 0.0f);
 		sprite1.draw();
-		glPopMatrix();
-	
+		glPopMatrix();	
 }
 void Torre::dibujab()
 {

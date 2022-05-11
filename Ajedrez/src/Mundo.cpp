@@ -123,7 +123,8 @@ void Mundo::tecla(unsigned char key)
 	
 	switch (key) {
 	case 'q':
-		for (int i = 0;i < 4;i++)
+		torres.mover(tablero.selector);
+		//for (int i = 0;i < 4;i++)
 			//Interaccion::mov(*torres[i], tablero.selector);
 		break;
 	}
