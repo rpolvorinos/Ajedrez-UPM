@@ -28,21 +28,21 @@ Dama::Dama(int _f, int _c) {
 	posicion = pos2.conversor(_f, _c);
 }
 void Dama::dibujaw()
-{
+{/*
 	glPushMatrix();
 	glTranslatef(posicion.x, posicion.y, 0.5);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	sprite1.draw();
-	glPopMatrix();
+	glPopMatrix();*/
 
 }
 void Dama::dibujab()
-{
+{/*
 	glPushMatrix();
 	glTranslatef(posicion.x, posicion.y, 0.5);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	sprite2.draw();
-	glPopMatrix();
+	glPopMatrix();*/
 
 }
 

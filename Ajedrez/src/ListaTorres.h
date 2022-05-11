@@ -1,16 +1,16 @@
 #pragma once
-#include "Peon.h"
-#define MAX_PEONES 16
+#include "Torre.h"
+#define MAX_TORRES 4
 
-class ListaPeones {
+class ListaTorres {
 private:
-	Peon* lista[MAX_PEONES];
+	Torre* lista[MAX_TORRES];
 	int numero;
 public:
-	ListaPeones();
-	virtual ~ListaPeones() {}
+	ListaTorres();
+	virtual ~ListaTorres() {}
 	void dibuja();
-	bool agregar(Peon* t);
+	bool agregar(Torre* t);
 	int getNumero() { return numero; }
 
 	//void destruirContenido();

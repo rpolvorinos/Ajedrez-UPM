@@ -1,5 +1,4 @@
 #include "Interaccion.h"
-#include "piezas.h"
 #include "Tablero.h"
 
 void Interaccion::mov(Torre& t, Selector s)

@@ -27,13 +27,17 @@ void Mundo::dibuja()
 //Dibujo del tablero
 	
 	tablero.dibuja(); //se dibuja el tablero
-	piezas.dibuja(); //se dibujan todas las piezas
-	
+
+	torres.dibuja();
+	caballos.dibuja();
+	alfiles.dibuja();
+	reyes.dibuja();
+	damas.dibuja();
+	peones.dibuja();
 }
 
 void Mundo::mueve()
 {
-	//piezas.mueve();
 }
 
 void Mundo::inicializa()
@@ -42,9 +46,73 @@ void Mundo::inicializa()
 	y_ojo = -0.01;
 	z_ojo = 23;
 
-	piezas.inicializa(); //inicializacion de los datos de las diferentes piezas
 	tablero.selector.inicializa();
 
+	//datos de inicializacion de las torres
+	for (float i = 1; i < 9; i = i + 7)
+	{
+		Torre* aux = new Torre(i, 8);
+		torres.agregar(aux);
+	}
+
+	for (float i = 1; i < 9; i = i + 7)
+	{
+		Torre* aux = new Torre(i, 1);
+		torres.agregar(aux);
+	}
+
+	//datos de incializacion de los caballos
+	for (float i = 2; i < 8; i = i + 5)
+	{
+		Caballo* aux = new Caballo(i, 8);
+		caballos.agregar(aux);
+	}
+
+	for (float i = 2; i < 8; i = i + 5)
+	{
+		Caballo* aux = new Caballo(i, 1);
+		caballos.agregar(aux);
+	}
+
+	// datos de inicializacion de los alfiles
+	for (float i = 3; i < 7; i = i + 3)
+	{
+		Alfil* aux = new Alfil(i, 8);
+		alfiles.agregar(aux);
+	}
+
+	for (float i = 3; i < 7; i = i + 3)
+	{
+		Alfil* aux = new Alfil(i, 1);
+		alfiles.agregar(aux);
+	}
+	
+	//datos de incializacion de los reyes
+	for (float i = 1; i < 9; i = i + 7)
+	{
+		Rey* aux = new Rey(4, i);
+		reyes.agregar(aux);
+	}
+
+	//datos de inicializacion de las damas
+	for (float i = 1; i < 9; i = i + 7)
+	{
+		Dama* aux = new Dama(5, i);
+		damas.agregar(aux);
+	}
+
+	//datos de incializacion de los peones
+	for (float i = 1; i < 9; i = i++)
+	{
+		Peon* aux = new Peon(i, 7);
+		peones.agregar(aux);
+	}
+
+	for (float i = 1; i < 9; i++)
+	{
+		Peon* aux = new Peon(i, 2);
+		peones.agregar(aux);
+	}
 }
 
 void Mundo::tecla(unsigned char key)
@@ -53,12 +121,10 @@ void Mundo::tecla(unsigned char key)
 
 	//piezas.tecla(key);
 	
-	/*switch (key) {
+	switch (key) {
 	case 'q':
-		Interaccion::mov(piezas.torre1, tablero.selector);
-		Interaccion::mov(piezas.torre2, tablero.selector);
-		Interaccion::mov(piezas.torre3, tablero.selector);
-		Interaccion::mov(piezas.torre4, tablero.selector);
+		for (int i = 0;i < 4;i++)
+			//Interaccion::mov(*torres[i], tablero.selector);
 		break;
-	}*/
+	}
 }

@@ -29,21 +29,21 @@ Rey::Rey(int _f, int _c) {
 }
 
 void Rey::dibujaw()
-{
+{/*
 	glPushMatrix();
 	glTranslatef(posicion.x, posicion.y, 0.5);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	sprite1.draw();
 	glPopMatrix();
-
+	*/
 }
 void Rey::dibujab()
-{
+{/*
 	glPushMatrix();
 	glTranslatef(posicion.x, posicion.y, 0.5);
 	glColor3f(1.0f, 0.0f, 0.0f);
 	sprite2.draw();
-	glPopMatrix();
+	glPopMatrix();*/
 
 }
 

@@ -1,15 +1,15 @@
-#include "ListaPeones.h"
+#include "ListaCaballos.h"
 
-ListaPeones::ListaPeones()
+ListaCaballos::ListaCaballos()
 {
 	numero = 0;
-	for (int i = 0; i < MAX_PEONES; i++)
+	for (int i = 0; i < MAX_CABALLOS; i++)
 		lista[i] = 0;
 }
 
-bool ListaPeones::agregar(Peon* t)
+bool ListaCaballos::agregar(Caballo* t)
 {
-	if (numero < MAX_PEONES)
+	if (numero < MAX_CABALLOS)
 		lista[numero++] = t; // último puesto sin rellenar
 	else
 		return false; // capacidad máxima alcanzada
@@ -17,7 +17,7 @@ bool ListaPeones::agregar(Peon* t)
 
 }
 
-void ListaPeones::dibuja()
+void ListaCaballos::dibuja()
 {
 	for (int i = 0; i < numero - 2; i++)
 		lista[i]->dibujab();

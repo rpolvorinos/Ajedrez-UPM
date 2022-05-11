@@ -1,15 +1,15 @@
-#include "ListaPeones.h"
+#include "ListaTorres.h"
 
-ListaPeones::ListaPeones()
+ListaTorres::ListaTorres()
 {
 	numero = 0;
-	for (int i = 0; i < MAX_PEONES; i++)
+	for (int i = 0; i < MAX_TORRES; i++)
 		lista[i] = 0;
 }
 
-bool ListaPeones::agregar(Peon* t)
+bool ListaTorres::agregar(Torre* t)
 {
-	if (numero < MAX_PEONES)
+	if (numero < MAX_TORRES)
 		lista[numero++] = t; // último puesto sin rellenar
 	else
 		return false; // capacidad máxima alcanzada
@@ -17,7 +17,7 @@ bool ListaPeones::agregar(Peon* t)
 
 }
 
-void ListaPeones::dibuja()
+void ListaTorres::dibuja()
 {
 	for (int i = 0; i < numero - 2; i++)
 		lista[i]->dibujab();

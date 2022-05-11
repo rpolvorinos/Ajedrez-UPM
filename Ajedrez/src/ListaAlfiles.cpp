@@ -1,15 +1,15 @@
-#include "ListaPeones.h"
+#include "ListaAlfiles.h"
 
-ListaPeones::ListaPeones()
+ListaAlfiles::ListaAlfiles()
 {
 	numero = 0;
-	for (int i = 0; i < MAX_PEONES; i++)
+	for (int i = 0; i < MAX_ALFILES; i++)
 		lista[i] = 0;
 }
 
-bool ListaPeones::agregar(Peon* t)
+bool ListaAlfiles::agregar(Alfil* t)
 {
-	if (numero < MAX_PEONES)
+	if (numero < MAX_ALFILES)
 		lista[numero++] = t; // último puesto sin rellenar
 	else
 		return false; // capacidad máxima alcanzada
@@ -17,7 +17,7 @@ bool ListaPeones::agregar(Peon* t)
 
 }
 
-void ListaPeones::dibuja()
+void ListaAlfiles::dibuja()
 {
 	for (int i = 0; i < numero - 2; i++)
 		lista[i]->dibujab();

@@ -1,7 +1,12 @@
 #pragma once
-#include "Piezas.h"
 #include "Tablero.h"
-
+#include "ListaTorres.h"
+#include "ListaCaballos.h"
+#include "ListaAlfiles.h"
+#include "ListaReyes.h"
+#include "ListaDamas.h"
+#include "ListaPeones.h"
+#include "Interaccion.h"
 
 class Mundo
 {
@@ -16,7 +21,11 @@ public:
 	float y_ojo;
 	float z_ojo;
 
-	Piezas piezas;
 	Tablero tablero;
-	
+	ListaTorres torres;
+	ListaCaballos caballos;
+	ListaAlfiles alfiles;
+	ListaReyes reyes;
+	ListaDamas damas;
+	ListaPeones peones;
 };

@@ -1,16 +1,16 @@
 #pragma once
-#include "Peon.h"
-#define MAX_PEONES 16
+#include "Caballo.h"
+#define MAX_CABALLOS 4
 
-class ListaPeones {
+class ListaCaballos {
 private:
-	Peon* lista[MAX_PEONES];
+	Caballo* lista[MAX_CABALLOS];
 	int numero;
 public:
-	ListaPeones();
-	virtual ~ListaPeones() {}
+	ListaCaballos();
+	virtual ~ListaCaballos() {}
 	void dibuja();
-	bool agregar(Peon* t);
+	bool agregar(Caballo* t);
 	int getNumero() { return numero; }
 
 	//void destruirContenido();
