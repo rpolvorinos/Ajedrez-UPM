@@ -1,4 +1,6 @@
 #include "ListaPeones.h"
+#include "Selector.h"
+#include "Interaccion.h"
 
 ListaPeones::ListaPeones()
 {
@@ -24,4 +26,10 @@ void ListaPeones::dibuja()
 
 	for (int j = 8; j < numero; j++)
 		lista[j]->dibujaw();
+}
+
+void ListaPeones::mover(Selector s)
+{
+	for (int i = 0;i < 4;i++)
+		Interaccion::mov(*lista[i], s);
 }

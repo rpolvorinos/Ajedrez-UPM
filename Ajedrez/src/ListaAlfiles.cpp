@@ -1,4 +1,6 @@
 #include "ListaAlfiles.h"
+#include "Selector.h"
+#include "Interaccion.h"
 
 ListaAlfiles::ListaAlfiles()
 {
@@ -24,4 +26,10 @@ void ListaAlfiles::dibuja()
 
 	for (int j = 2; j < numero; j++)
 		lista[j]->dibujaw();
+}
+
+void ListaAlfiles::mover(Selector s)
+{
+	for (int i = 0;i < 4;i++)
+		Interaccion::mov(*lista[i], s);
 }

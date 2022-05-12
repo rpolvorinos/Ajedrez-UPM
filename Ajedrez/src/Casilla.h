@@ -6,6 +6,11 @@ class Casilla
 	friend class Movimiento;
 	friend class Torre;
 	friend class piezas;
+	friend class Alfil;
+	friend class Peon;
+	friend class Rey;
+	friend class Dama;
+	friend class Caballo;
 private:
 	int fila, columna;
 	unsigned char rojo;

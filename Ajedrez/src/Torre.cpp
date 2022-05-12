@@ -28,6 +28,9 @@ Torre::Torre(int _f, int _c) {
 	Vector pos2;
 	posicion = pos2.conversor(_f, _c);
 
+	estado = 0;
+	fc.fila = _f;
+	fc.columna = _c;
 }
 	
 void Torre::dibujaw()

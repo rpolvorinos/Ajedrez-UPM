@@ -124,6 +124,8 @@ void Mundo::tecla(unsigned char key)
 	switch (key) {
 	case 'q':
 		torres.mover(tablero.selector);
+		alfiles.mover(tablero.selector);
+		peones.mover(tablero.selector);
 		//for (int i = 0;i < 4;i++)
 			//Interaccion::mov(*torres[i], tablero.selector);
 		break;
