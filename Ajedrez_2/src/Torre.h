@@ -1,12 +1,11 @@
 #pragma once
 #include "Vector.h"
 #include "ETSIDI.h"
-# include "Movimiento.h"
 #include "Casilla.h"
 
 using ETSIDI::Sprite;
 
-class Torre :public Movimiento {
+class Torre {
 	friend class Piezas;
 	friend class Mundo;
 	friend class ListaPiezas;
