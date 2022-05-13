@@ -7,6 +7,7 @@
 #include "ListaDamas.h"
 #include "ListaPeones.h"
 #include "Interaccion.h"
+#include "ListasPiezas.h"
 
 class Mundo
 {
@@ -28,4 +29,5 @@ public:
 	ListaReyes reyes;
 	ListaDamas damas;
 	ListaPeones peones;
+	ListasPiezas piezas;
 };

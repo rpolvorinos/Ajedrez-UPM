@@ -27,13 +27,14 @@ void Mundo::dibuja()
 //Dibujo del tablero
 	
 	tablero.dibuja(); //se dibuja el tablero
-
+	/*
 	torres.dibuja();
 	caballos.dibuja();
 	alfiles.dibuja();
 	reyes.dibuja();
 	damas.dibuja();
-	peones.dibuja();
+	peones.dibuja();*/
+	piezas.dibuja();
 }
 
 void Mundo::mueve()
@@ -48,6 +49,29 @@ void Mundo::inicializa()
 
 	tablero.selector.inicializa();
 
+	for (float i = 1; i < 9; i = i + 7)
+	{
+		Torre* aux = new Torre(i, 8);
+		piezas.agregar(aux);
+	}
+	for (float i = 1; i < 9; i = i + 7)
+	{
+		Torre* aux = new Torre(i, 1);
+		piezas.agregar(aux);
+	}
+
+	for (float i = 3; i < 7; i = i + 3)
+	{
+		Alfil* aux = new Alfil(i, 8);
+		piezas.agregar(aux);
+	}
+
+	for (float i = 3; i < 7; i = i + 3)
+	{
+		Alfil* aux = new Alfil(i, 1);
+		piezas.agregar(aux);
+	}
+	/*
 	//datos de inicializacion de las torres
 	for (float i = 1; i < 9; i = i + 7)
 	{
@@ -112,7 +136,7 @@ void Mundo::inicializa()
 	{
 		Peon* aux = new Peon(i, 2);
 		peones.agregar(aux);
-	}
+	}*/
 }
 
 void Mundo::tecla(unsigned char key)
@@ -120,7 +144,7 @@ void Mundo::tecla(unsigned char key)
 	tablero.selector.mover(key);
 
 	//piezas.tecla(key);
-	
+	/*
 	switch (key) {
 	case 'q':
 		torres.mover(tablero.selector);
@@ -128,6 +152,13 @@ void Mundo::tecla(unsigned char key)
 		peones.mover(tablero.selector);
 		//for (int i = 0;i < 4;i++)
 			//Interaccion::mov(*torres[i], tablero.selector);
+		break;
+	}*/
+
+	switch (key)
+	{
+	case 'a':
+		piezas.mover(tablero.selector);
 		break;
 	}
 }

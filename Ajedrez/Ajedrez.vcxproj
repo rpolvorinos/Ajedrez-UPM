@@ -30,6 +30,7 @@
     <ClCompile Include="src\ListaDamas.cpp" />
     <ClCompile Include="src\ListaPeones.cpp" />
     <ClCompile Include="src\ListaReyes.cpp" />
+    <ClCompile Include="src\ListasPiezas.cpp" />
     <ClCompile Include="src\ListaTorres.cpp" />
     <ClCompile Include="src\Movimiento.cpp" />
     <ClCompile Include="src\ObjetoMovil.cpp" />
@@ -52,6 +53,7 @@
     <ClInclude Include="src\ListaDamas.h" />
     <ClInclude Include="src\ListaPeones.h" />
     <ClInclude Include="src\ListaReyes.h" />
+    <ClInclude Include="src\ListasPiezas.h" />
     <ClInclude Include="src\ListaTorres.h" />
     <ClInclude Include="src\Movimiento.h" />
     <ClInclude Include="src\ObjetoMovil.h" />
