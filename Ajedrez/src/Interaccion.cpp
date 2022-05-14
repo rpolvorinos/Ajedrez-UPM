@@ -32,6 +32,7 @@ void Interaccion::mov(Alfil& t, Selector s)
 			t.estado--;
 		}
 	}
+//
 }
 
 void Interaccion::mov(Peon& t, Selector s)
