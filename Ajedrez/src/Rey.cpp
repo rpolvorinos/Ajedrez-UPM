@@ -10,8 +10,8 @@ Rey::Rey()
 	sprite2.setCenter(0, 0);
 	sprite2.setSize(1, 1);
 	radio = 0.5f;
-
-	fila = columna = 0;
+	estado = 0;
+	//fila = columna = 0;
 }
 
 Rey::Rey(int _f, int _c) {
@@ -26,6 +26,9 @@ Rey::Rey(int _f, int _c) {
 	radio = 0.01f;
 	Vector pos2;
 	posicion = pos2.conversor(_f, _c);
+	fc.fila = _f;
+	fc.columna = _c;
+	estado = 0;
 }
 
 void Rey::dibujaw()
@@ -49,6 +52,8 @@ void Rey::dibujab()
 
 void Rey::setDatos(float r, int _f, int _c)
 {
+	fc.fila=_f;
+	fc.columna = _c;
 	radio = r;
 	Vector pos;
 	posicion = pos.conversor(_f, _c);

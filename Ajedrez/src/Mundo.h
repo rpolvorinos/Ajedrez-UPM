@@ -1,11 +1,5 @@
 #pragma once
 #include "Tablero.h"
-#include "ListaTorres.h"
-#include "ListaCaballos.h"
-#include "ListaAlfiles.h"
-#include "ListaReyes.h"
-#include "ListaDamas.h"
-#include "ListaPeones.h"
 #include "Interaccion.h"
 #include "ListasPiezas.h"
 
@@ -23,11 +17,5 @@ public:
 	float z_ojo;
 
 	Tablero tablero;
-	ListaTorres torres;
-	ListaCaballos caballos;
-	ListaAlfiles alfiles;
-	ListaReyes reyes;
-	ListaDamas damas;
-	ListaPeones peones;
 	ListasPiezas piezas;
 };

@@ -5,6 +5,7 @@
 #include "Peon.h"
 #include "Dama.h"
 #include "Rey.h"
+#include "Peon.h"
 #define MAX_4 4
 #define MAX_2 2
 #define MAX_16 16
@@ -14,7 +15,7 @@ class ListasPiezas {
 private:
 	Torre* lista1[MAX_4];
 	Alfil* lista2[MAX_4];
-	//Alfil* lista3[MAX_4];
+	Caballo* lista3[MAX_4];
 	Rey* lista4[MAX_2];
 	Dama* lista5[MAX_2];
 	Peon* lista6[MAX_16];
@@ -25,10 +26,11 @@ public:
 	virtual ~ListasPiezas() {}
 	void dibuja();
 	bool agregar(Torre* t);
-	bool agregar(Alfil* t);/*
 	bool agregar(Alfil* t);
-	bool agregar(Torre* t);
-	bool agregar(Torre* t);*/
+	bool agregar(Caballo* t);
+	bool agregar(Rey* t);
+	bool agregar(Dama* t);
+	bool agregar(Peon* t);
 	//int getNumero() { return numero; }
 	void mover(Selector s);
 

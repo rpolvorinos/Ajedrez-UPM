@@ -1,6 +1,7 @@
 #pragma once
 #include "Vector.h"
 #include "ETSIDI.h"
+#include "Casilla.h"
 
 using ETSIDI::Sprite;
 class Rey
@@ -10,7 +11,8 @@ private:
 	Sprite sprite2{ "imagenes/rey_b.png", 5 };
 	float radio;
 	Vector posicion;
-	int fila, columna;
+	int estado;
+	Casilla fc;
 
 public:
 	Rey();
@@ -19,4 +21,6 @@ public:
 	virtual ~Rey() {}
 	void dibujaw();
 	void dibujab();
+
+	friend class Interaccion;
 };

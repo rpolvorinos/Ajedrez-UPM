@@ -1,6 +1,7 @@
 #pragma once
 #include "Vector.h"
 #include "ETSIDI.h"
+#include "Casilla.h"
 
 using ETSIDI::Sprite;
 
@@ -10,7 +11,8 @@ private:
 	Sprite sprite1{ "imagenes/dama_w.png", 5 };
 	Sprite sprite2{ "imagenes/dama_b.png", 5 };
 	float radio;
-	int fila, columna;
+	int estado;
+	Casilla fc;
 	Vector posicion;
 
 public:
@@ -20,4 +22,6 @@ public:
 	void dibujaw();
 	void dibujab();
 	void setDatos(float _r, int _f, int _c);
+
+	friend class Interaccion;
 };
