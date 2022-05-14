@@ -11,7 +11,7 @@ private:
 	float radio;
 	Vector posicion;
 	Casilla fc;
-	int estado;
+	int estado, color;
 
 public:
 	Alfil();

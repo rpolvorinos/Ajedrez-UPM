@@ -11,7 +11,7 @@ private:
 	Sprite sprite1{ "imagenes/dama_w.png", 5 };
 	Sprite sprite2{ "imagenes/dama_b.png", 5 };
 	float radio;
-	int estado;
+	int estado, color;
 	Casilla fc;
 	Vector posicion;
 

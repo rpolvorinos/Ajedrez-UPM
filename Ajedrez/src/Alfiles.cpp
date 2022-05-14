@@ -31,4 +31,3 @@ void Alfiles::setDatos(float _r, float _x, float _y)
 	posicion.x = _x;
 	posicion.y = _y;
 }
-//

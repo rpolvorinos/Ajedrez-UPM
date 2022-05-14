@@ -32,7 +32,7 @@ public:
 	bool agregar(Dama* t);
 	bool agregar(Peon* t);
 	//int getNumero() { return numero; }
-	void mover(Selector s);
+	void mover(Selector s, int& _turno);
 
 	//void destruirContenido();
 	//void eliminar(int index);

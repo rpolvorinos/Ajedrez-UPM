@@ -15,4 +15,3 @@ public:
 	void dibuja();
 	void setDatos(float _r, float _x, float _y);
 };
-//

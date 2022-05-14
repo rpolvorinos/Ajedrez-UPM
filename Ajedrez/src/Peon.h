@@ -12,7 +12,7 @@ private:
 	float radio;
 	Casilla fc;
 	Vector posicion;
-	int estado;
+	int estado, color;
 
 public:
 	Peon();

@@ -13,7 +13,7 @@ private:
 	float radio;
 	Casilla fc;
 	Vector posicion;
-	int estado;
+	int estado, color;
 public:
 	Caballo();
 	Caballo(int _f, int _c);

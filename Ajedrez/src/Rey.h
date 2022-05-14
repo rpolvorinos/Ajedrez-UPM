@@ -11,7 +11,7 @@ private:
 	Sprite sprite2{ "imagenes/rey_b.png", 5 };
 	float radio;
 	Vector posicion;
-	int estado;
+	int estado, color;
 	Casilla fc;
 
 public:

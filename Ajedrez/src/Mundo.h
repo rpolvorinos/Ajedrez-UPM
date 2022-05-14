@@ -18,4 +18,7 @@ public:
 
 	Tablero tablero;
 	ListasPiezas piezas;
+	int turno;
+
+	friend class Interaccion;
 };

@@ -13,7 +13,7 @@ private:
 	float radio;
 	Vector posicion;
 	Casilla fc;
-	int estado;
+	int estado, color;
 public:
 	Torre();
 	Torre(int _f, int _c);

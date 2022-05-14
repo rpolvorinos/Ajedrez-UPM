@@ -30,4 +30,3 @@ void Casilla::cuadrado(float _x, float _y, float tamanio) {
 	glVertex2f(_x - tamanio, _y - tamanio); glVertex2f(_x + tamanio, _y - tamanio);
 	glEnd();
 }
-//

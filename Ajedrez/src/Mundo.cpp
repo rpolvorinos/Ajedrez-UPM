@@ -40,6 +40,8 @@ void Mundo::inicializa()
 	y_ojo = -0.01;
 	z_ojo = 23;
 
+	turno = 0;
+
 	tablero.selector.inicializa();
 
 	for (float i = 1; i < 9; i = i + 7)
@@ -113,7 +115,7 @@ void Mundo::tecla(unsigned char key)
 	switch (key)
 	{
 	case ' ':
-		piezas.mover(tablero.selector);
+		piezas.mover(tablero.selector,turno);
 		break;
 	}
 }

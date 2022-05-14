@@ -28,9 +28,9 @@ Listapiezas::Listapiezas()
 bool Listapiezas::agregar(Peon* e)
 {
 	if (numero1 < MAX_PEONES)
-		lista1[numero1++] = e; // Ãºltimo puesto sin rellenar
+		lista1[numero1++] = e; // último puesto sin rellenar
 	else
-		return false; // capacidad mÃ¡xima alcanzada
+		return false; // capacidad máxima alcanzada
 	return true;
 }
 
@@ -38,9 +38,9 @@ bool Listapiezas::agregar(Peon* e)
 bool Listapiezas::agregar(Torre* e)
 {
 	if (numero2 < MAX_TORRES)
-		lista2[numero2++] = e; // Ãºltimo puesto sin rellenar
+		lista2[numero2++] = e; // último puesto sin rellenar
 	else
-		return false; // capacidad mÃ¡xima alcanzada
+		return false; // capacidad máxima alcanzada
 	return true;
 
 }
@@ -48,9 +48,9 @@ bool Listapiezas::agregar(Torre* e)
 bool Listapiezas::agregar(Rey* e)
 {
 	if (numero3 < MAX_REYES)
-		lista3[numero3++] = e; // Ãºltimo puesto sin rellenar
+		lista3[numero3++] = e; // último puesto sin rellenar
 	else
-		return false; // capacidad mÃ¡xima alcanzada
+		return false; // capacidad máxima alcanzada
 	return true;
 
 }
@@ -58,25 +58,25 @@ bool Listapiezas::agregar(Dama* e)
 {
 
 	if (numero4 < MAX_DAMAS)
-		lista4[numero4++] = e; // Ãºltimo puesto sin rellenar
+		lista4[numero4++] = e; // último puesto sin rellenar
 	else
-		return false; // capacidad mÃ¡xima alcanzada
+		return false; // capacidad máxima alcanzada
 	return true;
 }
 bool Listapiezas::agregar(Alfil* e)
 {
 	if (numero5 < MAX_ALFILES)
-		lista5[numero5++] = e; // Ãºltimo puesto sin rellenar
+		lista5[numero5++] = e; // último puesto sin rellenar
 	else
-		return false; // capacidad mÃ¡xima alcanzada
+		return false; // capacidad máxima alcanzada
 	return true;
 }
 bool Listapiezas::agregar(Caballo* e)
 {
 	if (numero6 < MAX_CABALLOS)
-		lista6[numero6++] = e; // Ãºltimo puesto sin rellenar
+		lista6[numero6++] = e; // último puesto sin rellenar
 	else
-		return false; // capacidad mÃ¡xima alcanzada
+		return false; // capacidad máxima alcanzada
 	return true;
 }
 
@@ -120,4 +120,3 @@ void Listapiezas::dibuja()
 	for (int j = 2; j < numero2; j++)
 		lista6[j]->dibujaw();
 }
-//

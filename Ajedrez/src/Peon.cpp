@@ -41,7 +41,7 @@ void Peon::dibujaw()
 	glColor3f(1.0f, 0.0f, 0.0f);
 	sprite1.draw();
 	glPopMatrix();
-
+	color = 0;
 }
 void Peon::dibujab()
 {
@@ -50,7 +50,7 @@ void Peon::dibujab()
 	glColor3f(1.0f, 0.0f, 0.0f);
 	sprite2.draw();
 	glPopMatrix();
-
+	color = 1;
 }
 
 void Peon::setDatos(float _r, int _f, int _c)

@@ -97,18 +97,18 @@ void ListasPiezas::dibuja()
 		lista6[j]->dibujaw();
 }
 
-void ListasPiezas::mover(Selector s)
+void ListasPiezas::mover(Selector s, int& _turno)
 {
 	for (int i = 0;i < 4;i++)
-		Interaccion::mov(*lista1[i], s);
+		Interaccion::mov(*lista1[i], s,_turno);
 	for (int i = 0;i < 4;i++)
-		Interaccion::mov(*lista2[i], s);
+		Interaccion::mov(*lista2[i], s,_turno);
 	for (int i = 0;i < 4;i++)
-		Interaccion::mov(*lista3[i], s);
+		Interaccion::mov(*lista3[i], s, _turno);
 	for (int i = 0;i < 2;i++)
-		Interaccion::mov(*lista4[i], s);
+		Interaccion::mov(*lista4[i], s, _turno);
 	for (int i = 0;i < 2;i++)
-		Interaccion::mov(*lista5[i], s);
+		Interaccion::mov(*lista5[i], s, _turno);
 	for (int i = 0;i < 16;i++)
-		Interaccion::mov(*lista6[i], s);
+		Interaccion::mov(*lista6[i], s, _turno);
 }

@@ -40,7 +40,7 @@ void Alfil::dibujaw()
 	glColor3f(1.0f, 0.0f, 0.0f);
 	sprite1.draw();
 	glPopMatrix();
-
+	color = 0;
 }
 void Alfil::dibujab()
 {
@@ -49,7 +49,7 @@ void Alfil::dibujab()
 	glColor3f(1.0f, 0.0f, 0.0f);
 	sprite2.draw();
 	glPopMatrix();
-
+	color = 1;
 }
 
 void Alfil::setDatos(float _r, int _f, int _c)
