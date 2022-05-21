@@ -10,10 +10,10 @@
 class Interaccion
 {
 public:
-	static void mov(Torre& t, Selector s, int& _turno);
-	static void mov(Alfil& t, Selector s, int& _turno);
-	static void mov(Peon& t, Selector s, int& _turno);
-	static void mov(Caballo& t, Selector s, int& _turno);
-	static void mov(Rey& t, Selector s, int& _turno);
-	static void mov(Dama& t, Selector s, int& _turno);
+	static void mov(Torre& t, Selector s, int& _turno,int& _o);
+	static void mov(Alfil& t, Selector s, int& _turno, int& _o);
+	static void mov(Peon& t, Selector s, int& _turno, int& _o);
+	static void mov(Caballo& t, Selector s, int& _turno, int& _o);
+	static void mov(Rey& t, Selector s, int& _turno, int& _o);
+	static void mov(Dama& t, Selector s, int& _turno, int& _o);
 };

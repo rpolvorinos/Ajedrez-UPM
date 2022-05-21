@@ -106,16 +106,52 @@ void Mundo::inicializa()
 		Dama* aux = new Dama(5, i);
 		piezas.agregar(aux);
 	}
+
+	for (int i = 0;i < 8;i++)
+	{
+		for (int j = 0;j < 8;j++)
+		{
+			if (j == 0 || j==1)
+				ocupacion[i][j]=0;
+			else
+			{
+				if (j==6 || j == 7)
+					ocupacion[i][j] =1;
+				else
+					ocupacion[i][j] =2;
+			}
+			/*
+			if (j == 0)
+			piezas.setOcupacion(i, j, 1);
+			else
+			{
+				if (j == 7)
+					piezas.setOcupacion(i, j, 0);
+				else
+					piezas.setOcupacion(i, j, 2);*/
+			//}
+		}
+	}
 }
 
 void Mundo::tecla(unsigned char key)
 {
 	tablero.selector.mover(key);
-
+	
 	switch (key)
 	{
 	case ' ':
-		piezas.mover(tablero.selector,turno);
+		piezas.mover(tablero.selector,turno, ocupacion[tablero.selector.getFila()-1][tablero.selector.getColumna()-1]);
 		break;
 	}
 }
+/*
+void Mundo::setOcupacion(int _f, int _c, int _o)
+{
+	ocupacion[_f][_c] = _o;
+}
+
+int Mundo::getOcupacion(int _f, int _c)
+{
+	return ocupacion[_f][_c];
+}*/

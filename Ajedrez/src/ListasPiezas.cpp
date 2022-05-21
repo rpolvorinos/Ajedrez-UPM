@@ -97,18 +97,28 @@ void ListasPiezas::dibuja()
 		lista6[j]->dibujaw();
 }
 
-void ListasPiezas::mover(Selector s, int& _turno)
+void ListasPiezas::mover(Selector s, int& _turno,int& _o)
 {
 	for (int i = 0;i < 4;i++)
-		Interaccion::mov(*lista1[i], s,_turno);
+		Interaccion::mov(*lista1[i], s,_turno,_o);
 	for (int i = 0;i < 4;i++)
-		Interaccion::mov(*lista2[i], s,_turno);
+		Interaccion::mov(*lista2[i], s,_turno, _o);
 	for (int i = 0;i < 4;i++)
-		Interaccion::mov(*lista3[i], s, _turno);
+		Interaccion::mov(*lista3[i], s, _turno, _o);
 	for (int i = 0;i < 2;i++)
-		Interaccion::mov(*lista4[i], s, _turno);
+		Interaccion::mov(*lista4[i], s, _turno, _o);
 	for (int i = 0;i < 2;i++)
-		Interaccion::mov(*lista5[i], s, _turno);
+		Interaccion::mov(*lista5[i], s, _turno, _o);
 	for (int i = 0;i < 16;i++)
-		Interaccion::mov(*lista6[i], s, _turno);
+		Interaccion::mov(*lista6[i], s, _turno, _o);
 }
+/*
+void ListasPiezas::setOcupacion(int _f, int _c,int _o)
+{
+	ocupacion[_f][_c] = _o;
+}
+
+int ListasPiezas::getOcupacion(int _f, int _c)
+{
+	return ocupacion[_f][_c];
+}*/

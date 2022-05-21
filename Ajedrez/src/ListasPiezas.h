@@ -12,7 +12,7 @@
 #include "Selector.h"
 
 class ListasPiezas {
-private:
+protected:
 	Torre* lista1[MAX_4];
 	Alfil* lista2[MAX_4];
 	Caballo* lista3[MAX_4];
@@ -20,6 +20,7 @@ private:
 	Dama* lista5[MAX_2];
 	Peon* lista6[MAX_16];
 	int numero1, numero2, numero3, numero4, numero5,numero6 ;
+	//int ocupacion[8][8];
 
 public:
 	ListasPiezas();
@@ -32,11 +33,12 @@ public:
 	bool agregar(Dama* t);
 	bool agregar(Peon* t);
 	//int getNumero() { return numero; }
-	void mover(Selector s, int& _turno);
+	void mover(Selector s, int& _turno,int& _o);
 
 	//void destruirContenido();
 	//void eliminar(int index);
 	//void eliminar(Esfera* e);
-
+	//void setOcupacion(int _f, int _c,int _o);
+	//int getOcupacion(int _f, int _c);
 	friend class Interaccion;
 };
