@@ -66,34 +66,4 @@ Vector Vector::conversor(int _f, int _c) {
 		break;
 	}
 
-	switch (_c) {
-
-	case 1:
-		resultado.y = -6.4;
-		break;
-	case 2:
-		resultado.y = -4.85;
-		break;
-	case 3:
-		resultado.y = -3.35;
-		break;
-	case 4:
-		resultado.y = -1.9;
-		break;
-	case 5:
-		resultado.y = -0.45;
-		break;
-	case 6:
-		resultado.y = 1;
-		break;
-	case 7:
-		resultado.y = 2.35;
-		break;
-	case 8:
-		resultado.y = 3.85;
-		break;
-
-	}
-
-	return resultado;
-}
+	
