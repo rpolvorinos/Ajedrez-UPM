@@ -1,26 +1,25 @@
 #pragma once
 #include "Vector.h"
 #include "ETSIDI.h"
-using ETSIDI::Sprite;
 #include "Casilla.h"
+#include "Pieza.h"
 
-class Peon
+using ETSIDI::Sprite;
+
+
+class Peon : public Pieza
 {
 private:
 	Sprite sprite1{ "imagenes/peon_w.png", 5};
 	Sprite sprite2{ "imagenes/peon_b.png", 5 };
-	float radio;
-	Casilla fc;
-	Vector posicion;
-	int estado, color;
 
 public:
 	Peon();
-	Peon(int _f, int _c);
+	Peon(int _f, int _c, int _color);
 	virtual ~Peon() {}
 	void dibujaw();
 	void dibujab();
-	void setDatos(float _r, int _f, int _c);
+	void dibuja();
 
 	friend class Interaccion;
 };

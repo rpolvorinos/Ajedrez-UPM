@@ -44,26 +44,26 @@ void Mundo::inicializa()
 
 	tablero.selector.inicializa();
 
-	for (float i = 1; i < 9; i = i + 7)
+	for (float i = 1; i < 9; i = i + 7) //Inicialización torres blancas
 	{
-		Torre* aux = new Torre(i, 8);
+		Torre* aux = new Torre(i, 8, 0);
 		piezas.agregar(aux);
 	}
-	for (float i = 1; i < 9; i = i + 7)
+	for (float i = 1; i < 9; i = i + 7) //Inicialización torres negras
 	{
-		Torre* aux = new Torre(i, 1);
-		piezas.agregar(aux);
-	}
-
-	for (float i = 3; i < 7; i = i + 3)
-	{
-		Alfil* aux = new Alfil(i, 8);
+		Torre* aux = new Torre(i, 1, 1);
 		piezas.agregar(aux);
 	}
 
 	for (float i = 3; i < 7; i = i + 3)
 	{
-		Alfil* aux = new Alfil(i, 1);
+		Alfil* aux = new Alfil(i, 8, 0);
+		piezas.agregar(aux);
+	}
+
+	for (float i = 3; i < 7; i = i + 3)
+	{
+		Alfil* aux = new Alfil(i, 1, 1);
 		piezas.agregar(aux);
 	}
 
@@ -71,41 +71,43 @@ void Mundo::inicializa()
 	//datos de incializacion de los caballos
 	for (float i = 2; i < 8; i = i + 5)
 	{
-		Caballo* aux = new Caballo(i, 8);
+		Caballo* aux = new Caballo(i, 8, 0);
 		piezas.agregar(aux);
 	}
 
 	for (float i = 2; i < 8; i = i + 5)
 	{
-		Caballo* aux = new Caballo(i, 1);
+		Caballo* aux = new Caballo(i, 1, 1);
 		piezas.agregar(aux);
 	}
 
 	//datos de incializacion de los peones
-	for (float i = 1; i < 9; i = i++)
+	for (float i = 1; i < 9; i = i++) //Inicialización peones blancos
 	{
-		Peon* aux = new Peon(i, 7);
+		Peon* aux = new Peon(i, 7, 0);
 		piezas.agregar(aux);
 	}
 
-	for (float i = 1; i < 9; i++)
+	for (float i = 1; i < 9; i++) //Inicialización peones negros
 	{
-		Peon* aux = new Peon(i, 2);
+		Peon* aux = new Peon(i, 2, 1);
 		piezas.agregar(aux);
 	}
+
 	//datos de incializacion de los reyes
-	for (float i = 1; i < 9; i = i + 7)
-	{
-		Rey* aux = new Rey(4, i);
-		piezas.agregar(aux);
-	}
+		Rey* r_aux = new Rey(4, 1, 1);
+		piezas.agregar(r_aux);
+		Rey* r_aux1 = new Rey(4, 8, 0);
+		piezas.agregar(r_aux1);
 
 	//datos de inicializacion de las damas
-	for (float i = 1; i < 9; i = i + 7)
-	{
-		Dama* aux = new Dama(5, i);
-		piezas.agregar(aux);
-	}
+		Dama* d_aux = new Dama(5, 1, 1);
+		piezas.agregar(d_aux);
+		Dama* d_aux1 = new Dama(5, 8, 0);
+		piezas.agregar(d_aux1);
+
+
+
 
 	for (int i = 0;i < 8;i++)
 	{
@@ -120,16 +122,7 @@ void Mundo::inicializa()
 				else
 					ocupacion[i][j] =2;
 			}
-			/*
-			if (j == 0)
-			piezas.setOcupacion(i, j, 1);
-			else
-			{
-				if (j == 7)
-					piezas.setOcupacion(i, j, 0);
-				else
-					piezas.setOcupacion(i, j, 2);*/
-			//}
+			
 		}
 	}
 }
@@ -145,13 +138,3 @@ void Mundo::tecla(unsigned char key)
 		break;
 	}
 }
-/*
-void Mundo::setOcupacion(int _f, int _c, int _o)
-{
-	ocupacion[_f][_c] = _o;
-}
-
-int Mundo::getOcupacion(int _f, int _c)
-{
-	return ocupacion[_f][_c];
-}*/

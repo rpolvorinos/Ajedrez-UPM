@@ -5,7 +5,7 @@ class Casilla
 	friend class Tablero;
 	friend class Movimiento;
 	friend class Torre;
-	friend class piezas;
+	friend class Pieza;
 	friend class Alfil;
 	friend class Peon;
 	friend class Rey;

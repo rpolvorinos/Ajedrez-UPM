@@ -2,9 +2,10 @@
 #include "Vector.h"
 #include "ETSIDI.h"
 #include "Casilla.h"
+#include "Pieza.h"
 
 using ETSIDI::Sprite;
-class Rey
+class Rey : public Pieza
 {
 private:
 	Sprite sprite1{ "imagenes/rey_w.png", 5 };
@@ -16,11 +17,11 @@ private:
 
 public:
 	Rey();
-	Rey(int _f, int _c);
-	void setDatos(float r, int _f, int _c);
+	Rey(int _f, int _c, int _color);
 	virtual ~Rey() {}
 	void dibujaw();
 	void dibujab();
+	void dibuja();
 
 	friend class Interaccion;
 };
