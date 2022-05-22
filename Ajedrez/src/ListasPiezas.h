@@ -22,11 +22,13 @@ public:
 	bool agregar(Pieza* t);
 	//void destruirContenido();
 	//void eliminar(int index);
-	//void eliminar(Esfera* e);
 	//void setOcupacion(int _f, int _c,int _o);
 	//int getOcupacion(int _f, int _c);
 	void eliminar(Pieza* e);
-	Pieza* colision(int _f, int _c);
+	void eliminar(int index);
+	Pieza* colision(int _f, int _c, int _turno);
 
 	friend class Interaccion;
 };
+
+

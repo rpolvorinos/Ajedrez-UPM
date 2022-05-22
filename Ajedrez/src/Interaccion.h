@@ -22,5 +22,5 @@ public:
 	static void moverRey(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l);
 	static void moverDama(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l);
 	static void moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l);
-	static bool colision(Pieza t,int _f, int _c);
+	static bool captura(Pieza t,int _f, int _c);
 };
