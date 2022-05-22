@@ -19,7 +19,7 @@ public:
 	void setDatos(float _r, int _f, int _c);
 	virtual void dibuja();
 	virtual int getTipoPieza() {return 0;}
-
+	int getColor() { return color; }
 	friend class Interaccion;
 };
 

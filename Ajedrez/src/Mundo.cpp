@@ -142,14 +142,22 @@ void Mundo::tecla(unsigned char key)
 	}
 }
 
-bool Mundo::jaqueMate() {
+int Mundo::jaqueMate() {
 
 	int n_reyes = 0;
+	Pieza auxiliar;
 	for (int i = 0; i < piezas.n; i++) {
-		if (piezas.lista[i]->getTipoPieza() == 5)
+		if (piezas.lista[i]->getTipoPieza() == 5) {
 			n_reyes++;
+			auxiliar = *piezas.lista[i];
+		}
+			
 	}
 	if (n_reyes == 2)
 		return 0;
-	else return 1;
+	else
+		if (auxiliar.getColor() == 0)
+			return 1; //Ganan las blancas
+		else
+			return 2; //Ganan las negras
 }

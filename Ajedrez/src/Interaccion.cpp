@@ -243,7 +243,6 @@ void Interaccion::moverDama(Pieza& t, Selector s, int& _turno, int& _o, ListasPi
 	}
 }
 
-
 void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l) {
 
 	int tipoPieza;
