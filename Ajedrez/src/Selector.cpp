@@ -2,8 +2,8 @@
 #include "freeglut.h"
 
 Selector::Selector() {
-	fila = 4;
-	columna = 4;
+	fila = 1;
+	columna = 1;
 }
 
 void Selector::inicializa() {

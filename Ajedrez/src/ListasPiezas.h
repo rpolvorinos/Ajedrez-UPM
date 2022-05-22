@@ -18,12 +18,15 @@ public:
 	virtual ~ListasPiezas() {}
 	void dibuja();
 	//int getNumero() { return numero; }
-	void mover(Selector s, int& _turno,int& _o);
+	void mover(Selector s, int& _turno,int& _o, ListasPiezas& l);
 	bool agregar(Pieza* t);
 	//void destruirContenido();
 	//void eliminar(int index);
 	//void eliminar(Esfera* e);
 	//void setOcupacion(int _f, int _c,int _o);
 	//int getOcupacion(int _f, int _c);
+	void eliminar(Pieza* e);
+	Pieza* colision(int _f, int _c);
+
 	friend class Interaccion;
 };

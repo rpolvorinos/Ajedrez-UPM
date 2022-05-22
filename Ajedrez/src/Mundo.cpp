@@ -136,7 +136,7 @@ void Mundo::tecla(unsigned char key)
 	switch (key)
 	{
 	case ' ':
-		piezas.mover(tablero.selector,turno, ocupacion[tablero.selector.getFila()-1][tablero.selector.getColumna()-1]);
+		piezas.mover(tablero.selector,turno, ocupacion[tablero.selector.getFila()-1][tablero.selector.getColumna()-1],piezas);
 		break;
 	}
 }

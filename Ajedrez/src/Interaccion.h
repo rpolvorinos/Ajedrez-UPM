@@ -15,12 +15,12 @@ class Interaccion
 {
 public:
 	
-	static void moverTorre(Pieza& t, Selector s, int& _turno,int& _o);
-	static void moverAlfil(Pieza& t, Selector s, int& _turno, int& _o);
-	static void moverPeon(Pieza& t, Selector s, int& _turno, int& _o);
-	static void moverCaballo(Pieza& t, Selector s, int& _turno, int& _o);
-	static void moverRey(Pieza& t, Selector s, int& _turno, int& _o);
-	static void moverDama(Pieza& t, Selector s, int& _turno, int& _o);
-	static void moverPieza(Pieza& t, Selector s, int& _turno, int& _o);
-
+	static void moverTorre(Pieza& t, Selector s, int& _turno,int& _o, ListasPiezas& l);
+	static void moverAlfil(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l);
+	static void moverPeon(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l);
+	static void moverCaballo(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l);
+	static void moverRey(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l);
+	static void moverDama(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l);
+	static void moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l);
+	static bool colision(Pieza t,int _f, int _c);
 };

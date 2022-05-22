@@ -64,6 +64,9 @@ Vector Vector::conversor(int _f, int _c) {
 	case 8:
 		resultado.x = 0.35;
 		break;
+	case 9:
+		resultado.x = 20;
+		break;
 	}
 
 	switch (_c) {

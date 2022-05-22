@@ -26,9 +26,9 @@
     <ClCompile Include="src\Dama.cpp" />
     <ClCompile Include="src\Interaccion.cpp" />
     <ClCompile Include="src\ListasPiezas.cpp" />
-    <ClCompile Include="src\ObjetoMovil.cpp" />
     <ClCompile Include="src\Peon.cpp" />
     <ClCompile Include="src\Mundo.cpp" />
+    <ClCompile Include="src\Piezas.cpp" />
     <ClCompile Include="src\Rey.cpp" />
     <ClCompile Include="src\Selector.cpp" />
     <ClCompile Include="src\Tablero.cpp" />
@@ -42,9 +42,9 @@
     <ClInclude Include="src\Dama.h" />
     <ClInclude Include="src\Interaccion.h" />
     <ClInclude Include="src\ListasPiezas.h" />
-    <ClInclude Include="src\ObjetoMovil.h" />
     <ClInclude Include="src\Peon.h" />
     <ClInclude Include="src\Mundo.h" />
+    <ClInclude Include="src\Piezas.h" />
     <ClInclude Include="src\Rey.h" />
     <ClInclude Include="src\Selector.h" />
     <ClInclude Include="src\Tablero.h" />

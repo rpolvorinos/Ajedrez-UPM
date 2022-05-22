@@ -1,17 +1,24 @@
 #pragma once
-#include "Listapiezas.h"
+#include "Vector.h"
+#include "Casilla.h"
+#include "ETSIDI.h"
+#include<iostream>
+#include<cstring>
 
+using namespace std;
 
-class Piezas {
+class Pieza
+{
+protected:
+	float radio;
+	Vector posicion;
+	int estado, color;
+	Casilla fc;
 
 public:
-	void tecla(unsigned char key);
-	void inicializa();
-	void mueve();
-	void dibuja();
+	void setDatos(float _r, int _f, int _c);
+	virtual void dibuja();
+	virtual int getTipoPieza() { return 0; }
 
-	//Creacion de los objetos
-	Listapiezas piezas;
-
-	int estado;
+	friend class Interaccion;
 };
