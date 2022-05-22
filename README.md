@@ -33,6 +33,7 @@ En cada partida existen dos jugadores, al primer jugador se le asignan las pieza
 |        ↑         | Moverse con el selector hacia arriba      |
 |        →         | Moverse con el selector hacia la derecha  |
 |        ←         | Moverse con el selector hacia la izquierda|
+|        ↓         | Moverse con el selector hacia abajo       |
 |       E/e        | Empezar la partida                        |
 |       S/s        | Salir de la partida                       |
 |       C/c        | Empezar una nueva partida                 |
