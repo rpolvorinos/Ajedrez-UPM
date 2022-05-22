@@ -40,6 +40,7 @@ void ListasPiezas::eliminar(Pieza* e)
 		if (lista[i] == e)
 		{
 			lista[i]->setDatos(0.5, 9, 5);
+			ETSIDI::play("sonidos/impacto.wav");
 			return;
 		}
 }
