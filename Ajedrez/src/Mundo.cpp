@@ -29,6 +29,14 @@ void Mundo::dibuja()
 	
 	tablero.dibuja(); //se dibuja el tablero
 	piezas.dibuja();
+
+	ETSIDI::setTextColor(255, 0, 0);
+	ETSIDI::setFont("fuentes/Bitwise.ttf", 24);
+	//ETSIDI::printxy("%d",aa, -8, 5);
+	if (turno == 0)
+		ETSIDI::printxy("Turno de Padre de Familia", -5.5, 6);
+	if (turno == 1)
+		ETSIDI::printxy("Turno de Los Simpsons", -5.5, 6);
 }
 
 void Mundo::mueve()
