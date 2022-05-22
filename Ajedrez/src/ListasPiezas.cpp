@@ -5,14 +5,15 @@
 ListasPiezas::ListasPiezas()
 {
 	n = 0;
-	for (int i = 0; i < MAX_4; i++)
+	for (int i = 0; i < MAX_32; i++)
 		lista[i] = 0;
 }
 
 bool ListasPiezas::agregar(Pieza* t)
 {
-	if (n < MAX_32)
-		lista[n++] = t; // último puesto sin rellenar
+	if (n < MAX_32) {
+		lista[n++] = t;// último puesto sin rellenar
+	}
 	else
 		return false; // capacidad máxima alcanzada
 	return true;
@@ -33,17 +34,6 @@ void ListasPiezas::mover(Selector s, int& _turno,int& _o, ListasPiezas& l)
 		Interaccion::moverPieza(*lista[i], s, _turno, _o, l);
 		
 }
-
-/*void ListasPiezas::eliminar(Pieza* e)
-{
-	for (int i = 0;i < MAX_32;i++)
-		if (lista[i] == e)
-		{
-			lista[i]->setDatos(0.5, 9, 5);
-			
-			return;
-		}
-}*/
 
 Pieza* ListasPiezas::colision(int _f, int _c, int _turn)
 {

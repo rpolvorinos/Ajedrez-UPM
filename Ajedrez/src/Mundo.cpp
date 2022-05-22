@@ -16,6 +16,7 @@ void Mundo::rotarOjo()
 	glRotatef(y_ojo, 0, 1, 0);
 
 }
+
 void Mundo::dibuja()
 {
 	gluLookAt(x_ojo, y_ojo, z_ojo,  // posicion del ojo
@@ -139,4 +140,16 @@ void Mundo::tecla(unsigned char key)
 		piezas.mover(tablero.selector,turno, ocupacion[tablero.selector.getFila()-1][tablero.selector.getColumna()-1],piezas);
 		break;
 	}
+}
+
+bool Mundo::jaqueMate() {
+
+	int n_reyes = 0;
+	for (int i = 0; i < piezas.n; i++) {
+		if (piezas.lista[i]->getTipoPieza() == 5)
+			n_reyes++;
+	}
+	if (n_reyes == 2)
+		return 0;
+	else return 1;
 }

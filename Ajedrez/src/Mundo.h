@@ -23,6 +23,7 @@ public:
 	int ocupacion[8][8];
 	//void setOcupacion(int _f, int _c, int _o);
 	//int getOcupacion(int _f, int _c);
+	bool jaqueMate();
 
 	friend class Interaccion;
 };
