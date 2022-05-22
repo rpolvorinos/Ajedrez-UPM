@@ -36,7 +36,7 @@ En cada partida existen dos jugadores, al primer jugador se le asignan las pieza
 |        ↓         | Moverse con el selector hacia abajo       |
 |       E/e        | Empezar la partida                        |
 |       S/s        | Salir de la partida                       |
-|       C/c        | Empezar una nueva partida                 |
+
 *Selector: Casilla móvil pintada de color verde*
 
 ## Equivalencias
