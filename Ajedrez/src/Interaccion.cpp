@@ -85,7 +85,30 @@ void Interaccion::moverPeon(Pieza& t, Selector s, int& _turno, int& _o, ListasPi
 	}
 	else
 	{
-		if (t.estado == 1 && (abs(s.columna - t.fc.columna)==1) && ((s.fila - t.fc.fila)==0) && t.color == _turno && _turno != _o)
+		if(t.color == 0 && t.estado == 1 && ((s.columna - t.fc.columna) == 1) && ((s.fila - t.fc.fila) == 0) && t.color == _turno && _turno != _o) {
+			Pieza* aux = l.colision(s.fila, s.columna, _turno);
+			if (aux != 0 && _turno != aux->color)
+			{
+				l.eliminar(aux);
+			}
+			if (aux != 0 && _turno == aux->color) {}
+			else {
+				t.setDatos(0.5, s.getFila(), s.getColumna());
+				t.estado--;
+				_o = _turno;
+				switch (_turno)
+				{
+				case 0:
+					_turno = 1;
+					break;
+				case 1:
+					_turno = 0;
+					break;
+				}
+			}
+
+		}
+		if (t.color == 1 && t.estado == 1 && ((s.columna - t.fc.columna)==-1) && ((s.fila - t.fc.fila)==0) && t.color == _turno && _turno != _o)
 		{
 			Pieza* aux = l.colision(s.fila, s.columna, _turno);
 			if (aux != 0 && _turno != aux->color)
