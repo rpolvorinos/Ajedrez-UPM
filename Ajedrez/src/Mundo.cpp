@@ -106,15 +106,15 @@ void Mundo::inicializa()
 
 	//datos de incializacion de los reyes
 
-		Rey* r_aux = new Rey(4, 1, 0);
+		Rey* r_aux = new Rey(5, 1, 0);
 	piezas.agregar(r_aux);
-		Rey* r_aux1 = new Rey(4, 8, 1);
+		Rey* r_aux1 = new Rey(5, 8, 1);
 		piezas.agregar(r_aux1);
 
 	//datos de inicializacion de las damas
-		Dama* d_aux = new Dama(5, 1, 0);
+		Dama* d_aux = new Dama(4, 1, 0);
 		piezas.agregar(d_aux);
-		Dama* d_aux1 = new Dama(5, 8, 1);
+		Dama* d_aux1 = new Dama(4, 8, 1);
 		piezas.agregar(d_aux1);
 
 
