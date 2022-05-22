@@ -6,6 +6,10 @@ CoordinadorAjedrez::CoordinadorAjedrez() {
 	estado = INICIO;
 	sprite1.setCenter(0, 0);
 	sprite1.setSize(12,7);
+	sprite2.setCenter(0, 0);
+	sprite2.setSize(12, 7);
+	sprite3.setCenter(0, 0);
+	sprite3.setSize(12, 7);
 }
 
 CoordinadorAjedrez::~CoordinadorAjedrez() {
@@ -38,25 +42,11 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 
 	else if (estado == FIN) {
 		if (key == 'c' || key == 'C')
+		{
 			estado = INICIO;
+			fin = 0;
+		}
 	}
-
-}
-
-void CoordinadorAjedrez::mueve() {
-
-	/*if (estado == JUEGO) {
-		mundo.mueve();
-		if (mundo.get() == 0)
-		{
-			estado = FIN;
-		}
-		if (mundo.get())
-		{
-			estado = GAMEOVER;
-		}
-
-	}*/
 
 }
 
@@ -83,25 +73,48 @@ void CoordinadorAjedrez::dibuja() {
 		glPopMatrix();
 		
 	}
-	else if (estado == JUEGO)
+	else if (estado == JUEGO) {
 		mundo.dibuja();
-
-	else if (estado == GAMEOVER) {
-
-		mundo.dibuja();
-		ETSIDI::setTextColor(1, 0, 0);
-		ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
-		ETSIDI::printxy("GAMEOVER: Has perdido", -5, 10);
-		ETSIDI::printxy("Pulsa -C- para continuar", -5, 5);
+		fin = mundo.jaqueMate();
+		if (fin == 1 || fin == 2)
+			estado = FIN;
 	}
 
 	else if (estado == FIN) {
 
-		mundo.dibuja();
-		ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
-		ETSIDI::printxy("ENHORABUENA, ¡Has ganado!", -5, 10);
-		ETSIDI::printxy("Pulsa -C- para continuar", -5, 9);
-
+		if (fin == 1)
+		{
+			gluLookAt(0, 7.5, 30, // posicion del ojo
+				0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
+				0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
+			ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
+			ETSIDI::printxy("Gana Padre de Famailia", -5, 12);
+			ETSIDI::printxy("Pulsa -C- para continuar", -5, 0);
+			//fin = 0;
+			glPushMatrix();
+			glTranslatef(-11, 2, -2);
+			glColor3f(1.0f, 0.0f, 0.0f);
+			sprite3.draw();
+			glPopMatrix();
+		}
+		else
+		{
+			if (fin == 2)
+			{
+				gluLookAt(0, 7.5, 30, // posicion del ojo
+					0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
+					0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
+				ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
+				ETSIDI::printxy("Ganan Los Simpsons", -5, 12);
+				ETSIDI::printxy("Pulsa -C- para continuar", -5, 0);
+				//fin = 0;
+				glPushMatrix();
+				glTranslatef(-11, 2, -2);
+				glColor3f(1.0f, 0.0f, 0.0f);
+				sprite2.draw();
+				glPopMatrix();
+			}
+		}
 	}
 
 }
