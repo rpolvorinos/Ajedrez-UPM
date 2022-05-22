@@ -23,7 +23,7 @@ En cada partida existen dos jugadores, al primer jugador se le asignan las pieza
 **Resultado**
 - Ganador-El jugador que provoca un jaque mate al oponente.
 - Perdedor-El jugador que recibe el jaque mate.
-- Tablas- Rey Ahogado (El rey ahogado es una situación que se produce cuando el jugador de quien es el turno no tiene jugadas legales para realizar y el rey no se encuentra en estado de jaque)
+
 
 
 ## Controles del juego
