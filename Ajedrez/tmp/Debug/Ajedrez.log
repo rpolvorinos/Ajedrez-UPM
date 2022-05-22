@@ -1,0 +1,57 @@
+﻿  Ajedrez.cpp
+  Alfil.cpp
+  Caballo.cpp
+  Casilla.cpp
+  CoordinadorAjedrez.cpp
+C:\Users\victo\Desktop\Ajedrez\src\CoordinadorAjedrez.cpp(7,2): error C2065: 'sprite1': identificador no declarado
+C:\Users\victo\Desktop\Ajedrez\src\CoordinadorAjedrez.cpp(8,2): error C2065: 'sprite1': identificador no declarado
+C:\Users\victo\Desktop\Ajedrez\src\CoordinadorAjedrez.cpp(46,26): error C2039: "mueve": no es un miembro de "CoordinadorAjedrez"
+C:\Users\victo\Desktop\Ajedrez\src\CoordinadorAjedrez.h(5): message : vea la declaración de 'CoordinadorAjedrez'
+C:\Users\victo\Desktop\Ajedrez\src\CoordinadorAjedrez.cpp(82,3): error C2065: 'sprite1': identificador no declarado
+  Dama.cpp
+  Interaccion.cpp
+  ListasPiezas.cpp
+  Peon.cpp
+  Mundo.cpp
+C:\Users\victo\Desktop\Ajedrez\src\Mundo.cpp(37,49): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez\src\Mundo.cpp(39,45): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez\src\Mundo.cpp(50,15): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Mundo.cpp(59,26): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez\src\Mundo.cpp(64,26): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez\src\Mundo.cpp(70,26): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez\src\Mundo.cpp(76,26): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez\src\Mundo.cpp(84,30): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez\src\Mundo.cpp(90,30): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez\src\Mundo.cpp(97,24): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez\src\Mundo.cpp(103,24): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  Pieza.cpp
+  Rey.cpp
+  Selector.cpp
+  Tablero.cpp
+C:\Users\victo\Desktop\Ajedrez\src\Tablero.cpp(15,26): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez\src\Tablero.cpp(16,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\victo\Desktop\Ajedrez\src\Tablero.cpp(49,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\victo\Desktop\Ajedrez\src\Tablero.cpp(50,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\victo\Desktop\Ajedrez\src\Tablero.cpp(51,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\victo\Desktop\Ajedrez\src\Tablero.cpp(52,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\victo\Desktop\Ajedrez\src\Tablero.cpp(53,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\victo\Desktop\Ajedrez\src\Tablero.cpp(54,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\victo\Desktop\Ajedrez\src\Tablero.cpp(55,25): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\victo\Desktop\Ajedrez\src\Tablero.cpp(56,26): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+  Torre.cpp
+  Vector.cpp
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(44,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(47,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(53,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(56,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(59,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(62,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(65,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(75,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(78,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(81,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(84,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(87,22): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(93,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\victo\Desktop\Ajedrez\src\Vector.cpp(96,21): warning C4305: '=': truncamiento de 'double' a 'float'
+  Generando código...
