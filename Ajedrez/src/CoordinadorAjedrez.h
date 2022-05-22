@@ -12,7 +12,7 @@ public:
 
 protected:
 	Mundo mundo;
-	enum Estado { INICIO, JUEGO, GAMEOVER, FIN };
+	enum Estado { INICIO, JUEGO, GanaB, GanaW };
 	Estado estado;
 	int fin;
 

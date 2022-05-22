@@ -4,8 +4,7 @@
 CoordinadorAjedrez::CoordinadorAjedrez() {
 
 	estado = INICIO;
-	sprite1.setCenter(0, 0);
-	sprite1.setSize(12,7);
+	
 }
 
 CoordinadorAjedrez::~CoordinadorAjedrez() {
@@ -22,6 +21,7 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 		if (key == 'e' || key == 'E') {
 			mundo.inicializa();
 			estado = JUEGO;
+
 		}
 		if (key == 's' || key == 'S')
 			exit(0);
@@ -30,33 +30,15 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 	else if (estado == JUEGO) {
 		mundo.tecla(key);
 	}
-
-	else if (estado == GAMEOVER) {
-		if (key == 'c' || key == 'C')
-			estado = INICIO;
+	else if (estado == GanaW)
+	{
+		if (key == 's' || key == 'S')
+		exit(0);
 	}
-
-	else if (estado == FIN) {
-		if (key == 'c' || key == 'C')
-			estado = INICIO;
+	else if (estado ==GanaB) {
+		if (key == 's' || key == 'S')
+		exit(0);
 	}
-
-}
-
-void CoordinadorAjedrez::mueve() {
-
-	/*if (estado == JUEGO) {
-		mundo.mueve();
-		if (mundo.get() == 0)
-		{
-			estado = FIN;
-		}
-		if (mundo.get())
-		{
-			estado = GAMEOVER;
-		}
-
-	}*/
 
 }
 
@@ -79,32 +61,43 @@ void CoordinadorAjedrez::dibuja() {
 		glPushMatrix();
 		glTranslatef(-10,1, 0.5);
 		glColor3f(1.0f, 0.0f, 0.0f);
-		sprite1.draw();
 		glPopMatrix();
 		
 	}
-	else if (estado == JUEGO)
+	else if (estado == JUEGO) {
 		mundo.dibuja();
+		fin = mundo.jaqueMate();
+		if (fin == 1)
+			estado = GanaW;
+		else if (fin == 2)
+			estado = GanaB;
+	}
+		
 
-	else if (estado == GAMEOVER) {
+	else if (estado == GanaW) {
 
-		mundo.dibuja();
-		ETSIDI::setTextColor(1, 0, 0);
-		ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
-		ETSIDI::printxy("GAMEOVER: Has perdido", -5, 10);
-		ETSIDI::printxy("Pulsa -C- para continuar", -5, 5);
+
+			gluLookAt(0, 7.5, 30, // posicion del ojo
+				0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
+				0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
+			ETSIDI::setTextColor(1, 1, 0);
+			ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
+			ETSIDI::printxy("Gana Padre de Familia", -5, 8);
+			ETSIDI::printxy("Pulsa -S- para finalizar", -5,4);
+			
+		}
+		else if (fin == GanaB) {
+			gluLookAt(0, 7.5, 30, // posicion del ojo
+				0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
+				0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
+			ETSIDI::setTextColor(1, 1, 0);
+			ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
+			ETSIDI::printxy("Gana Los Simpsons", -5, 8);
+			ETSIDI::printxy("Pulsa -S- para finalizar", -5, 4);
+		
+		}
 	}
 
-	else if (estado == FIN) {
-
-		mundo.dibuja();
-		ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
-		ETSIDI::printxy("ENHORABUENA, ¡Has ganado!", -5, 10);
-		ETSIDI::printxy("Pulsa -C- para continuar", -5, 9);
-
-	}
-
-}
 
 
 
