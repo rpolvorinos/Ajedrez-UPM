@@ -1,11 +1,10 @@
 #include "CoordinadorAjedrez.h"
 
 
+
 CoordinadorAjedrez::CoordinadorAjedrez() {
 
 	estado = INICIO;
-	sprite1.setCenter(0, 0);
-	sprite1.setSize(12,7);
 }
 
 CoordinadorAjedrez::~CoordinadorAjedrez() {
@@ -31,10 +30,6 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 		mundo.tecla(key);
 	}
 
-	else if (estado == GAMEOVER) {
-		if (key == 'c')
-			estado = INICIO;
-	}
 
 	else if (estado == FIN) {
 		if (key == 'c')
@@ -43,24 +38,11 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 
 }
 
-void CoordinadorAjedrez::mueve() {
 
-	/*if (estado == JUEGO) {
-		mundo.mueve();
-		if (mundo.get() == 0)
-		{
-			estado = FIN;
-		}
-		if (mundo.get())
-		{
-			estado = GAMEOVER;
-		}
-
-	}*/
-
-}
 
 void CoordinadorAjedrez::dibuja() {
+
+	
 
 	if (estado == INICIO)
 	{//CODIGO PARA PINTAR UNA PANTALLA NEGRA CON LETRAS
@@ -69,41 +51,44 @@ void CoordinadorAjedrez::dibuja() {
 			0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
 		ETSIDI::setTextColor(1, 1, 0);
 		ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
-		ETSIDI::printxy("Simpsons vs Padre de Familia", -5, 12);
+		ETSIDI::printxy("Simpsons vs Padre de Familia", -5, 8);
 		ETSIDI::setTextColor(1, 1, 1);
 		ETSIDI::setFont("fuentes/Bitwise.ttf", 12);
-		ETSIDI::printxy("PULSE LA TECLA -E- PARA EMPEZAR", -5, 11);
-		ETSIDI::printxy("PULSE LA TECLA -S- PARA SALIR", -5, 10);
-		ETSIDI::printxy("Ajedrez UPM", -1, -1);
-
-		glPushMatrix();
-		glTranslatef(-10,1, 0.5);
-		glColor3f(1.0f, 0.0f, 0.0f);
-		sprite1.draw();
-		glPopMatrix();
-		
+		ETSIDI::printxy("PULSE LA TECLA -E- PARA EMPEZAR", -5, 7);
+		ETSIDI::printxy("PULSE LA TECLA -S- PARA SALIR", -5, 6);
+		ETSIDI::printxy("Ajedrez UPM", 2, 1);
 	}
-	else if (estado == JUEGO)
+	else if (estado == JUEGO) {
 		mundo.dibuja();
-
-	else if (estado == GAMEOVER) {
-
-		mundo.dibuja();
-		ETSIDI::setTextColor(1, 0, 0);
-		ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
-		ETSIDI::printxy("GAMEOVER: Has perdido", -5, 10);
-		ETSIDI::printxy("Pulsa -C- para continuar", -5, 5);
+		 fin = mundo.jaqueMate();
+		if (fin == 1 || fin == 2)
+			estado = FIN;
 	}
+
+
 
 	else if (estado == FIN) {
 
-		mundo.dibuja();
-		ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
-		ETSIDI::printxy("ENHORABUENA, ¡Has ganado!", -5, 10);
-		ETSIDI::printxy("Pulsa -C- para continuar", -5, 9);
+
+		if (fin = 1) {
+
+			ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
+			ETSIDI::printxy("FIN de partida", -5, 10);
+			ETSIDI::printxy("Han ganado las blancas", -5, 8);
+			ETSIDI::printxy("Pulsa -C- para continuar", -5, 6);
+		}
+
+		if (fin = 2) {
+			ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
+			ETSIDI::printxy("FIN de partida", -5, 10);
+			ETSIDI::printxy("Han ganado las negras", -5, 8);
+			ETSIDI::printxy("Pulsa -C- para continuar", -5, 6);
+
+		}
+
+
 
 	}
-
 }
 
 
