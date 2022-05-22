@@ -33,3 +33,5 @@ En cada partida existen dos jugadores, al primer jugador se le asignan las pieza
 |        ↑         | Moverse con el selector hacia arriba      |
 |        →         | Moverse con el selector hacia la derecha  |
 |        ←         | Moverse con el selector hacia la izquierda|
+
+*Selector: Casilla móvil pintada de color verde*
