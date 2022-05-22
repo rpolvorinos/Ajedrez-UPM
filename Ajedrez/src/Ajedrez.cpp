@@ -78,8 +78,6 @@ void OnTimer(int value)
 {
 	//poner aqui el código de animacion
 	mundo.mueve();
-	
-
 
 	//no borrar estas lineas
 	glutTimerFunc(25, OnTimer, 0);

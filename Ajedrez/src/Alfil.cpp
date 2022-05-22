@@ -33,27 +33,11 @@ Alfil::Alfil(int _f, int _c, int _color) {
 	fc.columna = _c;
 }
 
-void Alfil::dibujaw()
-{
-	glPushMatrix();
-	glTranslatef(posicion.x, posicion.y, 0.5);
-	glColor3f(1.0f, 0.0f, 0.0f);
-	sprite1.draw();
-	glPopMatrix();
-	color = 0;
-}
-void Alfil::dibujab()
-{
-	glPushMatrix();
-	glTranslatef(posicion.x, posicion.y, 0.5);
-	glColor3f(1.0f, 0.0f, 0.0f);
-	sprite2.draw();
-	glPopMatrix();
-	color = 1;
-}
 void Alfil::dibuja() {
 
-	if (color == 1) {
+	posicion = posicion.conversor(fc.fila, fc.columna);
+
+	if (color == 0) {
 		glPushMatrix();
 		glTranslatef(posicion.x, posicion.y, 0.5);
 		glColor3f(1.0f, 0.0f, 0.0f);
@@ -67,4 +51,8 @@ void Alfil::dibuja() {
 		sprite2.draw();
 		glPopMatrix();
 	}
+}
+
+int Alfil::getTipoPieza() {
+	return 3;
 }

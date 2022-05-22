@@ -2,7 +2,7 @@
 #include "Tablero.h"
 #include "math.h"
 
-void Interaccion::mov(Torre& t, Selector s, int& _turno, int& _o)
+void Interaccion::moverTorre(Pieza& t, Selector s, int& _turno, int& _o)
 {
 	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color==_turno)
 	{
@@ -31,7 +31,7 @@ void Interaccion::mov(Torre& t, Selector s, int& _turno, int& _o)
 	}
 }
 
-void Interaccion::mov(Alfil& t, Selector s, int& _turno, int& _o)
+void Interaccion::moverAlfil(Pieza& t, Selector s, int& _turno, int& _o)
 {
 	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
 	{
@@ -60,7 +60,7 @@ void Interaccion::mov(Alfil& t, Selector s, int& _turno, int& _o)
 	}
 }
 
-void Interaccion::mov(Peon& t, Selector s, int& _turno, int& _o)
+void Interaccion::moverPeon(Pieza& t, Selector s, int& _turno, int& _o)
 {
 	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
 	{
@@ -89,7 +89,7 @@ void Interaccion::mov(Peon& t, Selector s, int& _turno, int& _o)
 	}
 }
 
-void Interaccion::mov(Caballo& t, Selector s, int& _turno, int& _o)
+void Interaccion::moverCaballo(Pieza& t, Selector s, int& _turno, int& _o)
 {
 	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
 	{
@@ -118,7 +118,7 @@ void Interaccion::mov(Caballo& t, Selector s, int& _turno, int& _o)
 	}
 }
 
-void Interaccion::mov(Rey& t, Selector s, int& _turno, int& _o)
+void Interaccion::moverRey(Pieza& t, Selector s, int& _turno, int& _o)
 {
 	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
 	{
@@ -147,7 +147,7 @@ void Interaccion::mov(Rey& t, Selector s, int& _turno, int& _o)
 	}
 }
 
-void Interaccion::mov(Dama& t, Selector s, int& _turno, int& _o)
+void Interaccion::moverDama(Pieza& t, Selector s, int& _turno, int& _o)
 {
 	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
 	{
@@ -176,31 +176,37 @@ void Interaccion::mov(Dama& t, Selector s, int& _turno, int& _o)
 	}
 }
 
-void Interaccion::mov(Pieza& t, Selector s, int& _turno, int& _o)
-{
-	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
-	{
-		t.estado++;
-		_o = 2;
-	}
-	else
-	{
-		if (t.estado == 1 && (s.fila == t.fc.fila || s.columna == t.fc.columna) && t.color == _turno && _turno != _o)
-		{
-			t.setDatos(0.5, s.getFila(), s.getColumna());
-			t.estado--;
 
-			_o = _turno;
+void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o) {
 
-			switch (_turno)
-			{
-			case 0:
-				_turno = 1;
-				break;
-			case 1:
-				_turno = 0;
-				break;
-			}
+	int tipoPieza;
+	tipoPieza = t.getTipoPieza();
+
+	switch (tipoPieza) {
+		case 1: {	//Torres
+			Interaccion::moverTorre(t, s, _turno, _o);
+			break;
+		}
+		case 2: {	//Caballos
+			Interaccion::moverCaballo(t, s, _turno, _o);
+			break;
+		}
+		case 3: {	//Alfiles
+			Interaccion::moverAlfil(t, s, _turno, _o);
+			break;
+		}
+		case 4: {	//Damas
+			Interaccion::moverDama(t, s, _turno, _o);
+			break;
+		}
+		case 5: {	//Reyes
+			Interaccion::moverRey(t, s, _turno, _o);
+			break;
+		}
+		case 6: {	//Peones
+			Interaccion::moverPeon(t, s, _turno, _o);
+			break;
 		}
 	}
 }
+

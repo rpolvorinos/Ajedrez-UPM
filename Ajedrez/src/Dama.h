@@ -16,9 +16,8 @@ public:
 	Dama();
 	Dama(int _f, int _c, int _color);
 	virtual ~Dama() {}
-	void dibujaw();
-	void dibujab();
 	void dibuja();
+	int getTipoPieza();
 
 	friend class Interaccion;
 };

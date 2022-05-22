@@ -17,9 +17,8 @@ public:
 	Peon();
 	Peon(int _f, int _c, int _color);
 	virtual ~Peon() {}
-	void dibujaw();
-	void dibujab();
 	void dibuja();
+	int getTipoPieza();
 
 	friend class Interaccion;
 };

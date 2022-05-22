@@ -2,7 +2,10 @@
 #include "Vector.h"
 #include "Casilla.h"
 #include "ETSIDI.h"
+#include<iostream>
+#include<cstring>
 
+using namespace std;
 
 class Pieza
 {
@@ -15,6 +18,7 @@ protected:
 public:
 	void setDatos(float _r, int _f, int _c);
 	virtual void dibuja();
+	virtual int getTipoPieza() {return 0;}
 
 	friend class Interaccion;
 };

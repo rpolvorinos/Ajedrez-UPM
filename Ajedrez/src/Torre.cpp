@@ -33,27 +33,10 @@ Torre::Torre(int _f, int _c, int _color) {
 	fc.columna = _c;
 }
 	
-void Torre::dibujaw()
-{
-		glPushMatrix();
-		glTranslatef(posicion.x, posicion.y, 0.5);
-		glColor3f(1.0f, 0.0f, 0.0f);
-		sprite1.draw();
-		glPopMatrix();	
-		color = 0;
-}
-void Torre::dibujab()
-{
-	glPushMatrix();
-	glTranslatef(posicion.x, posicion.y, 0.5); 
-	glColor3f(1.0f, 0.0f, 0.0f);
-	sprite2.draw();
-	glPopMatrix();
-	color = 1;
-}
 void Torre::dibuja() {
 
-	if (color == 1) {
+	posicion = posicion.conversor(fc.fila, fc.columna);
+	if (color == 0) {
 		glPushMatrix();
 		glTranslatef(posicion.x, posicion.y, 0.5);
 		glColor3f(1.0f, 0.0f, 0.0f);
@@ -84,4 +67,8 @@ int Torre::getFila()
 int Torre::getColumna()
 {
 	return fc.columna;
+}
+
+int Torre::getTipoPieza() {
+	return 1;
 }

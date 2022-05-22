@@ -1,6 +1,5 @@
 #pragma once
 #include "Torre.h"
-
 #include "Alfil.h"
 #include "Peon.h"
 #include "Rey.h"
@@ -15,11 +14,13 @@
 class Interaccion
 {
 public:
-	static void mov(Torre& t, Selector s, int& _turno,int& _o);
-	static void mov(Alfil& t, Selector s, int& _turno, int& _o);
-	static void mov(Peon& t, Selector s, int& _turno, int& _o);
-	static void mov(Caballo& t, Selector s, int& _turno, int& _o);
-	static void mov(Rey& t, Selector s, int& _turno, int& _o);
-	static void mov(Dama& t, Selector s, int& _turno, int& _o);
-	static void mov(Pieza& t, Selector s, int& _turno, int& _o);
+	
+	static void moverTorre(Pieza& t, Selector s, int& _turno,int& _o);
+	static void moverAlfil(Pieza& t, Selector s, int& _turno, int& _o);
+	static void moverPeon(Pieza& t, Selector s, int& _turno, int& _o);
+	static void moverCaballo(Pieza& t, Selector s, int& _turno, int& _o);
+	static void moverRey(Pieza& t, Selector s, int& _turno, int& _o);
+	static void moverDama(Pieza& t, Selector s, int& _turno, int& _o);
+	static void moverPieza(Pieza& t, Selector s, int& _turno, int& _o);
+
 };

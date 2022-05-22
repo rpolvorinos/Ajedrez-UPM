@@ -29,17 +29,7 @@ void ListasPiezas::dibuja()
 
 void ListasPiezas::mover(Selector s, int& _turno,int& _o)
 {
-	for (int i = 0;i < n;i++)
-		Interaccion::mov(*lista[i], s,_turno,_o);
-	
+	for (int i = 0; i < n; i++)
+		Interaccion::moverPieza(*lista[i], s, _turno, _o);
+		
 }
-/*
-void ListasPiezas::setOcupacion(int _f, int _c,int _o)
-{
-	ocupacion[_f][_c] = _o;
-}
-
-int ListasPiezas::getOcupacion(int _f, int _c)
-{
-	return ocupacion[_f][_c];
-}*/
