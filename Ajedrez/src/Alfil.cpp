@@ -6,13 +6,12 @@ Alfil::Alfil()
 	sprite1.setCenter(0, 0);
 	sprite1.setSize(1, 1);
 	radio = 0.5f;
-	//fila = columna = 0;
+	
 	sprite2.setCenter(0, 0);
 	sprite2.setSize(1, 1);
 	radio = 0.5f;
 
 	estado = 0;
-	//fila = columna = 0;
 }
 
 Alfil::Alfil(int _f, int _c, int _color) {

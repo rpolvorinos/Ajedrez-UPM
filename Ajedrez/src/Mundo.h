@@ -21,8 +21,7 @@ public:
 	int turno;
 
 	int ocupacion[8][8];
-	//void setOcupacion(int _f, int _c, int _o);
-	//int getOcupacion(int _f, int _c);
+	
 	int jaqueMate();
 
 	friend class Interaccion;

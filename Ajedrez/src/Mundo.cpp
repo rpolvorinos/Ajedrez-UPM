@@ -6,12 +6,7 @@
 
 void Mundo::rotarOjo()
 {
-	/*float dist = sqrt(x_ojo * x_ojo + y_ojo * y_ojo);
-	float ang = atan2(y_ojo, x_ojo);
-	ang -= 90.0f;
-	x_ojo = dist * cos(ang);
-	y_ojo = dist * sin(ang);
-	*/
+	
 
 	glRotatef(y_ojo, 0, 1, 0);
 
@@ -32,7 +27,7 @@ void Mundo::dibuja()
 
 	ETSIDI::setTextColor(255, 0, 0);
 	ETSIDI::setFont("fuentes/Bitwise.ttf", 24);
-	//ETSIDI::printxy("%d",aa, -8, 5);
+	
 	if (turno == 0)
 		ETSIDI::printxy("Turno de Padre de Familia", -5.5, 6);
 	if (turno == 1)

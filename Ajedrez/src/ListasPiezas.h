@@ -11,19 +11,15 @@ class ListasPiezas {
 protected:
 	int n;
 	Pieza* lista[MAX_32];
-	//int ocupacion[8][8];
 
 public:
 	ListasPiezas();
 	virtual ~ListasPiezas() {}
 	void dibuja();
-	//int getNumero() { return numero; }
+	
 	void mover(Selector s, int& _turno,int& _o, ListasPiezas& l);
 	bool agregar(Pieza* t);
-	//void destruirContenido();
-	//void eliminar(int index);
-	//void setOcupacion(int _f, int _c,int _o);
-	//int getOcupacion(int _f, int _c);
+	
 	void eliminar(Pieza* e);
 	void eliminar(int index);
 	Pieza* colision(int _f, int _c, int _turno);

@@ -6,11 +6,9 @@ Dama::Dama()
 	sprite1.setCenter(0, 0);
 	sprite1.setSize(1, 1);
 	radio = 0.5f;
-	//fila = columna = 0;
 	sprite2.setCenter(0, 0);
 	sprite2.setSize(1, 1);
 	radio = 0.5f;
-	//fila = columna = 0;
 	estado = 0;
 }
 

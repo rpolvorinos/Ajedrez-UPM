@@ -11,7 +11,6 @@ Rey::Rey()
 	sprite2.setSize(1, 1);
 	radio = 0.5f;
 	estado = 0;
-	//fila = columna = 0;
 }
 
 Rey::Rey(int _f, int _c, int _color) {
