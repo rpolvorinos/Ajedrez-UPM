@@ -67,14 +67,20 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t)
 	//poner aqui el código de teclado
 	controlador.tecla(key);
 	
-	
+	switch (key) {
+
+		case 13:
+				//mundo.y_ojo = -mundo.y_ojo;
+				//mundo.rotarOjo();
+			break;
+
+	}
 	glutPostRedisplay();
 }
 
 void OnTimer(int value)
 {
 	//poner aqui el código de animacion
-
 
 	//no borrar estas lineas
 	glutTimerFunc(25, OnTimer, 0);
