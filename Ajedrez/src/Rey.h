@@ -17,5 +17,5 @@ public:
 	virtual ~Rey() {}
 	void dibuja();
 	int getTipoPieza();
-	friend class Interaccion;
+	
 };

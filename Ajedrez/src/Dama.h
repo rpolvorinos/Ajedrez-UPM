@@ -19,5 +19,4 @@ public:
 	void dibuja();
 	int getTipoPieza();
 
-	friend class Interaccion;
 };

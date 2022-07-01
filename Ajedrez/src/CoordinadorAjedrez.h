@@ -1,5 +1,5 @@
 #pragma once
-#include "Mundo.h"
+#include "Tablero.h"
 #include "ETSIDI.h"
 using ETSIDI::Sprite;
 
@@ -16,7 +16,7 @@ public:
 	Sprite sprite3{ "imagenes/padre.png", 5 };
 
 protected:
-	Mundo mundo;
+	Tablero tablero;
 	enum Estado { INICIO, JUEGO, GanaB, GanaW };
 	Estado estado;
 	int fin;

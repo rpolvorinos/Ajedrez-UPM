@@ -1,19 +1,18 @@
 #include "Interaccion.h"
-#include "Tablero.h"
 #include "math.h"
 
 void Interaccion::moverTorre(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l)
 {
-	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
+	if (t.estado == 0 && t.fc.getF() == s.getFila() && t.fc.getC() == s.getColumna()&& t.color == _turno)
 	{
 		t.estado++;
 		_o = 2;
 	}
 	else
 	{
-		if (t.estado == 1 && (s.fila == t.fc.fila || s.columna == t.fc.columna) && t.color == _turno && _turno != _o)
+		if (t.estado == 1 && (s.getFila()== t.fc.getF() || s.getFila() == t.fc.getC()) && t.color == _turno && _turno != _o)
 		{
-			Pieza* aux = l.colision(s.fila, s.columna, _turno);
+			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
 			if (aux != 0 && _turno != aux->color)
 			{
 				l.eliminar(aux);
@@ -42,16 +41,16 @@ void Interaccion::moverTorre(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 
 void Interaccion::moverAlfil(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l)
 {
-	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
+	if (t.estado == 0 && t.fc.getF() == s.getFila() && t.fc.getC() == s.getColumna() && t.color == _turno)
 	{
 		t.estado++;
 		_o = 2;
 	}
 	else
 	{
-		if (t.estado == 1 && (abs(s.fila-t.fc.fila) == abs(s.columna-t.fc.columna)) && t.color == _turno && _turno != _o)
+		if (t.estado == 1 && (abs(s.getFila()-t.fc.getF()) == abs(s.getColumna()-t.fc.getC())) && t.color == _turno && _turno != _o)
 		{
-			Pieza* aux = l.colision(s.fila, s.columna, _turno);
+			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
 			if (aux != 0 && _turno != aux->color)
 			{
 				l.eliminar(aux);
@@ -78,15 +77,15 @@ void Interaccion::moverAlfil(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 
 void Interaccion::moverPeon(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l)
 {
-	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
+	if (t.estado == 0 && t.fc.getF() == s.getFila() && t.fc.getC() == s.getColumna() && t.color == _turno)
 	{
 		t.estado++;
 		_o = 2;
 	}
 	else
 	{
-		if(t.color == 0 && t.estado == 1 && ((s.columna - t.fc.columna) == 1) && ((s.fila - t.fc.fila) == 0) && t.color == _turno && _turno != _o) {
-			Pieza* aux = l.colision(s.fila, s.columna, _turno);
+		if(t.color == 0 && t.estado == 1 && ((s.getColumna() - t.fc.getC()) == 1) && ((s.getFila() - t.fc.getF()) == 0) && t.color == _turno && _turno != _o) {
+			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
 			if (aux != 0 && _turno != aux->color)
 			{
 				l.eliminar(aux);
@@ -108,9 +107,9 @@ void Interaccion::moverPeon(Pieza& t, Selector s, int& _turno, int& _o, ListasPi
 			}
 
 		}
-		if (t.color == 1 && t.estado == 1 && ((s.columna - t.fc.columna)==-1) && ((s.fila - t.fc.fila)==0) && t.color == _turno && _turno != _o)
+		if (t.color == 1 && t.estado == 1 && ((s.getColumna() - t.fc.getC())==-1) && ((s.getFila() - t.fc.getF())==0) && t.color == _turno && _turno != _o)
 		{
-			Pieza* aux = l.colision(s.fila, s.columna, _turno);
+			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
 			if (aux != 0 && _turno != aux->color)
 			{
 				l.eliminar(aux);
@@ -137,16 +136,16 @@ void Interaccion::moverPeon(Pieza& t, Selector s, int& _turno, int& _o, ListasPi
 
 void Interaccion::moverCaballo(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l)
 {
-	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
+	if (t.estado == 0 && t.fc.getF() == s.getFila() && t.fc.getC() == s.getColumna() && t.color == _turno)
 	{
 		t.estado++;
 		_o = 2;
 	}
 	else
 	{
-		if (t.estado == 1 && ((abs(s.columna - t.fc.columna) == 1&& abs(s.fila - t.fc.fila) == 2)|| (abs(s.columna - t.fc.columna) == 2 && abs(s.fila - t.fc.fila) == 1)) && t.color == _turno && _turno != _o)
+		if (t.estado == 1 && ((abs(s.getColumna() - t.fc.getC()) == 1&& abs(s.getFila() - t.fc.getF()) == 2)|| (abs(s.getColumna() - t.fc.getC()) == 2 && abs(s.getFila() - t.fc.getF()) == 1)) && t.color == _turno && _turno != _o)
 		{
-			Pieza* aux = l.colision(s.fila, s.columna, _turno);
+			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
 			if (aux != 0 && _turno != aux->color)
 			{
 				l.eliminar(aux);
@@ -174,16 +173,16 @@ void Interaccion::moverCaballo(Pieza& t, Selector s, int& _turno, int& _o, Lista
 
 void Interaccion::moverRey(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l)
 {
-	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
+	if (t.estado == 0 && t.fc.getF() == s.getFila() && t.fc.getC() == s.getColumna() && t.color == _turno)
 	{
 		t.estado++;
 		_o = 2;
 	}
 	else
 	{
-		if (t.estado == 1 && (abs(s.columna - t.fc.columna) <= 1 && abs(s.fila - t.fc.fila) <= 1) && t.color == _turno && _turno != _o)
+		if (t.estado == 1 && (abs(s.getColumna() - t.fc.getC()) <= 1 && abs(s.getFila() - t.fc.getF()) <= 1) && t.color == _turno && _turno != _o)
 		{
-			Pieza* aux = l.colision(s.fila, s.columna, _turno);
+			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
 			if (aux != 0 && _turno != aux->color)
 			{
 				l.eliminar(aux);
@@ -210,16 +209,16 @@ void Interaccion::moverRey(Pieza& t, Selector s, int& _turno, int& _o, ListasPie
 
 void Interaccion::moverDama(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l)
 {
-	if (t.estado == 0 && t.fc.fila == s.fila && t.fc.columna == s.columna && t.color == _turno)
+	if (t.estado == 0 && t.fc.getF() == s.getFila() && t.fc.getC() == s.getColumna() && t.color == _turno)
 	{
 		t.estado++;
 		_o = 2;
 	}
 	else
 	{
-		if (t.estado == 1 && (s.fila == t.fc.fila || s.columna == t.fc.columna|| (abs(s.fila - t.fc.fila) == abs(s.columna - t.fc.columna))) && t.color == _turno && _turno != _o)
+		if (t.estado == 1 && (s.getFila() == t.fc.getF() || s.getColumna() == t.fc.getC()|| (abs(s.getFila() - t.fc.getF()) == abs(s.getColumna() - t.fc.getC()))) && t.color == _turno && _turno != _o)
 		{
-			Pieza* aux = l.colision(s.fila, s.columna, _turno);
+			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
 			if (aux != 0 && _turno != aux->color)
 			{
 				l.eliminar(aux);
@@ -278,7 +277,7 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 
 bool Interaccion::captura(Pieza t, int _f, int _c)
 {
-	if (t.fc.fila == _f && t.fc.columna == _c)
+	if (t.fc.getF() == _f && t.fc.getC() == _c)
 		return true;
 	return false;
 }

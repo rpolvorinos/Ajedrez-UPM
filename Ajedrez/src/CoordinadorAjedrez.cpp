@@ -24,7 +24,7 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 
 	if (estado == INICIO) {
 		if (key == 'e' || key == 'E') {
-			mundo.inicializa();
+			tablero.inicializa();
 			estado = JUEGO;
 
 		}
@@ -33,7 +33,7 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 	}
 
 	else if (estado == JUEGO) {
-		mundo.tecla(key);
+		tablero.tecla(key);
 	}
 	else if (estado == GanaW)
 	{
@@ -71,8 +71,8 @@ void CoordinadorAjedrez::dibuja() {
 		
 	}
 	else if (estado == JUEGO) {
-		mundo.dibuja();
-		fin = mundo.jaqueMate();
+		tablero.dibuja();
+		fin = tablero.jaqueMate();
 		if (fin == 1)
 			estado = GanaW;
 		else if (fin == 2)

@@ -1,6 +1,5 @@
 #include "ListasPiezas.h"
 #include "Interaccion.h"
-#include "Mundo.h"
 
 ListasPiezas::ListasPiezas()
 {

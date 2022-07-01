@@ -16,10 +16,7 @@ public:
 	virtual ~Torre() {}
 	void dibuja();
 	void movimiento(int _f, int _c);
-	int getFila();
-	int getColumna();
 	int getTipoPieza();
 
-	friend class Interaccion;
 };
 

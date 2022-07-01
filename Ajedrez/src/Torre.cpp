@@ -29,23 +29,22 @@ Torre::Torre(int _f, int _c, int _color) {
 	posicion = pos2.conversor(_f, _c);
 	color = _color;
 	estado = 0;
-	fc.fila = _f;
-	fc.columna = _c;
+	fc.setCasillas(_f, _c);
 }
 	
 void Torre::dibuja() {
 
-	posicion = posicion.conversor(fc.fila, fc.columna);
+	posicion = posicion.conversor(fc.getF(), fc.getC());
 	if (color == 0) {
 		glPushMatrix();
-		glTranslatef(posicion.x, posicion.y, 0.5);
+		glTranslatef(posicion.getX(), posicion.getY(), 0.5);
 		glColor3f(1.0f, 0.0f, 0.0f);
 		sprite1.draw();
 		glPopMatrix();
 	}
 	else {
 		glPushMatrix();
-		glTranslatef(posicion.x, posicion.y, 0.5);
+		glTranslatef(posicion.getX(), posicion.getY(), 0.5);
 		glColor3f(1.0f, 0.0f, 0.0f);
 		sprite2.draw();
 		glPopMatrix();
@@ -59,15 +58,6 @@ void Torre::movimiento(int _f, int _c) {
 	posicion=pos.conversor(_f, _c);
 }
 
-int Torre::getFila()
-{
-	return fc.fila;
-}
-
-int Torre::getColumna()
-{
-	return fc.columna;
-}
 
 int Torre::getTipoPieza() {
 	return 1;

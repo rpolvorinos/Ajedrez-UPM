@@ -1,15 +1,6 @@
 #pragma once
-#include "Torre.h"
-#include "Alfil.h"
-#include "Peon.h"
-#include "Rey.h"
-#include "Dama.h"
-#include "Caballo.h"
 #include "Pieza.h"
 #include "ListasPiezas.h"
-#include "Selector.h"
-#include "Mundo.h"
-
 
 class Interaccion
 {

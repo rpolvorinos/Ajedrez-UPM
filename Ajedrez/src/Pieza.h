@@ -5,6 +5,7 @@
 #include<iostream>
 #include<cstring>
 
+
 using namespace std;
 
 class Pieza
@@ -14,7 +15,7 @@ protected:
 	Vector posicion;
 	int estado, color;
 	Casilla fc;
-
+	
 public:
 	void setDatos(float _r, int _f, int _c);
 	virtual void dibuja();
