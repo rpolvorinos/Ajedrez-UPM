@@ -4,9 +4,9 @@
 
 void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l)
 {
-	if (t.estado == 0 && t.fc.getF() == s.getFila() && t.fc.getC() == s.getColumna() && t.color == _turno)
+	if (t.getEstado() == 0 && t.getfila() == s.getFila() && t.getcolumna() == s.getColumna() && t.getColor() == _turno)
 	{
-		t.estado++;
+		t.Increm();
 		_o = 2;
 	}
 	else
@@ -15,14 +15,14 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 		if(condicion(t,s,_turno,_o,l))
 		{
 			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
-			if (aux != 0 && _turno != aux->color)
+			if (aux != 0 && _turno != aux->getColor())
 			{
 				l.eliminar(aux);
 			}
-			if (aux != 0 && _turno == aux->color) {}
+			if (aux != 0 && _turno == aux->getColor()) {}
 			else {
 				t.setDatos(0.5, s.getFila(), s.getColumna());
-				t.estado--;
+				t.Decrem();
 				_o = _turno;
 				switch (_turno)
 				{
@@ -43,32 +43,32 @@ bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o, ListasPi
 	switch (t.getTipoPieza())
 	{
 	case 1:
-		if (t.estado == 1 && (s.getFila() == t.fc.getF() || s.getFila() == t.fc.getC()) && t.color == _turno && _turno != _o)
+		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getFila() == t.getcolumna()) && t.getColor() == _turno && _turno != _o)
 			return true;
 		break;
 
 	case 2:
-		if (t.estado == 1 && ((abs(s.getColumna() - t.fc.getC()) == 1 && abs(s.getFila() - t.fc.getF()) == 2) || (abs(s.getColumna() - t.fc.getC()) == 2 && abs(s.getFila() - t.fc.getF()) == 1)) && t.color == _turno && _turno != _o)
+		if (t.getEstado() == 1 && ((abs(s.getColumna() - t.getcolumna()) == 1 && abs(s.getFila() - t.getfila()) == 2) || (abs(s.getColumna() - t.getcolumna()) == 2 && abs(s.getFila() - t.getfila()) == 1)) && t.getColor() == _turno && _turno != _o)
 		return true;
 		break;
 
 	case 3:
-		if (t.estado == 1 && (abs(s.getFila() - t.fc.getF()) == abs(s.getColumna() - t.fc.getC())) && t.color == _turno && _turno != _o)
+		if (t.getEstado() == 1 && (abs(s.getFila() - t.getfila()) == abs(s.getColumna() - t.getcolumna())) && t.getColor() == _turno && _turno != _o)
 		return true;
 		break;
 
 	case 4:
-		if (t.estado == 1 && (s.getFila() == t.fc.getF() || s.getColumna() == t.fc.getC()|| (abs(s.getFila() - t.fc.getF()) == abs(s.getColumna() - t.fc.getC()))) && t.color == _turno && _turno != _o)
+		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getColumna() == t.getcolumna()|| (abs(s.getFila() - t.getfila()) == abs(s.getColumna() - t.getcolumna()))) && t.getColor() == _turno && _turno != _o)
 		return true;
 		break;
 
 	case 5:
-		if (t.estado == 1 && (abs(s.getColumna() - t.fc.getC()) <= 1 && abs(s.getFila() - t.fc.getF()) <= 1) && t.color == _turno && _turno != _o)
+		if (t.getEstado() == 1 && (abs(s.getColumna() - t.getcolumna()) <= 1 && abs(s.getFila() - t.getfila()) <= 1) && t.getColor() == _turno && _turno != _o)
 		return true;
 		break;
 	
 	case 6:
-		if (t.color == 0 && t.estado == 1 && ((s.getColumna() - t.fc.getC()) == 1) && ((s.getFila() - t.fc.getF()) == 0) && t.color == _turno && _turno != _o) 
+		if (t.getColor() == 0 && t.getEstado() == 1 && ((s.getColumna() - t.getcolumna()) == 1) && ((s.getFila() - t.getfila()) == 0) && t.getColor() == _turno && _turno != _o) 
 		return true;
 		break;
 	}
@@ -112,7 +112,7 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 
 bool Interaccion::captura(Pieza t, int _f, int _c)
 {
-	if (t.fc.getF() == _f && t.fc.getC() == _c)
+	if (t.getfila() == _f && t.getcolumna() == _c)
 		return true;
 	return false;
 }

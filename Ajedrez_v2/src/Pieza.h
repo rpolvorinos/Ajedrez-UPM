@@ -36,6 +36,11 @@ public:
 	virtual void dibuja();
 	virtual int getTipoPieza() {return 0;}
 	int getColor() { return color; }
-	friend class Interaccion;
+	int getEstado() { return estado; }
+	void Increm() { estado++; }
+	void Decrem() { estado--; }
+	int getfila() { return fc.getF(); }
+	int getcolumna() { return fc.getC(); }
+	
 };
 
