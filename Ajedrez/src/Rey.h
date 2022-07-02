@@ -5,6 +5,7 @@
 #include "Pieza.h"
 
 using ETSIDI::Sprite;
+
 class Rey : public Pieza
 {
 public:

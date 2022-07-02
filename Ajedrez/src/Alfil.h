@@ -3,8 +3,6 @@
 #include "ETSIDI.h"
 #include "Casilla.h"
 #include "Pieza.h"
-#include<iostream>
-#include<cstring>
 
 using namespace std;
 

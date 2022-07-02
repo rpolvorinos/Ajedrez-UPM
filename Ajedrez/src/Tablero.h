@@ -16,6 +16,16 @@ private:
 	float posf[8];
 	float posc[8];
 
+	//Variables para el funcionamiento del juego
+	ListasPiezas piezas;
+	int turno;
+	int ocupacion[8][8];
+
+	//Variables para la posicion del punto de vista del tablero
+	float x_ojo;
+	float y_ojo;
+	float z_ojo;
+
 public:
 	
 	virtual ~Tablero() {};
@@ -24,16 +34,5 @@ public:
 	void dibuja();
 	int jaqueMate();
 	
-	//Variables para la posicion del punto de vista del tablero
-	float x_ojo;
-	float y_ojo;
-	float z_ojo;
-
-	//Variables para el funcionamiento del juego
-	ListasPiezas piezas;
-	int turno;
-	int ocupacion[8][8];
-	
-
 
 };

@@ -16,8 +16,8 @@ protected:
 	Vector posicion;
 	int estado, color;
 	Casilla fc;
-	//Declaracion de los diferentes figuras
 
+	//Declaracion de los diferentes figuras
 	Sprite sprite1{ "imagenes/Torre_w.png", 5 };
 	Sprite sprite2{ "imagenes/Torre_b.png", 5 };
 	Sprite sprite3{ "imagenes/caballo_w.png", 5 };
