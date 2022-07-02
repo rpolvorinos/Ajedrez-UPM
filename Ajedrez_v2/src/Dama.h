@@ -8,10 +8,6 @@ using ETSIDI::Sprite;
 
 class Dama: public Pieza
 {
-private:
-	/*Sprite sprite1{"imagenes/dama_w.png", 5};
-	Sprite sprite2{ "imagenes/dama_b.png", 5 };
-	*/
 public:
 	Dama();
 	Dama(int _f, int _c, int _color);

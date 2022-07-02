@@ -7,10 +7,7 @@
 using ETSIDI::Sprite;
 
 class Torre : public Pieza {
-private:
-	/*Sprite sprite1{"imagenes/Torre_w.png", 5};
-	Sprite sprite2{ "imagenes/Torre_b.png", 5 };
-	*/
+
 public:
 	Torre();
 	Torre(int _f, int _c, int _color);
