@@ -11,6 +11,8 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 	}
 	else
 	{
+		//if (t.estado == 1 && (s.getFila() == t.fc.getF() || s.getColumna() == t.fc.getC()|| (abs(s.getFila() - t.fc.getF()) == abs(s.getColumna() - t.fc.getC()))) && t.color == _turno && _turno != _o)
+		if(condicion(t,s,_turno,_o,l))
 		{
 			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
 			if (aux != 0 && _turno != aux->getColor())
@@ -41,34 +43,34 @@ bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o, ListasPi
 	switch (t.getTipoPieza())
 	{
 	case 1:
-		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getFila() == t.getcolumna()) && t.getColor() == _turno && _turno != _o)	//movimento de la torre blanca y negra
+		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getFila() == t.getcolumna()) && t.getColor() == _turno && _turno != _o)
 			return true;
 		break;
 
 	case 2:
-		if (t.getEstado() == 1 && ((abs(s.getColumna() - t.getcolumna()) == 1 && abs(s.getFila() - t.getfila()) == 2) || (abs(s.getColumna() - t.getcolumna()) == 2 && abs(s.getFila() - t.getfila()) == 1)) && t.getColor() == _turno && _turno != _o)	// movimiento del caballo blanco y negro 
+		if (t.getEstado() == 1 && ((abs(s.getColumna() - t.getcolumna()) == 1 && abs(s.getFila() - t.getfila()) == 2) || (abs(s.getColumna() - t.getcolumna()) == 2 && abs(s.getFila() - t.getfila()) == 1)) && t.getColor() == _turno && _turno != _o)
 		return true;
 		break;
 
 	case 3:
-		if (t.getEstado() == 1 && (abs(s.getFila() - t.getfila()) == abs(s.getColumna() - t.getcolumna())) && t.getColor() == _turno && _turno != _o)	//movimiento del alfil blanco y negro
+		if (t.getEstado() == 1 && (abs(s.getFila() - t.getfila()) == abs(s.getColumna() - t.getcolumna())) && t.getColor() == _turno && _turno != _o)
 		return true;
 		break;
 
 	case 4:
-		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getColumna() == t.getcolumna()|| (abs(s.getFila() - t.getfila()) == abs(s.getColumna() - t.getcolumna()))) && t.getColor() == _turno && _turno != _o)	//movimiento de la dama blanca y negra
+		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getColumna() == t.getcolumna()|| (abs(s.getFila() - t.getfila()) == abs(s.getColumna() - t.getcolumna()))) && t.getColor() == _turno && _turno != _o)
 		return true;
 		break;
 
 	case 5:
-		if (t.getEstado() == 1 && (abs(s.getColumna() - t.getcolumna()) <= 1 && abs(s.getFila() - t.getfila()) <= 1) && t.getColor() == _turno && _turno != _o)	//movimiento del rey blanco y negro
+		if (t.getEstado() == 1 && (abs(s.getColumna() - t.getcolumna()) <= 1 && abs(s.getFila() - t.getfila()) <= 1) && t.getColor() == _turno && _turno != _o)
 		return true;
 		break;
 	
 	case 6:
 		if (t.getColor() == 0 && t.getEstado() == 1 && ((s.getColumna() - t.getcolumna()) == 1) && ((s.getFila() - t.getfila()) == 0) && t.getColor() == _turno && _turno != _o) //Movimiento peones blancos
 			return true;
-		else if (t.getColor() == 1 && t.getEstado() == 1 && ((t.getcolumna() - s.getColumna()) == 1) && ((s.getFila() - t.getfila()) == 0) && t.getColor() == _turno && _turno != _o) //Movimiento peones negros
+		if (t.getColor() == 1 && t.getEstado() == 1 && ((t.getcolumna() - s.getColumna()) == 1) && ((s.getFila() - t.getfila()) == 0) && t.getColor() == _turno && _turno != _o) //Movimiento peones negros
 			return true;
 		break;
 	}
