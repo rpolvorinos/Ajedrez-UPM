@@ -11,6 +11,7 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 	}
 	else
 	{
+		if(condicion(t,s,_turno,_o))
 		{
 			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
 			if (aux != 0 && _turno != aux->getColor())
@@ -36,7 +37,7 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 	}
 }
 
-bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l)
+bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o)
 {
 	switch (t.getTipoPieza())
 	{
