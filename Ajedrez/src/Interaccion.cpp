@@ -11,8 +11,6 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 	}
 	else
 	{
-		//if (t.estado == 1 && (s.getFila() == t.fc.getF() || s.getColumna() == t.fc.getC()|| (abs(s.getFila() - t.fc.getF()) == abs(s.getColumna() - t.fc.getC()))) && t.color == _turno && _turno != _o)
-		if(condicion(t,s,_turno,_o,l))
 		{
 			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
 			if (aux != 0 && _turno != aux->getColor())
@@ -43,27 +41,27 @@ bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o, ListasPi
 	switch (t.getTipoPieza())
 	{
 	case 1:
-		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getFila() == t.getcolumna()) && t.getColor() == _turno && _turno != _o)
+		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getFila() == t.getcolumna()) && t.getColor() == _turno && _turno != _o) //Movimiento de las torres blancas y negras
 			return true;
 		break;
 
 	case 2:
-		if (t.getEstado() == 1 && ((abs(s.getColumna() - t.getcolumna()) == 1 && abs(s.getFila() - t.getfila()) == 2) || (abs(s.getColumna() - t.getcolumna()) == 2 && abs(s.getFila() - t.getfila()) == 1)) && t.getColor() == _turno && _turno != _o)
+		if (t.getEstado() == 1 && ((abs(s.getColumna() - t.getcolumna()) == 1 && abs(s.getFila() - t.getfila()) == 2) || (abs(s.getColumna() - t.getcolumna()) == 2 && abs(s.getFila() - t.getfila()) == 1)) && t.getColor() == _turno && _turno != _o) //Movimiento de los caballos blancos y negros
 		return true;
 		break;
 
 	case 3:
-		if (t.getEstado() == 1 && (abs(s.getFila() - t.getfila()) == abs(s.getColumna() - t.getcolumna())) && t.getColor() == _turno && _turno != _o)
+		if (t.getEstado() == 1 && (abs(s.getFila() - t.getfila()) == abs(s.getColumna() - t.getcolumna())) && t.getColor() == _turno && _turno != _o) //Movimiento de los alfiles blancos y negros
 		return true;
 		break;
 
 	case 4:
-		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getColumna() == t.getcolumna()|| (abs(s.getFila() - t.getfila()) == abs(s.getColumna() - t.getcolumna()))) && t.getColor() == _turno && _turno != _o)
+		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getColumna() == t.getcolumna()|| (abs(s.getFila() - t.getfila()) == abs(s.getColumna() - t.getcolumna()))) && t.getColor() == _turno && _turno != _o)	//Movimiento de las damas blancas y negras
 		return true;
 		break;
 
 	case 5:
-		if (t.getEstado() == 1 && (abs(s.getColumna() - t.getcolumna()) <= 1 && abs(s.getFila() - t.getfila()) <= 1) && t.getColor() == _turno && _turno != _o)
+		if (t.getEstado() == 1 && (abs(s.getColumna() - t.getcolumna()) <= 1 && abs(s.getFila() - t.getfila()) <= 1) && t.getColor() == _turno && _turno != _o)	//movimiento de los reyes blanco y negro
 		return true;
 		break;
 	
@@ -78,39 +76,6 @@ bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o, ListasPi
 	return false;
 }
 
-/*
-void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l) {
-
-	int tipoPieza;
-	tipoPieza = t.getTipoPieza();
-
-	switch (tipoPieza) {
-		case 1: {	//Torres
-			Interaccion::moverTorre(t, s, _turno, _o,l);
-			break;
-		}
-		case 2: {	//Caballos
-			Interaccion::moverCaballo(t, s, _turno, _o,l);
-			break;
-		}
-		case 3: {	//Alfiles
-			Interaccion::moverAlfil(t, s, _turno, _o, l);
-			break;
-		}
-		case 4: {	//Damas
-			Interaccion::moverDama(t, s, _turno, _o, l);
-			break;
-		}
-		case 5: {	//Reyes
-			Interaccion::moverRey(t, s, _turno, _o, l);
-			break;
-		}
-		case 6: {	//Peones
-			Interaccion::moverPeon(t, s, _turno, _o, l);
-			break;
-		}
-	}
-}*/
 
 bool Interaccion::captura(Pieza t, int _f, int _c)
 {
