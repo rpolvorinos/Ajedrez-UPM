@@ -8,12 +8,8 @@ private:
 	float y;
 public:
 	//Metodos
-	Vector(float xv=0.0f, float yv=0.0f);
+	Vector(float _x=0.0f, float _y=0.0f);
 	virtual ~Vector(){}
-	Vector operator+ (Vector op);
-	float operator* (Vector op);
-	Vector operator* (float op);
-	Vector operator+ (float real);
 	Vector conversor(int _f, int _c);
 	float getX() {	return x;}
 	float getY() { return y; }
