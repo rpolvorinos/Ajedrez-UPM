@@ -1,6 +1,7 @@
 #include "Alfil.h"
 #include "freeglut.h"
 
+//Constructor de alfil predeterminado
 Alfil::Alfil()
 {
 	sprite5.setCenter(0, 0);
@@ -15,6 +16,7 @@ Alfil::Alfil()
 	
 }
 
+//Constructor de los alfiles blanco y negro
 Alfil::Alfil(int _f, int _c, int _color) {
 	sprite5.setCenter(0, 0);
 	sprite5.setSize(1, 1);
@@ -33,6 +35,7 @@ Alfil::Alfil(int _f, int _c, int _color) {
 	
 }
 
+//Funcion para la representacion de los alfiles
 void Alfil::dibuja() {
 
 	posicion = posicion.conversor(fc.getF(), fc.getC());
@@ -53,6 +56,7 @@ void Alfil::dibuja() {
 	}
 }
 
+//Funcion para obtener que tipo de pieza es
 int Alfil::getTipoPieza() {
 	return 3;
 

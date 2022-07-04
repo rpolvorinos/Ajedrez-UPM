@@ -1,7 +1,7 @@
 #include "Interaccion.h"
 #include "math.h"
 
-
+//Funcion para realizar el movimiento de las piezas una vez que se ha indenficado el tipo de pieza que es y si el movimiento es correcto
 void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l)
 {
 	if (t.getEstado() == 0 && t.getfila() == s.getFila() && t.getcolumna() == s.getColumna() && t.getColor() == _turno)
@@ -37,7 +37,7 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 	}
 }
 
-
+//Funcion para realizar la captura de una pieza para su eliminacion 
 bool Interaccion::captura(Pieza t, int _f, int _c)
 {
 	if (t.getfila() == _f && t.getcolumna() == _c)
@@ -45,6 +45,7 @@ bool Interaccion::captura(Pieza t, int _f, int _c)
 	return false;
 }
 
+//Funcion para indentificar el tipo de pieza para realizar el movimiento y que comprueba si el movimiento que va a realizar es el indicado
 bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& piezas)
 {
 	Casilla _casilla;

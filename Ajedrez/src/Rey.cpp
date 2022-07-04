@@ -1,6 +1,7 @@
 #include "Rey.h"
 #include "freeglut.h"
 
+//Constructor del rey predeterminado
 Rey::Rey()
 {
 	sprite7.setCenter(0, 0);
@@ -13,6 +14,7 @@ Rey::Rey()
 	estado = 0;
 }
 
+//Constructor de los reyes blanco y negro
 Rey::Rey(int _f, int _c, int _color) {
 	sprite7.setCenter(0, 0);
 	sprite7.setSize(1, 1);
@@ -30,7 +32,7 @@ Rey::Rey(int _f, int _c, int _color) {
 	fc.setCasillas(_f, _c);
 }
 
-
+//Funcion para la representacion de los reyes
 void Rey::dibuja() {
 
 	posicion = posicion.conversor(fc.getF(), fc.getC());
@@ -51,6 +53,7 @@ void Rey::dibuja() {
 	}
 }
 
+//Funcion para obtener que tipo de pieza es
 int Rey::getTipoPieza() {
 	return 5;
 }

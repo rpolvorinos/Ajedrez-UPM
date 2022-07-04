@@ -2,7 +2,7 @@
 #include "freeglut.h"
 #include "ETSIDI.h"
 
-
+//Funcion para dibujar el tablero y las piezas en cada momento del juego
 void Tablero::dibuja() {
 
 	//Representacion del punto de vista de la camara
@@ -173,6 +173,7 @@ void Tablero::inicializa()
 	}
 }
 
+//Funcion para el movimiento de las piezas y el selector en el juego
 void Tablero::tecla(unsigned char key)
 {
 	selector.mover(key);
@@ -186,7 +187,6 @@ void Tablero::tecla(unsigned char key)
 }
 
 //Funcion que nos indica si el rey esta en jaque o no (si esta en jaque devuelve TRUE)
-
 bool Tablero::jaque(Casilla c) {
 
 	
@@ -234,6 +234,7 @@ bool Tablero::jaqueMate() {
 		return mate;
 }
 
+//Funcion para eliminar las piezas y reiniciar el selector en el caso de finalizar la partida
 void Tablero::eliminarContenido() {
 
 	turno = 0;

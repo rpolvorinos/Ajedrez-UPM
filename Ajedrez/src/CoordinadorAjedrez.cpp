@@ -1,6 +1,6 @@
 #include "CoordinadorAjedrez.h"
 
-
+//Constructor del coordinador
 CoordinadorAjedrez::CoordinadorAjedrez() {
 
 	estado = INICIO;
@@ -13,14 +13,13 @@ CoordinadorAjedrez::CoordinadorAjedrez() {
 	fin = 0; 
 }
 
+//Destructor del coordinador
 CoordinadorAjedrez::~CoordinadorAjedrez() {
 
 }
 
 
-
-
-
+//Funcion para determinar que tipo de estado entra el juego
 void CoordinadorAjedrez::tecla(unsigned char key) {
 
 	if (estado == INICIO) {
@@ -54,6 +53,7 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 
 }
 
+//Funcion para representar las distintas instancias de los diferentes estados del juego
 void CoordinadorAjedrez::dibuja() {
 
 	if (estado == INICIO)
