@@ -185,9 +185,48 @@ void Tablero::tecla(unsigned char key)
 	}
 }
 
+bool Tablero::jaque(Casilla c) {
 
+	//Funcion que nos indica si el rey esta en jaque o no (si esta en jaque devuelve TRUE).
+		for (int i = 0; i < piezas.getNumero_Piezas(); i++) //recorremos todas la fichas para comprobar cual produce jaque al rey correspondiente.
+		{
+			if (piezas.lista[i]->getColor() != turno && Interaccion::condicionjaque(*piezas.lista[i], c) == true)
+				return true;
+		}
+		return false;
+}
 
-int Tablero::jaqueMate() {
+bool Tablero::jaqueMate() {
+		
+		Casilla c_rey, auxiliar;
+		auxiliar.setCasillas(c_rey.getF(), c_rey.getC());
+		int mate = 1;
+
+		for (int i = 0; i < piezas.getNumero_Piezas(); i++) //Hallamos en qué casilla está el rey
+			if (piezas.lista[i]->getTipoPieza() == 5 && piezas.lista[i]->getColor() == turno)
+				c_rey = piezas.lista[i]->getCasilla();
+		
+		//Si el rey está en jaque, comprobamos si puede moverse a otra casilla
+		if (jaque(c_rey)) {
+			for (int i = 0; i < 8; i++)
+			{
+				for (int j = 0; j < 8; j++)
+				{
+					auxiliar.setCasillas(i, j);
+
+					if (turno == 0 && ((auxiliar.getC() - c_rey.getC()) == 1) && ((auxiliar.getF() - c_rey.getF()) == 0) && turno != ocupacion[auxiliar.getF()][auxiliar.getC()])
+						if (jaque(auxiliar) == 0)
+							mate = 0; //si se puede mover a alguna casilla, no hay jaque mate
+				}
+			}
+		}
+		else
+			mate = 0; // si el rey no está en jaque, obviamente tampoco hay jaque mate
+
+		return mate;
+}
+
+/*int Tablero::jaqueMate() {
 
 	int n_reyes = 0;
 	Pieza auxiliar;
@@ -205,4 +244,4 @@ int Tablero::jaqueMate() {
 			return 1; //Ganan las blancas
 		else
 			return 2; //Ganan las negras
-}
+}*/

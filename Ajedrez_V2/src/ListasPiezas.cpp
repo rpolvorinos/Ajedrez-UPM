@@ -71,7 +71,7 @@ void ListasPiezas::eliminar(Pieza* e)
 }
 
 //Funcion que nos indica si el rey esta en jaque o no (si esta en jaque devuelve TRUE).
-bool ListasPiezas::comprobarjaque(Casilla c, int _turno,int _o) //en casilla hay que introducir la casilla de los distintos reyes en un bucle en la funcion comprobarjaquemate
+/*bool ListasPiezas::comprobarjaque(Casilla c, int _turno, int _o) //en casilla hay que introducir la casilla de los distintos reyes en un bucle en la funcion comprobarjaquemate
 {
 	int turno_oponente = 0;
 	int color = 0; // caso de fichas blancas
@@ -80,13 +80,13 @@ bool ListasPiezas::comprobarjaque(Casilla c, int _turno,int _o) //en casilla hay
 		turno_oponente = 1;
 	}
 
-	for (int i = 0; i < MAX_32; i++) //recoremos todas la fichas para comprobar cual produce jaque al rey correspondiente.
+	for (int i = 0; i < MAX_32; i++) //recorremos todas la fichas para comprobar cual produce jaque al rey correspondiente.
 	{
 		if (lista[i]->getColor() == color && Interaccion::condicionjaque(*lista[i],c,turno_oponente,_o)==true) 
 			return true;	
 	}
 	return false;
-}
+}*/
 /*bool ListaPiezas::comprobarjaquemate(int _turno, int _o) {
 
 }*/

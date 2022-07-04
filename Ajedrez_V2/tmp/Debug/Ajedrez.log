@@ -1,0 +1,28 @@
+﻿  Ajedrez.cpp
+  CoordinadorAjedrez.cpp
+  Interaccion.cpp
+  ListasPiezas.cpp
+  Tablero.cpp
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(22,49): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(24,45): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(33,29): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(34,32): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(67,24): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(68,24): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(69,24): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(70,23): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(71,23): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(72,23): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(73,23): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(74,24): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(84,15): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(97,26): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(102,26): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(108,26): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(114,26): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(120,30): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(126,30): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(132,24): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\src\Tablero.cpp(138,24): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  Generando código...
+  Ajedrez.vcxproj -> C:\Users\Manu\OneDrive - Universidad Politécnica de Madrid\Documentos\GitHub\Ajedrez-UPM\Ajedrez_V2\bin\Ajedrez.exe

@@ -1,7 +1,6 @@
 #pragma once
 #include "Vector.h"
 #include "Casilla.h"
-#include "Selector.h"
 #include "ListasPiezas.h"
 #include "Interaccion.h"
 
@@ -32,7 +31,8 @@ public:
 	void tecla(unsigned char key);
 	void inicializa();
 	void dibuja();
-	int jaqueMate();
-	
+	bool jaque(Casilla aux);
+	//int jaqueMate();
+	bool jaqueMate();
 
 };
