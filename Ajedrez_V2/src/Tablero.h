@@ -14,6 +14,7 @@ private:
 	Selector selector;
 	float posf[8];
 	float posc[8];
+	int color;
 
 	//Variables para el funcionamiento del juego
 	ListasPiezas piezas;
@@ -32,7 +33,8 @@ public:
 	void inicializa();
 	void dibuja();
 	bool jaque(Casilla aux);
-	//int jaqueMate();
 	bool jaqueMate();
+	int getColor(){ return color; }
+	void eliminarContenido();
 
 };

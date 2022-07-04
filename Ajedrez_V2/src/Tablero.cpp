@@ -185,9 +185,11 @@ void Tablero::tecla(unsigned char key)
 	}
 }
 
+//Funcion que nos indica si el rey esta en jaque o no (si esta en jaque devuelve TRUE)
+
 bool Tablero::jaque(Casilla c) {
 
-	//Funcion que nos indica si el rey esta en jaque o no (si esta en jaque devuelve TRUE).
+	
 		for (int i = 0; i < piezas.getNumero_Piezas(); i++) //recorremos todas la fichas para comprobar cual produce jaque al rey correspondiente.
 		{
 			if (piezas.lista[i]->getColor() != turno && Interaccion::condicionjaque(*piezas.lista[i], c) == true)
@@ -196,15 +198,20 @@ bool Tablero::jaque(Casilla c) {
 		return false;
 }
 
+//Funcion que nos indica si se produce jaque mate (si se produce devuelve TRUE)
 bool Tablero::jaqueMate() {
 		
 		Casilla c_rey, auxiliar;
 		auxiliar.setCasillas(c_rey.getF(), c_rey.getC());
 		int mate = 1;
 
-		for (int i = 0; i < piezas.getNumero_Piezas(); i++) //Hallamos en qué casilla está el rey
-			if (piezas.lista[i]->getTipoPieza() == 5 && piezas.lista[i]->getColor() == turno)
+		for (int i = 0; i < piezas.getNumero_Piezas(); i++) {//Hallamos en qué casilla está el rey
+			if (piezas.lista[i]->getTipoPieza() == 5 && piezas.lista[i]->getColor() == turno) {
 				c_rey = piezas.lista[i]->getCasilla();
+				color = piezas.lista[i]->getColor(); //guardamos el color para saber a que jugador se le ha realizado el jaque
+			}
+		}
+
 		
 		//Si el rey está en jaque, comprobamos si puede moverse a otra casilla
 		if (jaque(c_rey)) {
@@ -215,6 +222,7 @@ bool Tablero::jaqueMate() {
 					auxiliar.setCasillas(i, j);
 
 					if (turno == 0 && ((auxiliar.getC() - c_rey.getC()) == 1) && ((auxiliar.getF() - c_rey.getF()) == 0) && turno != ocupacion[auxiliar.getF()][auxiliar.getC()])
+
 						if (jaque(auxiliar) == 0)
 							mate = 0; //si se puede mover a alguna casilla, no hay jaque mate
 				}
@@ -226,22 +234,15 @@ bool Tablero::jaqueMate() {
 		return mate;
 }
 
-/*int Tablero::jaqueMate() {
+void Tablero::eliminarContenido() {
 
-	int n_reyes = 0;
-	Pieza auxiliar;
-	for (int i = 0; i < piezas.getNumero_Piezas();i++) {
-		if (piezas.lista[i]->getTipoPieza() == 5) {
-			n_reyes++;
-			auxiliar = *piezas.lista[i];
-		}
-
+	turno = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		for (int j = 0; j < 8; j++)
+			ocupacion[i][j] = 0;
 	}
-	if (n_reyes == 2)
-		return 0;
-	else
-		if (auxiliar.getColor() == 0)
-			return 1; //Ganan las blancas
-		else
-			return 2; //Ganan las negras
-}*/
+	piezas.eliminarContenido();
+	selector.reinicio();
+
+}

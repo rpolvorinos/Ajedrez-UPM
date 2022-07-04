@@ -31,12 +31,20 @@ void Selector::mover(unsigned char key) {
 		break;
 	}
 }
+//Funcion que devuleve la fila
 int Selector::getFila()
 {
 	return fila;
 }
 
+//Funcion que devuelve la columa
 int Selector::getColumna()
 {
 	return columna;
+}
+
+//Funcion que devuelve el selector a su posicion incial
+void Selector::reinicio() {
+	fila = 4;
+	columna = 4;
 }
