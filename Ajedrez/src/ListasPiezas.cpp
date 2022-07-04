@@ -1,7 +1,6 @@
 #include "ListasPiezas.h"
 #include "Interaccion.h"
 
-//Constructor de ListasPiezas
 ListasPiezas::ListasPiezas()
 {
 	n = 0;
@@ -9,7 +8,6 @@ ListasPiezas::ListasPiezas()
 		lista[i] = 0;
 }
 
-//Funcion para agregar piezas a la lista (TRUE si la lista tiene espacio)
 bool ListasPiezas::agregar(Pieza* t)
 {
 	if (n < MAX_32) {
@@ -49,7 +47,7 @@ Pieza* ListasPiezas::colision(int _f, int _c, int _turn)
 	return 0; //no hay colisión
 }
 
-//Funcion para eliminar piezas si se ha introducida alguna y se ha superado el tamaño
+
 void ListasPiezas::eliminar(int index)
 {
 	if ((index < 0) || (index >= n))
@@ -60,7 +58,7 @@ void ListasPiezas::eliminar(int index)
 		lista[i] = lista[i + 1];
 }
 
-//Funcion para eliminar una pieza cuando esta ha sido comida por el jugador adversario
+//Funcion para elimar una pieza cuando esta ha sido comida por el jugador adversario
 void ListasPiezas::eliminar(Pieza* e)
 {
 	for (int i = 0; i < n; i++)

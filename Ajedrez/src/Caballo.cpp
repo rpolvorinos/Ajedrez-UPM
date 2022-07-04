@@ -1,7 +1,6 @@
 #include "Caballo.h"
 #include "freeglut.h"
 
-//Constructor de caballo predeterminado
 Caballo::Caballo()
 {
 	sprite3.setCenter(0, 0);
@@ -14,7 +13,6 @@ Caballo::Caballo()
 	estado = 0;
 }
 
-//Constructor de los caballos blanco y negro
 Caballo::Caballo(int _f, int _c, int _color) {
 	sprite3.setCenter(0, 0);
 	sprite3.setSize(1, 1);
@@ -32,7 +30,6 @@ Caballo::Caballo(int _f, int _c, int _color) {
 	estado = 0;
 }
 
-//Funcion para la representacion de los caballos
 void Caballo::dibuja() {
 
 	posicion = posicion.conversor(fc.getF(), fc.getC());
@@ -53,7 +50,6 @@ void Caballo::dibuja() {
 	}
 }
 
-//Funcion para obtener que tipo de pieza es
 int Caballo::getTipoPieza() {
 	return 2;
 }

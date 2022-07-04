@@ -3,10 +3,14 @@
 #include "Casilla.h"
 #include "ListasPiezas.h"
 #include "Interaccion.h"
+#include "ETSIDI.h"
+using ETSIDI::Sprite;
 
 class Tablero {
 
 private:
+	Sprite sprite2{ "imagenes/simpson.png", 5 };
+	Sprite sprite3{ "imagenes/padre.png", 5 };
 
 	//Variables para la creacion y funcionamiento del tablero
 	Vector posicion;
@@ -27,7 +31,7 @@ private:
 	float z_ojo;
 
 public:
-	
+	Tablero();
 	virtual ~Tablero() {};
 	void tecla(unsigned char key);
 	void inicializa();

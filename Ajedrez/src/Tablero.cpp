@@ -2,7 +2,14 @@
 #include "freeglut.h"
 #include "ETSIDI.h"
 
-//Funcion para dibujar el tablero y las piezas en cada momento del juego
+Tablero::Tablero()
+{
+	sprite2.setCenter(0, 0);
+	sprite2.setSize(3,2);
+	sprite3.setCenter(0, 0);
+	sprite3.setSize(3,2);
+}
+
 void Tablero::dibuja() {
 
 	//Representacion del punto de vista de la camara
@@ -13,15 +20,6 @@ void Tablero::dibuja() {
 
 
 //Dibujo del tablero
-
-	//Dibujo de la informacion de que jugador esta jugando en cada turno
-	ETSIDI::setTextColor(255, 0, 0);
-	ETSIDI::setFont("fuentes/Bitwise.ttf", 24);
-
-	if (turno == 0)
-		ETSIDI::printxy("Turno de Padre de Familia", -5.5, 6);
-	if (turno == 1)
-		ETSIDI::printxy("Turno de Los Simpsons", -5.5, 6);
 
 	//Representacion del tablero
 
@@ -76,6 +74,27 @@ void Tablero::dibuja() {
 	 
 	 //Dibujo de las piezas en el tablero
 	 piezas.dibuja();
+
+	 //Dibujo de la informacion de que jugador esta jugando en cada turno
+	
+	 
+	 
+	 ETSIDI::setTextColor(255,0,0);
+	 ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
+
+	 if (turno == 0)
+		 ETSIDI::printxy("Turno de Padre de Familia", -5.5, 7);
+	 if (turno == 1)
+		 ETSIDI::printxy("Turno de Los Simpsons", -5.5, 7);
+
+	 glPushMatrix();
+	 glTranslatef(-2,5.8, 0.5);
+	 glColor3f(1.0f, 0.0f, 0.0f);
+	 if (turno == 0)
+		 sprite3.draw();
+	 if (turno == 1)
+		sprite2.draw();
+	 glPopMatrix();
 }
 
 void Tablero::inicializa()
@@ -173,7 +192,6 @@ void Tablero::inicializa()
 	}
 }
 
-//Funcion para el movimiento de las piezas y el selector en el juego
 void Tablero::tecla(unsigned char key)
 {
 	selector.mover(key);
@@ -187,6 +205,7 @@ void Tablero::tecla(unsigned char key)
 }
 
 //Funcion que nos indica si el rey esta en jaque o no (si esta en jaque devuelve TRUE)
+
 bool Tablero::jaque(Casilla c) {
 
 	
@@ -234,7 +253,6 @@ bool Tablero::jaqueMate() {
 		return mate;
 }
 
-//Funcion para eliminar las piezas y reiniciar el selector en el caso de finalizar la partida
 void Tablero::eliminarContenido() {
 
 	turno = 0;

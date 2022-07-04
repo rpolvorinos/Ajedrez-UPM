@@ -1,6 +1,6 @@
 #include "CoordinadorAjedrez.h"
 
-//Constructor del coordinador
+
 CoordinadorAjedrez::CoordinadorAjedrez() {
 
 	estado = INICIO;
@@ -13,13 +13,14 @@ CoordinadorAjedrez::CoordinadorAjedrez() {
 	fin = 0; 
 }
 
-//Destructor del coordinador
 CoordinadorAjedrez::~CoordinadorAjedrez() {
 
 }
 
 
-//Funcion para determinar que tipo de estado entra el juego
+
+
+
 void CoordinadorAjedrez::tecla(unsigned char key) {
 
 	if (estado == INICIO) {
@@ -53,7 +54,6 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 
 }
 
-//Funcion para representar las distintas instancias de los diferentes estados del juego
 void CoordinadorAjedrez::dibuja() {
 
 	if (estado == INICIO)
@@ -64,7 +64,7 @@ void CoordinadorAjedrez::dibuja() {
 			0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
 		ETSIDI::setTextColor(1, 1, 0);
 		ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
-		ETSIDI::printxy("Simpsons vs Padre de Familia", -5, 12);
+		ETSIDI::printxy("Simpsons vs Padre de Familia", -5, 13);
 		ETSIDI::setTextColor(1, 1, 1);
 		ETSIDI::setFont("fuentes/Bitwise.ttf", 12);
 		ETSIDI::printxy("PULSE LA TECLA -E- PARA EMPEZAR", -5, 11);

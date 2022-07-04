@@ -1,7 +1,7 @@
 #include "Peon.h"
 #include "freeglut.h"
 
-//Constructor del peon predeterminado
+
 Peon::Peon()
 {
 	sprite11.setCenter(0, 0);
@@ -14,8 +14,6 @@ Peon::Peon()
 
 	estado = 0;
 }
-
-//Constructor de los peones blanco y negro
 Peon::Peon(int _f, int _c, int _color) {
 	sprite11.setCenter(0, 0);
 	sprite11.setSize(1, 1);
@@ -33,7 +31,6 @@ Peon::Peon(int _f, int _c, int _color) {
 	fc.setCasillas(_f, _c);
 }
 
-//Funcion para la representacion de los peones
 void Peon::dibuja() {
 
 	posicion = posicion.conversor(fc.getF(), fc.getC());
@@ -54,7 +51,6 @@ void Peon::dibuja() {
 	}
 }
 
-//Funcion para obtener que tipo de pieza es
 int Peon::getTipoPieza() {
 	return 6;
 }

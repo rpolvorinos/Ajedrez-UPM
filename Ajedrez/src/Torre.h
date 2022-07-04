@@ -13,6 +13,7 @@ public:
 	Torre(int _f, int _c, int _color);
 	virtual ~Torre() {}
 	void dibuja();
+	void movimiento(int _f, int _c);
 	int getTipoPieza();
 
 };
