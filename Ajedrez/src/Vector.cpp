@@ -1,11 +1,13 @@
 #include "Vector.h"
 
+//Constructor de vector
 Vector::Vector(float _x,float _y)
 {
 	x = _x;
 	y = _y;
 }
 
+//Funcion para realizar la conversion de las posicion de las casillas a su posicion en el plano XY
 Vector Vector::conversor(int _f, int _c) {
 
 	Vector resultado;

@@ -2,6 +2,7 @@
 #include "math.h"
 
 
+//Funcion para el movimiento de las piezas una vez detectado que tipo de pieza es
 void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l)
 {
 	if (t.getEstado() == 0 && t.getfila() == s.getFila() && t.getcolumna() == s.getColumna() && t.getColor() == _turno)
@@ -37,7 +38,7 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 	}
 }
 
-
+//Funcion para detectar que una pieza ha capturado a otra para su eliminacion (devuleve TRUE si se produce la captura)
 bool Interaccion::captura(Pieza t, int _f, int _c)
 {
 	if (t.getfila() == _f && t.getcolumna() == _c)
@@ -45,6 +46,7 @@ bool Interaccion::captura(Pieza t, int _f, int _c)
 	return false;
 }
 
+//Funcion para identificar que pieza es la que va a realizar el movimiento y si su movimiento es el adecuado (devulve TRUE en el caso que el movimiento sea correcto)
 bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o)
 {
 	switch (t.getTipoPieza())
@@ -85,7 +87,7 @@ bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o)
 	return false;
 }
 
-//Funcion que nos indica si hay piezas en la trayectoria del movimiento ( si no hay devuelve TRUE)
+//Funcion que nos indica si hay piezas que pueden hacer jaque al rey (devulve TRUE si es verdadero)
 bool Interaccion::condicionjaque(Pieza& t, Casilla s)
 {
 	switch (t.getTipoPieza())

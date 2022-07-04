@@ -1,6 +1,7 @@
 #include "ListasPiezas.h"
 #include "Interaccion.h"
 
+//Constructor de la clase ListaPiezas
 ListasPiezas::ListasPiezas()
 {
 	n = 0;
@@ -8,6 +9,7 @@ ListasPiezas::ListasPiezas()
 		lista[i] = 0;
 }
 
+//Funcion para agregar a las piezas a la lista (Devulve TRUE si aun hay espacio en la lista)
 bool ListasPiezas::agregar(Pieza* t)
 {
 	if (n < MAX_32) {
@@ -47,7 +49,7 @@ Pieza* ListasPiezas::colision(int _f, int _c, int _turn)
 	return 0; //no hay colisión
 }
 
-
+//Funcion para eliminar piezas en el caso que se haya superado el limite
 void ListasPiezas::eliminar(int index)
 {
 	if ((index < 0) || (index >= n))
