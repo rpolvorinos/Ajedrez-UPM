@@ -1,7 +1,7 @@
 #include "Torre.h"
 #include "freeglut.h"
 
-
+//Constructor de torre predeterminado
 Torre::Torre()
 {
 	sprite1.setCenter(0.0f, 0.0f);
@@ -15,6 +15,8 @@ Torre::Torre()
 
 	estado = 0;
 }
+
+//Constructor de las torres blancas y negras
 Torre::Torre(int _f, int _c, int _color) {
 	sprite1.setCenter(0, 0);
 	sprite1.setSize(1, 1);
@@ -32,6 +34,7 @@ Torre::Torre(int _f, int _c, int _color) {
 	fc.setCasillas(_f, _c);
 }
 	
+//Funcion para representar las torres
 void Torre::dibuja() {
 
 	posicion = posicion.conversor(fc.getF(), fc.getC());
@@ -51,14 +54,7 @@ void Torre::dibuja() {
 	}
 }
 
-
-void Torre::movimiento(int _f, int _c) {
-
-	Vector pos;
-	posicion=pos.conversor(_f, _c);
-}
-
-
+//Funcion para saber que tipo de pieza es 
 int Torre::getTipoPieza() {
 	return 1;
 }

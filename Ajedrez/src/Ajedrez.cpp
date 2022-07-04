@@ -2,7 +2,6 @@
 #include "freeglut.h"
 #include <CoordinadorAjedrez.h>
 
-//Mundo mundo ;
 CoordinadorAjedrez controlador;
 
 
@@ -67,14 +66,6 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t)
 	//poner aqui el código de teclado
 	controlador.tecla(key);
 	
-	switch (key) {
-
-		case 13:
-				//mundo.y_ojo = -mundo.y_ojo;
-				//mundo.rotarOjo();
-			break;
-
-	}
 	glutPostRedisplay();
 }
 

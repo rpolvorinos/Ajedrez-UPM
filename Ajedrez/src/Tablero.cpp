@@ -2,6 +2,7 @@
 #include "freeglut.h"
 #include "ETSIDI.h"
 
+//Constructor del tablero
 Tablero::Tablero()
 {
 	sprite2.setCenter(0, 0);
@@ -10,6 +11,7 @@ Tablero::Tablero()
 	sprite3.setSize(3,2);
 }
 
+//Funcion para representar el tablero y las piezas en cada momento de la partida
 void Tablero::dibuja() {
 
 	//Representacion del punto de vista de la camara
@@ -40,13 +42,13 @@ void Tablero::dibuja() {
 			{
 				if ((fila + columna) & 1)
 				{
-					casillas[fila - 1][columna - 1].setColor(255, 255, 255);
+					casillas[fila - 1][columna - 1].setColor(255, 255,255);
 					casillas[fila - 1][columna - 1].setCasillas(fila, columna);
 				}
 
 				else
 				{
-					casillas[fila - 1][columna - 1].setColor(0, 0, 0);
+					casillas[fila - 1][columna - 1].setColor(255, 0, 0);
 					casillas[fila - 1][columna - 1].setCasillas(fila, columna);
 				}
 			}
@@ -97,6 +99,7 @@ void Tablero::dibuja() {
 	 glPopMatrix();
 }
 
+//Funcion para inicializar la vista de la camara, de la posicion del selector y de las piezas para preparar el incio del juego
 void Tablero::inicializa()
 {
 	x_ojo = 0.0;
@@ -192,6 +195,7 @@ void Tablero::inicializa()
 	}
 }
 
+//Funcion para el movimiento de las piezas y el selector por el tablero
 void Tablero::tecla(unsigned char key)
 {
 	selector.mover(key);
@@ -205,7 +209,6 @@ void Tablero::tecla(unsigned char key)
 }
 
 //Funcion que nos indica si el rey esta en jaque o no (si esta en jaque devuelve TRUE)
-
 bool Tablero::jaque(Casilla c) {
 
 	
@@ -253,6 +256,7 @@ bool Tablero::jaqueMate() {
 		return mate;
 }
 
+//Funcion para eliminar las piezas y reinciar la posicion del selector cuando se termina la partida
 void Tablero::eliminarContenido() {
 
 	turno = 0;

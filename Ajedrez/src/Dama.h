@@ -6,7 +6,7 @@
 
 using ETSIDI::Sprite;
 
-class Dama: public Pieza
+class Dama : public Pieza
 {
 public:
 	Dama();

@@ -1,6 +1,7 @@
 #include "Dama.h"
 #include "freeglut.h"
 
+//Constructor de dama predeterminado
 Dama::Dama()
 {
 	sprite9.setCenter(0, 0);
@@ -14,7 +15,7 @@ Dama::Dama()
 	estado = 0;
 }
 
-
+//Constructor de las damas blancas y negras
 Dama::Dama(int _f, int _c, int _color) {
 	sprite9.setCenter(0, 0);
 	sprite9.setSize(1, 1);
@@ -32,6 +33,7 @@ Dama::Dama(int _f, int _c, int _color) {
 	estado = 0;
 }
 
+//Funcion para representar las damas
 void Dama::dibuja() {
 
 	posicion = posicion.conversor(fc.getF(), fc.getC());
@@ -51,6 +53,8 @@ void Dama::dibuja() {
 		glPopMatrix();
 	}
 }
+
+//Funcion para saber que tipo de pieza es 
 int Dama::getTipoPieza() {
 	return 4;
 }
