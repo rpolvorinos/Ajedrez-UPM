@@ -48,7 +48,7 @@ void Tablero::dibuja() {
 
 				else
 				{
-					casillas[fila - 1][columna - 1].setColor(255, 0, 0);
+					casillas[fila - 1][columna - 1].setColor(0, 0, 0);
 					casillas[fila - 1][columna - 1].setCasillas(fila, columna);
 				}
 			}
@@ -63,7 +63,7 @@ void Tablero::dibuja() {
 	 //Dibujo del contorno del tablero
 	 glLineWidth(4);
 	 glBegin(GL_LINES);
-	 glColor3f(128, 64, 0);
+	 glColor3f(255,0, 0);
 	 glVertex2f(-5.3, -6.8);
 	 glVertex2f(6.75, -6.8),
 	 glVertex2f(6.75, -6.8);
