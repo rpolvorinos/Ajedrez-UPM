@@ -1,6 +1,6 @@
 #include "CoordinadorAjedrez.h"
 
-//Constructor del coordinador
+
 CoordinadorAjedrez::CoordinadorAjedrez() {
 
 	estado = INICIO;
@@ -13,12 +13,14 @@ CoordinadorAjedrez::CoordinadorAjedrez() {
 	fin = 0; 
 }
 
-//Destructor del coordinador
 CoordinadorAjedrez::~CoordinadorAjedrez() {
 
 }
 
-//Funcion para establecer el estado del juego
+
+
+
+
 void CoordinadorAjedrez::tecla(unsigned char key) {
 
 	if (estado == INICIO) {
@@ -52,7 +54,6 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 
 }
 
-//Funcion para representar los distintos estados de juego
 void CoordinadorAjedrez::dibuja() {
 
 	if (estado == INICIO)
@@ -91,16 +92,14 @@ void CoordinadorAjedrez::dibuja() {
 		if (tablero.getColor() == 1)
 
 		{
-			//CODIGO PARA PINTAR UNA PANTALLA NEGRA CON LETRAS
 			gluLookAt(0, 7.5, 30, // posicion del ojo
 				0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
 				0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
-
 			ETSIDI::setTextColor(1, 1, 0);
 			ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
 			ETSIDI::printxy("Gana Padre de Familia", -5, 12);
-			ETSIDI::printxy("Pulsa -C- para continuar", -5, 0);
 
+			ETSIDI::printxy("Pulsa -C- para continuar", -5, 0);
 			glPushMatrix();
 			glTranslatef(-11, 2, -2);
 			glColor3f(1.0f, 0.0f, 0.0f);
@@ -112,12 +111,9 @@ void CoordinadorAjedrez::dibuja() {
 		}
 
 		else if (tablero.getColor() == 0) {	
-
-			//CODIGO PARA PINTAR UNA PANTALLA NEGRA CON LETRAS
 			gluLookAt(0, 7.5, 30, // posicion del ojo
 				0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
 				0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
-
 			ETSIDI::setTextColor(1, 1, 0);
 			ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
 			ETSIDI::printxy("Ganan Los Simpsons", -5, 12);
@@ -135,12 +131,9 @@ void CoordinadorAjedrez::dibuja() {
 	}
 
 	else if (estado == PAUSA) {
-
-		//CODIGO PARA PINTAR UNA PANTALLA NEGRA CON LETRAS
 			gluLookAt(0, 7.5, 30, // posicion del ojo
 				0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
 				0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
-
 			ETSIDI::setTextColor(1, 1, 0);
 			ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
 			ETSIDI::printxy("Simpsons vs Padre de Familia", -5, 12);

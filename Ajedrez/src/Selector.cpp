@@ -1,18 +1,15 @@
 #include "Selector.h"
 #include "freeglut.h"
 
-//Constructor del selector
 Selector::Selector() {
 	fila = 1;
 	columna = 1;
 }
 
-//Funcion para la inicializacion del selector
 void Selector::inicializa() {
 	Selector selector;
 }
 
-//Funcion para realizar el movimiento del selector en el tablero
 void Selector::mover(unsigned char key) {
 	switch (key)
 	{
@@ -34,7 +31,6 @@ void Selector::mover(unsigned char key) {
 		break;
 	}
 }
-
 //Funcion que devuleve la fila
 int Selector::getFila()
 {

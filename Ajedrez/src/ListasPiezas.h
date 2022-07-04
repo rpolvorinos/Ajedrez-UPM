@@ -20,7 +20,7 @@ private:
 	int n;
 	Pieza* lista[MAX_32];
 	friend class Tablero;
-
+	friend class Interaccion;
 public:
 	ListasPiezas();
 	virtual ~ListasPiezas() {}

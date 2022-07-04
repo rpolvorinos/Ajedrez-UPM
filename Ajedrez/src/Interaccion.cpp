@@ -2,7 +2,6 @@
 #include "math.h"
 
 
-//Funcion para el movimiento de las piezas una vez detectado que tipo de pieza es
 void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& l)
 {
 	if (t.getEstado() == 0 && t.getfila() == s.getFila() && t.getcolumna() == s.getColumna() && t.getColor() == _turno)
@@ -12,7 +11,7 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 	}
 	else
 	{
-		if(condicion(t,s,_turno,_o))
+		if(condicion(t,s,_turno,_o,l))
 		{
 			Pieza* aux = l.colision(s.getFila(), s.getColumna(), _turno);
 			if (aux != 0 && _turno != aux->getColor())
@@ -38,7 +37,7 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 	}
 }
 
-//Funcion para detectar que una pieza ha capturado a otra para su eliminacion (devuleve TRUE si se produce la captura)
+
 bool Interaccion::captura(Pieza t, int _f, int _c)
 {
 	if (t.getfila() == _f && t.getcolumna() == _c)
@@ -46,9 +45,18 @@ bool Interaccion::captura(Pieza t, int _f, int _c)
 	return false;
 }
 
-//Funcion para identificar que pieza es la que va a realizar el movimiento y si su movimiento es el adecuado (devulve TRUE en el caso que el movimiento sea correcto)
-bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o)
+bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o, ListasPiezas& piezas)
 {
+	Casilla _casilla;
+	_casilla.setCasillas(s.getFila(), s.getColumna());
+	int _aux = 0;
+
+	for (int i = 0; i < piezas.getNumero_Piezas(); i++) //recorremos todas la fichas para comprobar cual produce jaque al rey correspondiente.
+	{
+		if (piezas.lista[i]->getColor() != _turno && condicionjaque(*piezas.lista[i], _casilla) == true)
+			_aux++;
+	}
+
 	switch (t.getTipoPieza())
 	{
 	case 1:
@@ -72,7 +80,7 @@ bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o)
 		break;
 
 	case 5:
-		if (t.getEstado() == 1 && (abs(s.getColumna() - t.getcolumna()) <= 1 && abs(s.getFila() - t.getfila()) <= 1) && t.getColor() == _turno && _turno != _o)	//movimiento de los reyes blanco y negro
+		if (t.getEstado() == 1 && (abs(s.getColumna() - t.getcolumna()) <= 1 && abs(s.getFila() - t.getfila()) <= 1) && t.getColor() == _turno && _turno != _o && _aux==0)	//movimiento de los reyes blanco y negro
 		return true;
 		break;
 	
@@ -87,7 +95,7 @@ bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o)
 	return false;
 }
 
-//Funcion que nos indica si hay piezas que pueden hacer jaque al rey (devulve TRUE si es verdadero)
+//Funcion que nos indica si hay piezas en la trayectoria del movimiento ( si no hay devuelve TRUE)
 bool Interaccion::condicionjaque(Pieza& t, Casilla s)
 {
 	switch (t.getTipoPieza())

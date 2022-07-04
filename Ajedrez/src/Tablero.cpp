@@ -2,7 +2,7 @@
 #include "freeglut.h"
 #include "ETSIDI.h"
 
-//Funcion para la representacion del tablero de ajedrez y de las figuras en cada instante
+
 void Tablero::dibuja() {
 
 	//Representacion del punto de vista de la camara
@@ -78,7 +78,6 @@ void Tablero::dibuja() {
 	 piezas.dibuja();
 }
 
-//Funcion para la inicializacion de las posiciones iniciales de las piezas y del selector al incio de partida
 void Tablero::inicializa()
 {
 	x_ojo = 0.0;
@@ -174,7 +173,6 @@ void Tablero::inicializa()
 	}
 }
 
-//Funcion para el movimiento de las piezas y del selector
 void Tablero::tecla(unsigned char key)
 {
 	selector.mover(key);
@@ -188,6 +186,7 @@ void Tablero::tecla(unsigned char key)
 }
 
 //Funcion que nos indica si el rey esta en jaque o no (si esta en jaque devuelve TRUE)
+
 bool Tablero::jaque(Casilla c) {
 
 	
@@ -235,7 +234,6 @@ bool Tablero::jaqueMate() {
 		return mate;
 }
 
-//Funcion para la eliminacion del contenido del tablero en el caso de fin de partida
 void Tablero::eliminarContenido() {
 
 	turno = 0;
