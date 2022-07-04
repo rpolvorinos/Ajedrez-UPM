@@ -31,7 +31,6 @@ public:
 	void eliminar(int index);
 	int getNumero_Piezas() { return n; }
 	Pieza* colision(int _f, int _c, int _turno);
+	void eliminarContenido();
 
 };
-
-

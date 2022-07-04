@@ -10,6 +10,7 @@ CoordinadorAjedrez::CoordinadorAjedrez() {
 	sprite2.setSize(12, 7);
 	sprite3.setCenter(0, 0);
 	sprite3.setSize(12, 7);
+	fin = 0; 
 }
 
 CoordinadorAjedrez::~CoordinadorAjedrez() {
@@ -33,16 +34,22 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 	}
 
 	else if (estado == JUEGO) {
+		
+		if (key == 'p' || key=='P')
+			estado = PAUSA;
+		else
 		tablero.tecla(key);
 	}
-	else if (estado == GanaW)
+
+	else if (estado == GANA)
 	{
-		if (key == 's' || key == 'S')
-		exit(0);
+		if (key == 'C' || key == 'c')
+			estado = INICIO;
 	}
-	else if (estado ==GanaB) {
-		if (key == 's' || key == 'S')
-		exit(0);
+
+	else if (estado ==PAUSA) {
+		if (key == 'c' || key == 'C')
+			estado = JUEGO;
 	}
 
 }
@@ -50,7 +57,8 @@ void CoordinadorAjedrez::tecla(unsigned char key) {
 void CoordinadorAjedrez::dibuja() {
 
 	if (estado == INICIO)
-	{//CODIGO PARA PINTAR UNA PANTALLA NEGRA CON LETRAS
+	{
+		//CODIGO PARA PINTAR UNA PANTALLA NEGRA CON LETRAS
 		gluLookAt(0, 7.5, 30, // posicion del ojo
 			0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
 			0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
@@ -70,44 +78,75 @@ void CoordinadorAjedrez::dibuja() {
 		glPopMatrix();
 		
 	}
+
 	else if (estado == JUEGO) {
 		tablero.dibuja();
 		fin = tablero.jaqueMate();
 		if (fin == 1)
-			estado = GanaW;
-		else if (fin == 2)
-			estado = GanaB;
+			estado = GANA;
 	}
 		
 
-	else if (estado == GanaW) {
+	else if (estado == GANA) {
 
+		if (tablero.getColor() == 1)
 
+		{
 			gluLookAt(0, 7.5, 30, // posicion del ojo
 				0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
 				0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
 			ETSIDI::setTextColor(1, 1, 0);
 			ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
-			ETSIDI::printxy("Gana Padre de Famailia", -5, 12);
-			ETSIDI::printxy("Pulsa -S- para continuar", -5, 0);
+			ETSIDI::printxy("Gana Padre de Familia", -5, 12);
+
+			ETSIDI::printxy("Pulsa -C- para continuar", -5, 0);
 			glPushMatrix();
 			glTranslatef(-11, 2, -2);
 			glColor3f(1.0f, 0.0f, 0.0f);
 			sprite3.draw();
 			glPopMatrix();
+
+			tablero.eliminarContenido();
+			fin = 0;
 		}
-		else if (fin == GanaB) {
+
+		else if (tablero.getColor() == 0) {	
 			gluLookAt(0, 7.5, 30, // posicion del ojo
 				0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
 				0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
 			ETSIDI::setTextColor(1, 1, 0);
 			ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
 			ETSIDI::printxy("Ganan Los Simpsons", -5, 12);
-			ETSIDI::printxy("Pulsa -S- para continuar", -5, 0);
+			ETSIDI::printxy("Pulsa -C- para continuar", -5, 0);
+
 			glPushMatrix();
 			glTranslatef(-11, 2, -2);
 			glColor3f(1.0f, 0.0f, 0.0f);
 			sprite2.draw();
+			glPopMatrix();
+
+			tablero.eliminarContenido();
+			fin = 0;
+		}
+	}
+
+	else if (estado == PAUSA) {
+			gluLookAt(0, 7.5, 30, // posicion del ojo
+				0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
+				0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
+			ETSIDI::setTextColor(1, 1, 0);
+			ETSIDI::setFont("fuentes/Bitwise.ttf", 16);
+			ETSIDI::printxy("Simpsons vs Padre de Familia", -5, 12);
+			ETSIDI::setTextColor(1, 1, 1);
+			ETSIDI::setFont("fuentes/Bitwise.ttf", 12);
+			ETSIDI::printxy("JUEGO EN PAUSA", -2, 11);
+			ETSIDI::printxy("PULSE LA TECLA -C- PARA CONTINUAR", -5, 10);
+			ETSIDI::printxy("Ajedrez UPM", -1, -1);
+
+			glPushMatrix();
+			glTranslatef(-10, 1, 0.5);
+			glColor3f(1.0f, 0.0f, 0.0f);
+			sprite1.draw();
 			glPopMatrix();
 		}
 	}

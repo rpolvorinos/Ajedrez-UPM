@@ -15,7 +15,7 @@ public:
 
 protected:
 	Tablero tablero;
-	enum Estado { INICIO, JUEGO, GanaB, GanaW };
+	enum Estado { INICIO, JUEGO, GANA,PAUSA};
 	Estado estado;
 	int fin;
 	Sprite sprite1{ "imagenes/inicio.png", 5 };

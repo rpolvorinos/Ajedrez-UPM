@@ -20,7 +20,7 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 			}
 			if (aux != 0 && _turno == aux->getColor()) {}
 			else {
-				t.setDatos(0.5, s.getFila(), s.getColumna());
+				t.setPos(s.getFila(), s.getColumna());
 				t.Decrem();
 				_o = _turno;
 				switch (_turno)
@@ -37,12 +37,20 @@ void Interaccion::moverPieza(Pieza& t, Selector s, int& _turno, int& _o, ListasP
 	}
 }
 
+
+bool Interaccion::captura(Pieza t, int _f, int _c)
+{
+	if (t.getfila() == _f && t.getcolumna() == _c)
+		return true;
+	return false;
+}
+
 bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o)
 {
 	switch (t.getTipoPieza())
 	{
 	case 1:
-		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getFila() == t.getcolumna()) && t.getColor() == _turno && _turno != _o) //Movimiento de las torres blancas y negras
+		if (t.getEstado() == 1 && (s.getFila() == t.getfila() || s.getColumna() == t.getcolumna()) && t.getColor() == _turno && _turno != _o) //Movimiento de las torres blancas y negras
 			return true;
 		break;
 
@@ -77,10 +85,43 @@ bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o)
 	return false;
 }
 
-
-bool Interaccion::captura(Pieza t, int _f, int _c)
+//Funcion que nos indica si hay piezas en la trayectoria del movimiento ( si no hay devuelve TRUE)
+bool Interaccion::condicionjaque(Pieza& t, Casilla s)
 {
-	if (t.getfila() == _f && t.getcolumna() == _c)
-		return true;
+	switch (t.getTipoPieza())
+	{
+	case 1:
+		if ((s.getF() == t.getfila() || s.getC() == t.getcolumna())) //Movimiento de las torres blancas y negras
+			return true;
+		break;
+
+	case 2:
+		if (((abs(s.getC() - t.getcolumna()) == 1 && abs(s.getF() - t.getfila()) == 2) || (abs(s.getC() - t.getcolumna()) == 2 && abs(s.getF() - t.getfila()) == 1))) //Movimiento de los caballos blancos y negros
+			return true;
+		break;
+
+	case 3:
+		if ((abs(s.getF() - t.getfila()) == abs(s.getC() - t.getcolumna()))) //Movimiento de los alfiles blancos y negros
+			return true;
+		break;
+
+	case 4:
+		if ((s.getF() == t.getfila() || s.getC() == t.getcolumna() || (abs(s.getF() - t.getfila()) == abs(s.getC() - t.getcolumna()))))	//Movimiento de las damas blancas y negras
+			return true;
+		break;
+
+	case 5:
+		if ((abs(s.getC() - t.getcolumna()) <= 1 && abs(s.getF() - t.getfila()) <= 1))	//movimiento de los reyes blanco y negro
+			return true;
+		break;
+
+	case 6:
+		if (t.getColor() == 0 && ((s.getC() - t.getcolumna()) == 1) && ((s.getF() - t.getfila()) == 0)) //Movimiento peones blancos
+			return true;
+		if (t.getColor() == 1 && ((t.getcolumna() - s.getC()) == 1) && ((s.getF() - t.getfila()) == 0)) //Movimiento peones negros
+			return true;
+		break;
+	}
+
 	return false;
 }

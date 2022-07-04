@@ -18,6 +18,7 @@ bool ListasPiezas::agregar(Pieza* t)
 	return true;
 }
 
+//Funcion que nos permite dibujar las distintas piezas
 void ListasPiezas::dibuja()
 {
 	for (int i = 0; i < n; i++) {
@@ -27,6 +28,7 @@ void ListasPiezas::dibuja()
 
 }
 
+//Funcion para el movimiento de las piezas
 void ListasPiezas::mover(Selector s, int& _turno,int& _o, ListasPiezas& l)
 {
 	for (int i = 0; i < n; i++)
@@ -34,6 +36,7 @@ void ListasPiezas::mover(Selector s, int& _turno,int& _o, ListasPiezas& l)
 		
 }
 
+//Funcion para la colision entre dos piezas de distintos jugadores
 Pieza* ListasPiezas::colision(int _f, int _c, int _turn)
 {
 	for (int i = 0;i < MAX_32;i++)
@@ -43,6 +46,7 @@ Pieza* ListasPiezas::colision(int _f, int _c, int _turn)
 	}
 	return 0; //no hay colisión
 }
+
 
 void ListasPiezas::eliminar(int index)
 {
@@ -54,6 +58,7 @@ void ListasPiezas::eliminar(int index)
 		lista[i] = lista[i + 1];
 }
 
+//Funcion para elimar una pieza cuando esta ha sido comida por el jugador adversario
 void ListasPiezas::eliminar(Pieza* e)
 {
 	for (int i = 0; i < n; i++)
@@ -64,3 +69,13 @@ void ListasPiezas::eliminar(Pieza* e)
 			return;
 		}
 }
+
+//Funcion para eliminar el contenido de las piezas
+void ListasPiezas::eliminarContenido() {
+	for (int i = 0; i < MAX_32; i++) //eliminacion de las piezas
+		lista[i] = 0;
+	n = 0;
+}
+
+
+

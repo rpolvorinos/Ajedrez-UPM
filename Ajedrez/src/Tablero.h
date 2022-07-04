@@ -1,7 +1,6 @@
 #pragma once
 #include "Vector.h"
 #include "Casilla.h"
-#include "Selector.h"
 #include "ListasPiezas.h"
 #include "Interaccion.h"
 
@@ -15,6 +14,7 @@ private:
 	Selector selector;
 	float posf[8];
 	float posc[8];
+	int color;
 
 	//Variables para el funcionamiento del juego
 	ListasPiezas piezas;
@@ -32,7 +32,9 @@ public:
 	void tecla(unsigned char key);
 	void inicializa();
 	void dibuja();
-	int jaqueMate();
-	
+	bool jaque(Casilla aux);
+	bool jaqueMate();
+	int getColor(){ return color; }
+	void eliminarContenido();
 
 };

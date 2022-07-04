@@ -153,7 +153,7 @@ void Tablero::inicializa()
 
 
 
-	//Inicializacion de la ocupacion de las piezas
+	//Inicializacion de la ocupacion de del tablero
 
 	for (int i = 0; i < 8; i++)
 	{
@@ -185,22 +185,64 @@ void Tablero::tecla(unsigned char key)
 	}
 }
 
-int Tablero::jaqueMate() {
+//Funcion que nos indica si el rey esta en jaque o no (si esta en jaque devuelve TRUE)
 
-	int n_reyes = 0;
-	Pieza auxiliar;
-	for (int i = 0; i < piezas.getNumero_Piezas();i++) {
-		if (piezas.lista[i]->getTipoPieza() == 5) {
-			n_reyes++;
-			auxiliar = *piezas.lista[i];
+bool Tablero::jaque(Casilla c) {
+
+	
+		for (int i = 0; i < piezas.getNumero_Piezas(); i++) //recorremos todas la fichas para comprobar cual produce jaque al rey correspondiente.
+		{
+			if (piezas.lista[i]->getColor() != turno && Interaccion::condicionjaque(*piezas.lista[i], c) == true)
+				return true;
+		}
+		return false;
+}
+
+//Funcion que nos indica si se produce jaque mate (si se produce devuelve TRUE)
+bool Tablero::jaqueMate() {
+		
+		Casilla c_rey, auxiliar;
+		auxiliar.setCasillas(c_rey.getF(), c_rey.getC());
+		int mate = 1;
+
+		for (int i = 0; i < piezas.getNumero_Piezas(); i++) {//Hallamos en qué casilla está el rey
+			if (piezas.lista[i]->getTipoPieza() == 5 && piezas.lista[i]->getColor() == turno) {
+				c_rey = piezas.lista[i]->getCasilla();
+				color = piezas.lista[i]->getColor(); //guardamos el color para saber a que jugador se le ha realizado el jaque
+			}
 		}
 
-	}
-	if (n_reyes == 2)
-		return 0;
-	else
-		if (auxiliar.getColor() == 0)
-			return 1; //Ganan las blancas
+		
+		//Si el rey está en jaque, comprobamos si puede moverse a otra casilla
+		if (jaque(c_rey)) {
+			for (int i = 0; i < 8; i++)
+			{
+				for (int j = 0; j < 8; j++)
+				{
+					auxiliar.setCasillas(i, j);
+
+					if (turno == 0 && ((auxiliar.getC() - c_rey.getC()) == 1) && ((auxiliar.getF() - c_rey.getF()) == 0) && turno != ocupacion[auxiliar.getF()][auxiliar.getC()])
+
+						if (jaque(auxiliar) == 0)
+							mate = 0; //si se puede mover a alguna casilla, no hay jaque mate
+				}
+			}
+		}
 		else
-			return 2; //Ganan las negras
+			mate = 0; // si el rey no está en jaque, obviamente tampoco hay jaque mate
+
+		return mate;
+}
+
+void Tablero::eliminarContenido() {
+
+	turno = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		for (int j = 0; j < 8; j++)
+			ocupacion[i][j] = 0;
+	}
+	piezas.eliminarContenido();
+	selector.reinicio();
+
 }

@@ -41,6 +41,8 @@ public:
 	void Decrem() { estado--; }
 	int getfila() { return fc.getF(); }
 	int getcolumna() { return fc.getC(); }
+	Casilla getCasilla() { return fc; }
+	void setPos(int _f, int _c) { fc.setCasillas(_f, _c); }
 	
 };
 

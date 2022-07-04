@@ -16,4 +16,5 @@ public:
 	int getF() { return fila; }
 	int getC() { return columna; }
 	
+	
 };
