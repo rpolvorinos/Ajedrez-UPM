@@ -63,7 +63,7 @@ void Tablero::dibuja() {
 	 //Dibujo del contorno del tablero
 	 glLineWidth(4);
 	 glBegin(GL_LINES);
-	 glColor3f(255,0, 0);
+	 glColor3f(255,255, 0);
 	 glVertex2f(-5.3, -6.8);
 	 glVertex2f(6.75, -6.8),
 	 glVertex2f(6.75, -6.8);
