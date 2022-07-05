@@ -96,7 +96,7 @@ bool Interaccion::condicion(Pieza& t, Selector s, int& _turno, int& _o, ListasPi
 	return false;
 }
 
-//Funcion que nos indica si hay piezas en la trayectoria del movimiento ( si no hay devuelve TRUE)
+//Funcion que nos indica si hay piezas cuyas trayectorias de movimiento pueden amenzar al rey ( si no hay devuelve TRUE)
 bool Interaccion::condicionjaque(Pieza& t, Casilla s)
 {
 	switch (t.getTipoPieza())

@@ -6,7 +6,6 @@
 #include<cstring>
 
 
-using namespace std;
 using ETSIDI::Sprite;
 
 class Pieza

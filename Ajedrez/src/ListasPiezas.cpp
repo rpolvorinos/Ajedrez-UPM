@@ -49,7 +49,7 @@ Pieza* ListasPiezas::colision(int _f, int _c, int _turn)
 	return 0; //no hay colisión
 }
 
-//Funcion que nos permite aseguranos que no se han introducido piezas de mas a la lista
+//Funcion que se encarga de eliminar piezas de la lista
 void ListasPiezas::eliminar(int index)
 {
 	if ((index < 0) || (index >= n))
@@ -60,7 +60,7 @@ void ListasPiezas::eliminar(int index)
 		lista[i] = lista[i + 1];
 }
 
-//Funcion para elimar una pieza cuando esta ha sido comida por el jugador adversario
+//Funcion que evalua si debe eliminar una pieza y llama a la funcion eliminar que las elimina
 void ListasPiezas::eliminar(Pieza* e)
 {
 	for (int i = 0; i < n; i++)
