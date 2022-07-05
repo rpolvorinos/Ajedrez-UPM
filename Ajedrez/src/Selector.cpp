@@ -3,8 +3,8 @@
 
 //Constructor del selector
 Selector::Selector() {
-	fila = 1;
-	columna = 1;
+	fila = 4;
+	columna = 4;
 }
 
 //Funcion para inicializar el selector
